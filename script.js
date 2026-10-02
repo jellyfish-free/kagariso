@@ -41,7 +41,6 @@
     let number = 0;
     for (const area of data.areas) {
       const items = data.items.filter(item => item.area === area.id);
-      if (!items.length) continue;
       const link = element("a", "", area.name);
       link.href = `#${area.id}`;
       nav.append(link);
@@ -54,6 +53,7 @@
       const count = element("span", "", `${items.length}案`);
       heading.append(name, count);
       const grid = element("div", "cards");
+      if (!items.length) grid.append(element("p", "area-empty", "掲載項目はまだありません。"));
       const cards = [];
       items.forEach(item => {
         number++;
@@ -88,8 +88,9 @@
           card.node.hidden = !show;
           if (show) areaVisible++;
         });
-        group.section.hidden = !areaVisible;
-        group.link.hidden = !areaVisible;
+        const showArea = areaVisible > 0 || (words.length === 0 && group.cards.length === 0);
+        group.section.hidden = !showArea;
+        group.link.hidden = !showArea;
         group.count.textContent = `${areaVisible}案`;
         visible += areaVisible;
       });

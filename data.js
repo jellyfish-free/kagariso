@@ -1,6 +1,6 @@
 // 怪異の追加・修正は、このファイルで行います。
 // 番号・件数は自動で更新されるので、ここに番号は書きません。
-// area の対応：courtyard=中庭 / backyard=裏庭 / entrance=玄関・外周
+// area の対応：global=全域 / courtyard=中庭 / backyard=裏庭 / entrance=玄関・外周
 //               indoor=廊下・屋内 / stair=外階段・屋上
 // 追加する場合は、items の中へ { ... }, のかたまりをコピーしてください。
 // 使い方と追記用の例は README.md にあります。
@@ -8,6 +8,7 @@
 window.KAGARI_DATA = {
   // 場所の表示順。新しい場所もここへ追加できます。
   areas: [
+    { id: "global", name: "全域" },
     { id: "courtyard", name: "中庭" },
     { id: "backyard", name: "裏庭" },
     { id: "entrance", name: "玄関・外周" },
