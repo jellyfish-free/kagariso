@@ -100,6 +100,6 @@ body::before{
 
   /* 上部のタイトルの囲み：グレーを40％透過 */
   header {
-    background: rgba(210, 210, 210, 0.6);
+    background: rgba(210, 210, 210, 0.8);
   }
 }
