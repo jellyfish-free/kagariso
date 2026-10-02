@@ -22,7 +22,7 @@ window.KAGARI_DATA = {
     // 中庭
     {
       area: "global",
-      title: "十三の帰還",
+      title: "十三（センパイ）",
       location: "神狩荘",
       paragraphs: [
         "R8.9.13～9.26に実施された納涼肝試しイベント内で起こった怪異",
