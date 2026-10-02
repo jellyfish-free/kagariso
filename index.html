@@ -7,8 +7,10 @@
 <meta name="theme-color" content="#eee9df">
 <title>神狩荘 怪異・現象一覧</title>
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./horror.css?v=1">
 <script src="./data.js" defer></script>
 <script src="./script.js" defer></script>
+<script src="./horror.js?v=1" defer></script>
 </head>
 <body id="top">
 <div class="wrap">
@@ -32,6 +34,32 @@
 <section class="concept" aria-labelledby="concept-heading"><h2 id="concept-heading">方針・コンセプト</h2><p>PC同士の交流やRPのきっかけとして自由にご利用ください。</p></section>
 </main>
 <footer>神狩荘 怪異・現象一覧 / <span id="footer-total"></span><br><a href="#top">ページの先頭へ戻る</a></footer>
+<p id="horror-marker" class="horror-marker">ここで一覧は終わりです。</p>
 </div>
+
+<dialog id="horror-dialog" aria-labelledby="horror-greeting" aria-describedby="horror-message">
+<button id="horror-close" class="horror-close" type="button" autofocus>一覧へ戻る ×</button>
+<div class="horror-stage">
+<p class="horror-caption">記録にない項目</p>
+<div class="horror-portrait"><svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs><radialGradient id="mask-light" cx="45%" cy="35%" r="72%"><stop offset="0" stop-color="#a0aa91"/><stop offset=".6" stop-color="#515a46"/><stop offset="1" stop-color="#171d15"/></radialGradient><linearGradient id="coat-shadow" x2="0" y2="1"><stop stop-color="#111b13"/><stop offset="1" stop-color="#030503"/></linearGradient></defs>
+<path d="M76 376L83 235Q94 194 132 186L133 165H185L187 186Q227 197 238 237L251 376Z" fill="url(#coat-shadow)"/>
+<path d="M109 78Q112 20 159 19Q213 21 219 80L209 168L191 209L171 183L134 196L109 159Z" fill="#040704"/>
+<path d="M125 84Q129 48 160 49Q196 51 198 91L187 145Q169 176 153 167Q126 150 124 122Z" fill="url(#mask-light)"/>
+<path d="M131 91Q140 84 151 89L151 104Q137 107 129 101Z M166 89Q181 82 192 91L194 103Q177 109 167 103Z" fill="#020302"/>
+<g class="horror-eyes"><ellipse cx="142" cy="98" rx="2.9" ry="2" fill="#dce9c3"/><ellipse cx="180" cy="98" rx="2.9" ry="2" fill="#dce9c3"/></g>
+<path d="M159 106L153 125L167 125" fill="none" stroke="#1e271a" stroke-width="3"/>
+<path d="M144 141Q158 147 177 135Q165 155 150 150Z" fill="#0b1009"/>
+<path d="M129 73L115 156M191 66L209 159M133 53L119 130M198 71L218 149" stroke="#030603" stroke-width="8" fill="none"/>
+<path d="M92 306Q94 254 112 232L127 251L122 290L136 312L130 337L96 341Z M229 306Q225 254 207 232L193 251L198 289L184 312L191 337L225 341Z" fill="#273020" opacity=".5"/>
+</svg></div>
+<div class="horror-copy">
+<p id="horror-entry" class="horror-entry"></p>
+<p class="horror-location">場所：画面の前</p>
+<h2 id="horror-greeting" class="horror-greeting"></h2>
+<p id="horror-message" class="horror-message"></p>
+</div>
+</div>
+</dialog>
 </body>
 </html>

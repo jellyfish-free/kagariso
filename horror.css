@@ -1,0 +1,25 @@
+/* 最後まで読んだ時だけ現れる怪異。普段の一覧の配色には影響しません。 */
+.horror-marker{padding:22px 12px 18px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.14em}
+body.horror-open{overflow:hidden}
+#horror-dialog{position:fixed;inset:0;margin:0;width:100vw;max-width:none;height:100dvh;max-height:none;padding:0;border:0;background:#050706;color:#ecebe3;overflow:auto;overscroll-behavior:contain;font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+#horror-dialog::backdrop{background:#000}
+.horror-stage{position:relative;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 22px 45px;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 40%,#18211a 0%,#090d0a 35%,#030403 75%)}
+.horror-stage::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;background:repeating-linear-gradient(0deg,transparent 0 3px,#00000024 3px 4px);opacity:.45}
+.horror-close{position:fixed;top:18px;right:18px;z-index:5;border:1px solid #72766c;color:#eeeae0;background:#0b100de8;padding:9px 15px;font:inherit;font-size:13px;cursor:pointer}
+.horror-close:hover{background:#252d25}.horror-close:focus-visible{outline:2px solid #ecebe3;outline-offset:4px}
+.horror-caption{position:relative;z-index:4;font-size:11px;letter-spacing:.25em;color:#8d998c;margin:0 0 12px;animation:horror-arrive 1.3s both}
+.horror-portrait{width:min(310px,62vw);height:min(340px,40dvh);position:relative;z-index:1;margin:0 0 -15px;transform-origin:50% 65%;animation:horror-nearer 3.8s cubic-bezier(.12,.58,.27,1) both}
+.horror-portrait svg{display:block;width:100%;height:100%;filter:drop-shadow(0 0 10px #b8c5aa16)}
+.horror-eyes{animation:horror-eyes 1.8s both}
+.horror-copy{position:relative;z-index:4;text-align:center;width:min(650px,100%);padding-top:18px;background:linear-gradient(transparent,#050706 28%)}
+.horror-entry{margin:0 0 12px;font-size:14px;letter-spacing:.1em;color:#ab7066;animation:horror-arrive 1.2s .6s both}
+.horror-location{font-size:12px;letter-spacing:.14em;color:#838d80;margin:0 0 23px;animation:horror-arrive 1.2s .8s both}
+.horror-greeting{font-size:clamp(21px,4vw,33px);font-weight:400;line-height:1.8;letter-spacing:.06em;margin:0;animation:horror-arrive 1.4s 1.5s both}
+.horror-message{font-size:clamp(16px,2.5vw,22px);color:#c4c8bc;line-height:1.9;margin:14px 0 0;animation:horror-arrive 1.5s 3.1s both}
+@keyframes horror-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes horror-nearer{0%{opacity:0;transform:scale(.48)}32%{opacity:.3;transform:scale(.75)}55%{opacity:.55;transform:scale(.85)}70%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes horror-eyes{0%,45%{opacity:0}100%{opacity:1}}
+@media(max-width:500px){.horror-stage{padding:70px 18px 35px}.horror-portrait{width:68vw;height:34dvh}.horror-location{margin-bottom:20px}.horror-close{top:12px;right:12px}}
+.horror-still *{animation:none!important}
+@media(prefers-reduced-motion:reduce){#horror-dialog *{animation:none!important}}
+@media print{.horror-marker,#horror-dialog{display:none!important}}
