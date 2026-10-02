@@ -62,7 +62,15 @@
         const top = element("div", "card-top");
         top.append(element("span", "number", String(number).padStart(2, "0")),
           element("span", "place", item.location));
-        card.append(top, element("h3", "", item.title));
+        const title = element("h3");
+        const status = "（解決済み）";
+        if (item.title.endsWith(status)) {
+          title.textContent = item.title.slice(0, -status.length);
+          title.append(element("span", "resolved-status", status));
+        } else {
+          title.textContent = item.title;
+        }
+        card.append(top, title);
         item.paragraphs.forEach(p => card.append(element("p", "", p)));
         grid.append(card);
         cards.push({ node: card, text: normalize([area.name, item.title, item.location, ...item.paragraphs].join(" ")) });
