@@ -87,3 +87,19 @@ body::before{
 /* 怪異ごとの枠内をグレーに変更 */
 .card{background:#d2d2d2}
 @media print{.card{background:white}}
+
+@media screen {
+  :root {
+    --paper: #d2d2d2;
+  }
+
+  /* 怪異本文の枠：同じ色を参照する */
+  .card {
+    background: var(--paper);
+  }
+
+  /* 上部のタイトルの囲み：グレーを40％透過 */
+  header {
+    background: rgba(210, 210, 210, 0.6);
+  }
+}
