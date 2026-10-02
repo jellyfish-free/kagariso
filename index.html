@@ -3,41 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="神狩荘の怪異・現象候補、全19案。住人同士の交流やロールプレイのきっかけに。">
+<meta name="description" content="神狩荘の怪異・現象候補一覧。住人同士の交流やロールプレイのきっかけに。">
 <meta name="theme-color" content="#eee9df">
 <title>神狩荘 怪異・現象候補一覧</title>
-<style>
-:root{--bg:#eee9df;--paper:#fffdf8;--ink:#302e28;--muted:#777267;--line:#d6cebf;--accent:#465347}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;background:linear-gradient(160deg,#e7e1d5 0%,#f6f3ec 45%,#eee9df 100%);color:var(--ink);font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;line-height:1.95;overflow-wrap:anywhere}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 32px}
-header{background:var(--paper);border:1px solid var(--line);padding:40px;box-shadow:0 12px 30px #483e3010}
-.eyebrow{font-family:system-ui,sans-serif;font-size:11px;letter-spacing:.18em;color:var(--muted)}
-h1{font-size:clamp(26px,4.7vw,42px);line-height:1.5;letter-spacing:.07em;margin:14px 0 20px}
-.lead{margin:0;max-width:850px;font-size:15px}.total{display:inline-block;margin-top:20px;border:1px solid var(--line);padding:3px 12px;font-size:13px;color:var(--accent)}
-nav{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 36px}
-nav a{display:block;border:1px solid var(--line);background:var(--paper);padding:8px 16px;text-decoration:none;font-size:14px}
-nav a:hover{background:#e3e8df;border-color:var(--accent)}
-a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
-.area-section{margin:38px 0 46px;scroll-margin-top:24px}
-.section-heading{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid #bcb4a5;margin:0 0 20px;padding-bottom:10px}
-h2{font-size:23px;letter-spacing:.08em;margin:0}.section-heading>span{font-size:13px;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
-.card{border:1px solid var(--line);background:var(--paper);padding:26px 28px;box-shadow:0 5px 18px #483e3008;scroll-margin-top:24px}
-.card-top{display:flex;gap:12px;align-items:center;margin-bottom:16px}
-.number{font-family:system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:0 0 36px;height:36px;border:1px solid #b9c1b4;color:var(--accent);background:#eef1e9;font-size:13px}
-.place{font-size:12px;color:var(--muted);line-height:1.7}
-h3{font-size:19px;line-height:1.65;margin:0 0 19px;letter-spacing:.02em}
-.card p{font-size:15px;margin:0 0 15px}.card p:last-child{margin-bottom:0}
-.concept{background:#3b4038;color:#f8f4eb;padding:28px 32px;margin:16px 0 28px}
-.concept h2{font-size:20px}.concept p{font-size:14px;margin:14px 0 0}
-footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 0 20px}footer a{display:inline-block;margin-top:12px;text-underline-offset:4px}
-@media(max-width:760px){.wrap{padding:20px 14px}header{padding:26px 23px}.cards{grid-template-columns:1fr;gap:16px}.card{padding:23px 22px}nav{gap:7px;margin-bottom:30px}nav a{padding:7px 11px;font-size:13px}h2{font-size:21px}.area-section{margin:30px 0 36px}.concept{padding:24px}.card p{font-size:15px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-@media print{body{background:white}.wrap{max-width:none;padding:0}header,.card{box-shadow:none}nav,footer a{display:none}.cards{display:block}.card{break-inside:avoid;margin-bottom:15px}.concept{background:white;color:black;border:1px solid var(--line)}}
-</style>
+<link rel="stylesheet" href="./style.css">
+<script src="./data.js" defer></script>
+<script src="./script.js" defer></script>
 </head>
 <body id="top">
 <div class="wrap">
@@ -45,13 +16,22 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 0 20px}f
 <div class="eyebrow">KAGARI-SOU / STRANGE PHENOMENA ARCHIVE</div>
 <h1>神狩荘 怪異・現象候補一覧</h1>
 <p class="lead">危険一辺倒ではなく、人懐っこさや生活感のある不思議な出来事を中心にした怪異案。PC同士の交流やロールプレイのきっかけとして自由にご利用ください。</p>
-<span class="total">全19案</span>
+<span class="total" id="total"></span>
 </header>
-<nav aria-label="場所別の目次"><a href="#courtyard">中庭</a><a href="#backyard">裏庭</a><a href="#entrance">玄関・外周</a><a href="#indoor">廊下・屋内</a><a href="#stair">外階段・屋上</a></nav>
-<main><section class="area-section" id="courtyard" aria-labelledby="heading-courtyard"><div class="section-heading"><h2 id="heading-courtyard">中庭</h2><span>6案</span></div><div class="cards"><article class="card" id="phenomenon-01"><div class="card-top"><span class="number">01</span><span class="place">中庭（門・道路側）</span></div><h3>姿なき子供のボール投げと子供銀行券</h3><p>中庭で「取ってください」と子供の声がする。声のした方へボールを投げると、「へたくそー、やり直しー」と笑われ、見えない相手からこちらへ投げ返される。つい意地になって、何往復も投げ合ってしまう。</p><p>しばらくすると、「楽しかったよ。お母さん呼んでるから帰るね」と声がして、「これ、お礼！」の一言とともに、どこからともなくお札がひらひらと降ってくる。</p><p>「こんなに貰えないよ」と言いかけて拾ってみると、全部子供銀行券だった。</p></article><article class="card" id="phenomenon-02"><div class="card-top"><span class="number">02</span><span class="place">中庭にある物干し場</span></div><h3>洗濯物に混ざる知らない服と農家の装い</h3><p>洗濯物を取り込むと、住人の誰も心当たりのない少し土で汚れた野良着が一着混ざっている。</p><p>ハンガーに掛けておくと、翌日はもんぺ、手ぬぐい、菅笠…と数日で古い農家の装いが揃い、菅笠も拭き掃除をして干してやると翌日にはすべて消えている。</p><p>代わりに「助かりました」と書かれた袋に入った、良質な果物や野菜などの作物が物干し竿の下に置いてある。</p></article><article class="card" id="phenomenon-03"><div class="card-top"><span class="number">03</span><span class="place">中庭</span></div><h3>いがぐりとハリネズミ</h3><p>中庭に、いつの間にか大量のいがぐりが転がっている。「この辺に栗の木なんてあったっけ？」と見上げても、それらしい木はどこにもない。</p><p>不思議に思って拾い上げると、そのうちのひとつがもぞりと動く。よく見ると、いがぐりではなくハリネズミ？らしい。キィキィ鳴いたかと思うと、モグラのように前足で地面を掘り、そのまま土の中へ潜って逃げていく。</p></article><article class="card" id="phenomenon-04"><div class="card-top"><span class="number">04</span><span class="place">中庭（または共用部）</span></div><h3>影が火をつけてくれる灰皿と線香花火</h3><p>誰も置いてない灰皿が出現。そこを夜に使おうとすると、自分の影が動き出して火をつけてくれる。</p><p>やたら長い時間燃える線香花火がそっと数本置かれていることもある。火が消えない内はもう一人の自分と対話できる。</p></article><article class="card" id="phenomenon-05"><div class="card-top"><span class="number">05</span><span class="place">中庭</span></div><h3>ゲリラ豪雨と中庭の池</h3><p>突然、前が見えないほどのゲリラ豪雨に見舞われ、慌てて中庭を駆け抜ける。ところが数歩進んだところで雨だけがぴたりと止む。激しい雨音はまだ続いているのに、自分の周囲には一滴も落ちてこない。</p><p>耳を澄ますと、その雨音が中庭の一点にだけ集まっている。そちらを見ると、雨が降り続けた場所だけ地面が大きくくぼみ、いつの間にか小さな池ができている。しかも、さっきまで何もなかったはずなのに、その水の中では鯉が何匹ものんびり泳いでいる。</p></article><article class="card" id="phenomenon-06"><div class="card-top"><span class="number">06</span><span class="place">中庭</span></div><h3>焼くものが勝手に増える七輪</h3><p>中庭の廃品みたいなものから七輪を見つけて洗って使えるようにすると、目を離した隙に焼いてるものが勝手に増える七輪だった。</p></article></div></section><section class="area-section" id="backyard" aria-labelledby="heading-backyard"><div class="section-heading"><h2 id="heading-backyard">裏庭</h2><span>4案</span></div><div class="cards"><article class="card" id="phenomenon-07"><div class="card-top"><span class="number">07</span><span class="place">裏庭</span></div><h3>夜だけ開店する裏庭のおでん屋台</h3><p>秋〜冬、夜になるといい匂いとともに小さなおでん屋台が現れる。店主はおらず代金箱が置かれているが、お金を入れる投入口は無く、「今日あった話をひとつ」の張り紙があり、箱に向かって話すと小銭が入ったようなチャリンという音がして支払い完了。</p><p>無言で食べた場合、翌日その人の部屋の扉に「ツケ 一話」と書かれた紙が貼られる。</p></article><article class="card" id="phenomenon-08"><div class="card-top"><span class="number">08</span><span class="place">裏庭</span></div><h3>裏庭にできる一畳だけの雪国</h3><p>真夏でも畳一枚分ほどのエリアだけに雪が積もる。入ると普通に寒く、雪玉を作ったり持ち出したりできる。</p><p>雪玉を投げると見えない壁があるかのように自分に跳ね返ってくる。出入りはできる。</p></article><article class="card" id="phenomenon-09"><div class="card-top"><span class="number">09</span><span class="place">裏庭（古い納屋）</span></div><h3>畑を急成長させる足踏みオルガン</h3><p>納屋の奥に眠る足踏み式オルガン。鍵盤を弾くと裏庭の畑の作物が一瞬で急成長する。</p><p>演奏が上手いと美味しい野菜が実るが、不協和音を奏でるとトマトやピーマンが破裂して服が汚れるなどのシュールな事故が起きる。</p></article><article class="card" id="phenomenon-10"><div class="card-top"><span class="number">10</span><span class="place">裏庭</span></div><h3>地中から出てくる黒電話とメリーさん</h3><p>地面から生えている黒い電話線を引っ張ると、昔の黒電話が地中からズルズル出てくる。</p><p>突然ベルが鳴って受話器を取ると「わたし、メリーさん。いま駅にいるの。」と言われ、その後も伝承通りに何度かかかってくる。</p><p>しかし最終的に「あなたどこに住んでるかわからないの！」と切れられてガチャ切りされる。</p><p>一度ガチャ切りされた以降は、その人が居る場ではベルは鳴らない。ただし暇な時に受話器を取って耳に当てると「…わたし、メリーさん。何の用？」と無駄話にも意外と付き合ってくれる。</p><p>ハキハキ無邪気な少女だったり、吃音のある内気っぽかったり、ギャルっぽかったり、舌足らずな幼い子だったりと、人によって異なる「メリーさん」が出るという説があるが「～～なの」なのが共通して彼女の口癖である。</p></article></div></section><section class="area-section" id="entrance" aria-labelledby="heading-entrance"><div class="section-heading"><h2 id="heading-entrance">玄関・外周</h2><span>4案</span></div><div class="cards"><article class="card" id="phenomenon-11"><div class="card-top"><span class="number">11</span><span class="place">玄関前</span></div><h3>404号室から届く日用品の宅配箱</h3><p>身に覚えのない自分宛ての段ボール箱が部屋宛てに届く。</p><p>開けると「ちょうど必要だったがわざわざ買うほどでもなかった日用品」（輪ゴム、電池、ドライバー等）が入っている。</p><p>送り主の欄には毎回「神狩荘 404」と書かれている。次を期待しても来ず、完全に忘れた頃にまた届く。</p></article><article class="card" id="phenomenon-12"><div class="card-top"><span class="number">12</span><span class="place">1階の玄関付近（神棚）</span></div><h3>22時だけ使える10円駄菓子棚</h3><p>午後10時〜59分だけ一階の玄関付近にある神棚が、駄菓子（チロいチョコ、賽の目キャラメル、色んな味の棒菓子、小さいドーナツやヨーグルトみたいなアレ、さくらんぼ味やメロン味の餅菓子、キャベツ味のスナック小袋、ジャンキーな味の黒サンダークッキーなど）が全品10円で並ぶ商品棚と化している。</p><p>集金箱は無いが1個取ると自分の財布や口座から10円がしっかり消える。</p></article><article class="card" id="phenomenon-13"><div class="card-top"><span class="number">13</span><span class="place">玄関外</span></div><h3>やたら働き者の竹箒</h3><p>共用部に立てかけられた落ち葉清掃用の古い竹箒。一度持つと勝手に動き出し、その後手を離れて勢いよく落ち葉を掃いてくれる。</p><p>しばらく任せていると神狩荘から出て外のものを掃こうとするが敷地内から出た途端に消失し、振り返ると先程の場所に何事もなかったかのように立てかけられている。</p></article><article class="card" id="phenomenon-14"><div class="card-top"><span class="number">14</span><span class="place">敷地の塀の内側</span></div><h3>塀の内側に現れる謎の扉</h3><p>塀の内側に突如として謎の扉が出現している。</p><p>扉を開けると誰もいない海だったりどこかのお祭りだったり好きなところに行けるが、井戸から発見した鍵がなくては開かない。</p><p>鍵を開けた状態の扉は「塀の扉」というフリースペースとして自由に行き来して使える。(管理許可で使える季節モノイベント等用の一時的なフリースペース)</p></article></div></section><section class="area-section" id="indoor" aria-labelledby="heading-indoor"><div class="section-heading"><h2 id="heading-indoor">廊下・屋内</h2><span>3案</span></div><div class="cards"><article class="card" id="phenomenon-15"><div class="card-top"><span class="number">15</span><span class="place">2階廊下</span></div><h3>12時に現れる5合の炊飯器</h3><p>パイプ椅子に置かれている炊飯器。お昼12時になると炊飯の電子音がして必ず炊きたての米が5合位入っている。</p><p>よそえば普通に減るものの、閉めて開けたらまた同じ量が入っており、無限に米が食えそうだが13時になると中身は空になり、温度や水滴も残さず忽然と中身が消えている。</p><p>中に余計な物を入れると熱々の蓋をパカパカさせ突進してきてこちらを食おうとするという噂がある。</p></article><article class="card" id="phenomenon-16"><div class="card-top"><span class="number">16</span><span class="place">廊下</span></div><h3>知らない部屋の忘れ物カゴ</h3><p>「忘れ物入れ」と書かれたカゴ。中には、昔なくした片方の靴下やペン、キーホルダーなど、住人それぞれにとって懐かしい品が紛れ込んでいる。</p><p>持ち帰ろうとしても、まるでカゴの底に縫い付けられているかのように取り出せない。代わりに自分の不要品をひとつ入れると、ようやく目当ての品を持ち帰ることができる。</p><p>カゴに入れた不要品は、後日いつの間にか消えている。</p></article><article class="card" id="phenomenon-17"><div class="card-top"><span class="number">17</span><span class="place">1階廊下</span></div><h3>水曜の夜だけ営業する大浴場（銭湯）</h3><p>廊下が伸びて「ゆ」の暖簾がかかる引き戸の大浴場が毎週水曜の夜だけに現れ、中は広々としたレトロ銭湯に繋がっている。</p><p>番台は無人だが「料金はお気持ち」、とかろうじて読める草書体で張り紙がされており、「いいお湯でしたか？」と実態のない声に聞かれることがある。これに肯定的な言葉を返さないと帰りの扉が勝手に閉まって中からはどう頑張っても開かない。</p></article></div></section><section class="area-section" id="stair" aria-labelledby="heading-stair"><div class="section-heading"><h2 id="heading-stair">外階段・屋上</h2><span>2案</span></div><div class="cards"><article class="card" id="phenomenon-18"><div class="card-top"><span class="number">18</span><span class="place">外階段の下</span></div><h3>100円？自販機</h3><p>それなりに古く見えるが稼働している、メーカー名などの記載はない自販機。表示価格は「100」とだけ書かれているが100円を入れるとボタンが全て点灯する。</p><p>商品がディスプレイされていない箇所のボタンも点灯し、そのボタンを押すと、「いま一番ほしい液体の入った缶やボトル」が出てくる。（水やコーヒーなどの飲料はもちろん、酒、子供の頃に良く飲んでいた廃盤のジュース、アーモンドウォーターと書かれた謎の飲料、切らしてしまった醤油のボトル、液体のり、他）。</p><p>ただし一人で3本以上を買おうとすると、ボタンに「欲張り」と表示されて翌朝まで売り切れになる。たまに当たりでもう一本が出る。</p></article><article class="card" id="phenomenon-19"><div class="card-top"><span class="number">19</span><span class="place">外階段（屋上・屋根）</span></div><h3>満月の夜だけ星が近づく屋根</h3><p>満月の夜だけ外階段が一階分余計に上へ伸び、屋根の上に繋がる。</p><p>手を伸ばせば届く位置に星があり、触ると熱くない光の玉として手のひらに乗る。持ち帰ろうと階段を降りると空へ戻るが、屋根の上なら住人同士で光のキャッチボールができる。</p></article></div></section>
+<div class="tools" id="tools" hidden>
+<label for="search">怪異を探す</label>
+<input id="search" type="search" placeholder="名前・場所・本文で検索" autocomplete="off">
+<button type="button" id="reset-search" hidden>クリア</button>
+<span id="result-count" class="result-count" role="status" aria-live="polite"></span>
+</div>
+<nav id="area-nav" aria-label="場所別の目次"></nav>
+<main>
+<noscript><p class="load-error">この一覧を表示するには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+<div id="phenomena"></div>
+<p id="empty-message" class="empty-message" hidden>該当する怪異は見つかりませんでした。別の言葉で検索してみてください。</p>
 <section class="concept" aria-labelledby="concept-heading"><h2 id="concept-heading">方針・コンセプト</h2><p>ここに掲載している怪異は、危険一辺倒ではなく、人懐っこさや生活感のある不思議な出来事を中心としています。PC（キャラクター）同士の交流やロールプレイのきっかけとして自由にご利用ください。</p></section>
 </main>
-<footer>神狩荘 怪異・現象候補一覧 / 全19案<br><a href="#top">ページの先頭へ戻る</a></footer>
+<footer>神狩荘 怪異・現象候補一覧 / <span id="footer-total"></span><br><a href="#top">ページの先頭へ戻る</a></footer>
 </div>
 </body>
 </html>

@@ -1,0 +1,43 @@
+:root{--bg:#eee9df;--paper:#fffdf8;--ink:#302e28;--muted:#777267;--line:#d6cebf;--accent:#465347}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:linear-gradient(160deg,#e7e1d5 0%,#f6f3ec 45%,#eee9df 100%);color:var(--ink);font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;line-height:1.95;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 32px}
+header{background:var(--paper);border:1px solid var(--line);padding:40px;box-shadow:0 12px 30px #483e3010}
+.eyebrow{font-family:system-ui,sans-serif;font-size:11px;letter-spacing:.18em;color:var(--muted)}
+h1{font-size:clamp(26px,4.7vw,42px);line-height:1.5;letter-spacing:.07em;margin:14px 0 20px}
+.lead{margin:0;max-width:850px;font-size:15px}.total{display:inline-block;margin-top:20px;border:1px solid var(--line);padding:3px 12px;font-size:13px;color:var(--accent)}
+nav{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 36px}
+nav a{display:block;border:1px solid var(--line);background:var(--paper);padding:8px 16px;text-decoration:none;font-size:14px}
+nav a:hover{background:#e3e8df;border-color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.area-section{margin:38px 0 46px;scroll-margin-top:24px}
+.section-heading{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid #bcb4a5;margin:0 0 20px;padding-bottom:10px}
+h2{font-size:23px;letter-spacing:.08em;margin:0}.section-heading>span{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.card{border:1px solid var(--line);background:var(--paper);padding:26px 28px;box-shadow:0 5px 18px #483e3008;scroll-margin-top:24px}
+.card-top{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+.number{font-family:system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;flex:0 0 36px;height:36px;border:1px solid #b9c1b4;color:var(--accent);background:#eef1e9;font-size:13px}
+.place{font-size:12px;color:var(--muted);line-height:1.7}
+h3{font-size:19px;line-height:1.65;margin:0 0 19px;letter-spacing:.02em}
+.card p{font-size:15px;margin:0 0 15px}.card p:last-child{margin-bottom:0}
+.concept{background:#3b4038;color:#f8f4eb;padding:28px 32px;margin:16px 0 28px}
+.concept h2{font-size:20px}.concept p{font-size:14px;margin:14px 0 0}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 0 20px}footer a{display:inline-block;margin-top:12px;text-underline-offset:4px}
+@media(max-width:760px){.wrap{padding:20px 14px}header{padding:26px 23px}.cards{grid-template-columns:1fr;gap:16px}.card{padding:23px 22px}nav{gap:7px;margin-bottom:30px}nav a{padding:7px 11px;font-size:13px}h2{font-size:21px}.area-section{margin:30px 0 36px}.concept{padding:24px}.card p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white}.wrap{max-width:none;padding:0}header,.card{box-shadow:none}nav,footer a{display:none}.cards{display:block}.card{break-inside:avoid;margin-bottom:15px}.concept{background:white;color:black;border:1px solid var(--line)}}
+
+/* 検索欄 */
+[hidden]{display:none!important}
+.tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:25px 0 12px;padding:16px 18px;border:1px solid var(--line);background:var(--paper)}
+.tools label{font-size:13px;color:var(--muted)}
+.tools input{flex:1;min-width:160px;max-width:420px;padding:10px 12px;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:16px;line-height:1.5;border-radius:0}
+.tools input:focus-visible,.tools button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.tools button{border:1px solid var(--line);padding:9px 12px;background:var(--paper);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
+.tools button:hover{background:#e3e8df}
+.result-count{font-size:12px;color:var(--muted);margin-left:auto}
+.empty-message,.load-error{border:1px solid var(--line);background:var(--paper);padding:25px;text-align:center;color:var(--muted)}
+@media(max-width:500px){.tools{padding:13px;gap:9px}.tools label{width:100%}.tools input{max-width:none}.result-count{width:100%;margin-left:0}}
+@media print{.tools{display:none}}
