@@ -43,3 +43,17 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 0 20px}f
 .empty-message,.load-error{border:1px solid var(--line);background:var(--paper);padding:25px;text-align:center;color:var(--muted)}
 @media(max-width:500px){.tools{padding:13px;gap:9px}.tools label{width:100%}.tools input{max-width:none}.result-count{width:100%;margin-left:0}}
 @media print{.tools{display:none}}
+
+
+/* ページの背景を黒に近い灰色に。カードは明るい紙色を維持。 */
+:root{--bg:#242628}
+body{background:var(--bg)}
+.section-heading{color:#f0ece4;border-bottom-color:#555a5d}
+.section-heading>span{color:#c0beb7}
+footer{color:#c0beb7}
+.horror-marker{color:#c0beb7}
+@media print{
+  body{background:white}
+  .section-heading{color:var(--ink);border-bottom-color:var(--line)}
+  .section-heading>span,footer{color:var(--muted)}
+}
