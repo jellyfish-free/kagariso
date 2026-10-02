@@ -82,3 +82,8 @@ body::before{
   .section-heading{color:var(--ink);border-bottom-color:var(--line)}
   .section-heading>span,footer{color:var(--muted)}
 }
+
+
+/* 怪異ごとの枠内をグレーに変更 */
+.card{background:#d2d2d2}
+@media print{.card{background:white}}
