@@ -181,7 +181,7 @@ window.KAGARI_DATA = {
     // 玄関・外周
     {
       area: "entrance",
-      title: "4掲示板：増えていく張り紙",
+      title: "増えていく張り紙",
       location: "玄関前",
       paragraphs: [
         "掲示板に、身に覚えのない注意書きや禁止事項が増えていくことがある",
