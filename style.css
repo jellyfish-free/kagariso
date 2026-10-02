@@ -57,3 +57,28 @@ footer{color:#c0beb7}
   .section-heading{color:var(--ink);border-bottom-color:var(--line)}
   .section-heading>span,footer{color:var(--muted)}
 }
+
+
+/* 固定背景：スクロールしても画像は画面に固定されます。 */
+body{background:#242628}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)),url("./background.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+.wrap{position:relative;z-index:1}
+.section-heading{color:#f0ece4;border-bottom-color:#656960}
+.section-heading>span,footer,.horror-marker{color:#d0cec7}
+@media(max-width:760px){body::before{background-position:32% center}}
+@media print{
+  body{background:white}
+  body::before{display:none}
+  .section-heading{color:var(--ink);border-bottom-color:var(--line)}
+  .section-heading>span,footer{color:var(--muted)}
+}
