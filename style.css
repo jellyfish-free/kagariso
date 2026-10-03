@@ -136,8 +136,14 @@ body::before{
 
 .card-image {
   display: block;
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 8px;
-  margin: 18px 0 0;
+  margin: 18px 0 auto;
+}
+
+.card-with-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

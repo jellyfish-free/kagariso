@@ -186,14 +186,15 @@ item.paragraphs.forEach(p => {
   card.append(element("p", "", p));
 });
 
-// 画像の指定があれば、本文の下に表示
+// 画像の指定があれば、怪異の枠の背景に表示
 if (item.image) {
-  const image = element("img", "card-image");
-  image.src = item.image;
-  image.alt = item.imageAlt || item.title;
-  image.loading = "lazy";
-  image.decoding = "async";
-  card.append(image);
+  card.classList.add("card-with-image");
+
+  card.style.backgroundImage =
+    `linear-gradient(
+      rgba(210, 210, 210, 0.85),
+      rgba(210, 210, 210, 0.85)
+    ), url(${JSON.stringify(item.image)})`;
 }
 
 // 完成した怪異の枠を一覧へ追加
