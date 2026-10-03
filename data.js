@@ -243,7 +243,7 @@ window.KAGARI_DATA = {
       area: "entrance",
       title: "やたら働き者の竹箒",
       location: "玄関外",
-      image: "C:\Users\i-lov\OneDrive\デスクトップ\神狩荘\image/takebo-ki.png",
+      image: "image/takebo-ki.png",
       imageAlt: "働き者の竹箒",
       paragraphs: [
         "共用部に立てかけられた落ち葉清掃用の古い竹箒。一度持つと勝手に動き出し、その後手を離れて勢いよく落ち葉を掃いてくれる。",
