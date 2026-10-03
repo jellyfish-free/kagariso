@@ -181,14 +181,23 @@ const linkTools = element("div", "card-link-tools");
 linkTools.append(copyButton, copyMessage);
 top.append(linkTools);
 
+// 本文を表示
+item.paragraphs.forEach(p => {
+  card.append(element("p", "", p));
+});
 
+// 画像の指定があれば、本文の下に表示
+if (item.image) {
+  const image = element("img", "card-image");
+  image.src = item.image;
+  image.alt = item.imageAlt || item.title;
+  image.loading = "lazy";
+  image.decoding = "async";
+  card.append(image);
+}
 
-
-        item.paragraphs.forEach(p => {
-          card.append(element("p", "", p));
-        });
-
-        grid.append(card);
+// 完成した怪異の枠を一覧へ追加
+grid.append(card);
 
         cards.push({
           node: card,
