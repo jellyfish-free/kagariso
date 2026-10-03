@@ -107,3 +107,29 @@ body::before{
   }
 }
 
+/* 番号・場所・コピーボタンを同じ行に並べる */
+.card-top {
+  align-items: center;
+}
+
+.card-top .place {
+  flex: 1;
+  min-width: 0;
+}
+
+/* コピーボタンを右端へ */
+.card-link-tools {
+  position: relative;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-bottom: 0;
+}
+
+/* コピー完了の文字はボタンの下に表示 */
+.copy-message {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  white-space: nowrap;
+  font-size: 11px;
+}
