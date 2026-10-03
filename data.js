@@ -120,6 +120,8 @@ window.KAGARI_DATA = {
       area: "courtyard",
       title: "焼くものが勝手に増える七輪",
       location: "中庭",
+      image: "images/sitirin.png",
+      imageAlt: "七輪",
       paragraphs: [
         "中庭の廃品みたいなものから七輪を見つけて洗って使えるようにすると、目を離した隙に焼いてるものが勝手に増える七輪だった。",
       ],
@@ -154,6 +156,8 @@ window.KAGARI_DATA = {
       area: "backyard",
       title: "夜だけ開店する裏庭のおでん屋台",
       location: "裏庭",
+      image: "images/oden.png",
+      imageAlt: "おでん",
       paragraphs: [
         "秋〜冬、夜になるといい匂いとともに小さなおでん屋台が現れる。店主はおらず代金箱が置かれているが、お金を入れる投入口は無く、「今日あった話をひとつ」の張り紙があり、箱に向かって話すと小銭が入ったようなチャリンという音がして支払い完了。",
         "無言で食べた場合、翌日その人の部屋の扉に「ツケ 一話」と書かれた紙が貼られる。",
@@ -207,6 +211,8 @@ window.KAGARI_DATA = {
       area: "entrance",
       title: "井戸から出た鍵",
       location: "不明",
+      image: "images/kagi.png",
+      imageAlt: "鍵",
       paragraphs: [
         "鍵を使えば、扉ができる。",
         "扉を開ければ、そこには「その人のための場所」がある。",
@@ -320,6 +326,8 @@ window.KAGARI_DATA = {
       area: "indoor",
       title: "水曜の夜だけ営業する大浴場（銭湯）",
       location: "1階廊下",
+      image: "images/yu.png",
+      imageAlt: "銭湯",
       paragraphs: [
         "廊下が伸びて「ゆ」の暖簾がかかる引き戸の大浴場が毎週水曜の夜だけに現れ、中は広々としたレトロ銭湯に繋がっている。",
         "番台は無人だが「料金はお気持ち」、とかろうじて読める草書体で張り紙がされており、「いいお湯でしたか？」と実態のない声に聞かれることがある。これに肯定的な言葉を返さないと帰りの扉が勝手に閉まって中からはどう頑張っても開かない。",
