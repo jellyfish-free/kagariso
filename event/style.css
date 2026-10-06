@@ -57,3 +57,121 @@ footer { text-align:center; color:#ad9c85; font-size:12px; padding:28px 16px; }
 .result { position:relative; top:auto; left:auto; transform:none; width:calc(100% - 24px); max-height:none; margin:16px auto; }
 }
 @media(prefers-reduced-motion:reduce) { *,*:before,*:after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }
+
+/* 結果がじわじわと浮かび上がる */
+#result:not([hidden]) {
+  animation: result-appear 2.5s ease-out both;
+}
+
+@keyframes result-appear {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* 動きを減らす設定の人には、すぐ表示 */
+@media (prefers-reduced-motion: reduce) {
+  #result:not([hidden]) {
+    animation: none;
+  }
+}
+
+/* 結果を古い紙の上に表示 */
+#result {
+  background: url("./images/paper.png") center / 100% 100% no-repeat;
+  background-color: transparent;
+
+  border: none;
+  box-shadow: none;
+  color: #352a22;
+
+  /* 文字が紙の破れた縁に重ならないようにする */
+  padding: 50px 55px;
+}
+
+/* スマホでは余白を少し小さくする */
+@media (max-width: 600px) {
+  #result {
+    padding: 35px 30px;
+  }
+}
+
+/* 結果が表示されている間、背景の画像を暗くする */
+.box-scene:has(#result:not([hidden])) .scene-image {
+  filter: brightness(0.2);
+  transition: filter 1s ease;
+}
+
+/* 暗転と、結果表示後の背景の明るさ */
+#lottery-box {
+  --darkness: 0.08;       /* 「何かに触れた」の暗さ */
+  --result-light: 0.35;   /* 結果表示時の背景の明るさ */
+}
+
+/* 「何かに触れた」の画面 */
+#lottery-box.drawing .scene-image {
+  filter: brightness(var(--darkness));
+  transition: none;
+}
+
+/* 暗転中は、案内文を画像に重ねる */
+#reveal {
+  background: transparent;
+}
+
+/* 結果が出ると、背景が4秒かけて浮かび上がる */
+#lottery-box:has(#result:not([hidden])) .scene-image {
+  animation: background-appear 3s ease-out both;
+  transition: none;
+}
+
+@keyframes background-appear {
+  from {
+    filter: brightness(var(--darkness));
+  }
+
+  to {
+    filter: brightness(var(--result-light));
+  }
+}
+
+/* 結果の紙も同じ時間で浮かび上がる */
+#result:not([hidden]) {
+  animation: result-appear 4s ease-out both;
+}
+
+@keyframes result-appear {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* 動きを減らす設定への対応 */
+@media (prefers-reduced-motion: reduce) {
+  #lottery-box:has(#result:not([hidden])) .scene-image {
+    animation: none;
+    filter: brightness(var(--result-light));
+  }
+
+  #result:not([hidden]) {
+    animation: none;
+  }
+}
+/* 演出中と結果表示中は、右手・左手のボタンを隠す */
+#lottery-box.drawing .hands,
+#lottery-box:has(#result:not([hidden])) .hands {
+  visibility: hidden;
+  pointer-events: none;
+}
