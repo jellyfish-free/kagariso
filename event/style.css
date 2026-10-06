@@ -1,0 +1,59 @@
+/* 色を変える場合は、最初の変数を変更してください。 */
+:root { --bg:#191713; --paper:#e9dfc8; --ink:#352a22; --text:#f1e6d0; --accent:#763c2d; }
+* { box-sizing:border-box; }
+[hidden] { display:none !important; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:"Yu Mincho","Hiragino Mincho ProN",serif; line-height:1.8; }
+button,a { -webkit-tap-highlight-color:transparent; }
+button { font:inherit; cursor:pointer; color:var(--text); background:#332a23; border:1px solid #b59b76; border-radius:4px; padding:10px 22px; }
+button:hover:not(:disabled) { background:#574131; }
+button:focus-visible,a:focus-visible { outline:3px solid #e7bc77; outline-offset:4px; }
+button:disabled { opacity:.5; cursor:default; }
+.site-header { max-width:1200px; margin:auto; display:flex; justify-content:space-between; padding:14px 24px; letter-spacing:.14em; }
+.site-header a { color:inherit; text-decoration:none; }
+main { max-width:1200px; margin:auto; }
+.scene { position:relative; overflow:hidden; isolation:isolate; }
+.scene-image { width:100%; display:block; height:auto; }
+.entrance:after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#080705b8,transparent 80%); z-index:-1; }
+.entrance .scene-image { position:relative; z-index:-2; }
+.entrance-copy { position:absolute; left:6%; top:12%; max-width:470px; text-shadow:0 2px 8px #000; }
+h1 { font-weight:500; font-size:clamp(30px,5vw,64px); line-height:1.45; letter-spacing:.15em; margin:12px 0; }
+h1 span { font-size:.65em; }
+.eyebrow { font-size:13px; letter-spacing:.15em; }
+.primary { margin-top:12px; background:#282018db; padding:13px 32px; }
+.screen-heading { text-align:center; padding:16px; }
+.screen-heading h2 { font-weight:500; font-size:clamp(22px,3vw,32px); margin:4px 0; }
+#daily-status { margin:8px 0; font-size:14px; color:#d5c6ac; }
+.hands { position:absolute; inset:0; pointer-events:none; }
+.hands button { position:absolute; top:46%; transform:translate(-50%,-50%); width:23%; min-height:55px; pointer-events:auto; background:#211711dc; box-shadow:0 3px 22px #0009; }
+.hands button:first-child { left:34%; }
+.hands button:last-child { left:66%; }
+.reveal { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#080605ed; padding:24px; }
+.reveal p { font-size:clamp(18px,3vw,28px); letter-spacing:.12em; }
+.reveal span { color:#b6a990; font-size:14px; }
+.drawing .scene-image { filter:brightness(.3); transition:filter .6s; }
+.result { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:min(86%,620px); max-height:92%; overflow:auto; background:var(--paper); color:var(--ink); padding:clamp(20px,4vw,42px); border:1px solid #b49c76; box-shadow:0 15px 80px #000c; text-align:center; }
+.result h2 { font-weight:500; margin:10px 0; font-size:clamp(22px,3vw,30px); }
+#result-description { white-space:pre-wrap; text-align:left; }
+.result-date { font-size:12px; color:#77634f; }
+.result-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.result button { background:var(--ink); }
+#copy-status { display:block; font-size:13px; min-height:24px; }
+.below-box,.history-section { text-align:center; padding:18px; }
+.below-box button { margin:5px; }
+#draw-message:empty { display:none; }
+#history { max-width:720px; margin:24px auto; text-align:left; }
+.history-item { border-bottom:1px solid #655442; padding:18px 0; }
+.history-item small { color:#c1ab8c; }
+.history-item h3 { margin:8px 0; }
+.history-item p { white-space:pre-wrap; }
+footer { text-align:center; color:#ad9c85; font-size:12px; padding:28px 16px; }
+@media(max-width:600px) {
+.site-header { padding:12px 16px; font-size:13px; }
+.entrance-copy { position:relative; left:auto; top:auto; max-width:none; padding:24px; text-align:center; background:#211b15; }
+.entrance:after { display:none; }
+.entrance-copy p { font-size:14px; }
+.hands button { width:29%; padding:8px 3px; font-size:13px; min-height:44px; }
+.box-scene:has(.result:not([hidden])) { overflow:visible; }
+.result { position:relative; top:auto; left:auto; transform:none; width:calc(100% - 24px); max-height:none; margin:16px auto; }
+}
+@media(prefers-reduced-motion:reduce) { *,*:before,*:after { transition:none!important; animation:none!important; scroll-behavior:auto!important; } }

@@ -1,1 +1,29 @@
-
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#191713"><title>神狩荘｜おたのしみくじ</title>
+<link rel="stylesheet" href="./style.css"><script src="./data.js" defer></script><script src="./script.js" defer></script>
+</head>
+<body>
+<header class="site-header"><a href="../">神狩荘</a><span>おたのしみくじ</span></header>
+<main>
+<section id="entrance" class="scene entrance" aria-labelledby="entrance-title">
+<img class="scene-image" src="./images/entrance.png" alt="神狩荘の門の前に置かれた、おたのしみくじの箱" fetchpriority="high">
+<div class="entrance-copy"><p class="eyebrow">門の向こうに、今日のおたのしみ。</p><h1 id="entrance-title">神狩荘<br><span>おたのしみくじ</span></h1><p>いつの間にか置かれた、不思議な箱。<br>何が出るかは、手を入れてから。</p><button id="enter-button" class="primary" type="button">箱に近づく</button></div>
+</section>
+<section id="lottery-screen" hidden aria-labelledby="lottery-title">
+<div class="screen-heading"><p class="eyebrow">右手でも、左手でも、お好きなほうを。</p><h2 id="lottery-title" tabindex="-1">どちらの手を入れますか？</h2><p id="daily-status" role="status">くじを準備しています。</p></div>
+<div class="scene box-scene" id="lottery-box">
+<img class="scene-image" src="./images/lottery-box.png" alt="手を入れる二つの穴が開いた、錆びたくじ箱">
+<div class="hands"><button type="button" data-hand="右手" disabled>右手を入れる</button><button type="button" data-hand="左手" disabled>左手を入れる</button></div>
+<div id="reveal" class="reveal" hidden><p id="reveal-text">箱の中で、何かが指先に触れた。</p><span>そっと、取り出してみる。</span></div>
+<section id="result" class="result" aria-labelledby="result-title" hidden tabindex="-1"><p class="eyebrow" id="result-category"></p><h2 id="result-title"></h2><p id="result-description"></p><p id="result-date" class="result-date"></p><div class="result-actions"><button id="copy-result" type="button">結果をコピー</button><button id="close-result" type="button">箱に戻る</button></div><span id="copy-status" role="status"></span></section>
+</div>
+<div class="below-box"><p id="draw-message" role="status"></p><button id="today-button" type="button" hidden>今日のくじを見る</button><button id="back-entrance" type="button">入口に戻る</button></div>
+<section class="history-section"><button id="history-toggle" type="button" aria-expanded="false" aria-controls="history">これまでのくじを見る</button><div id="history" hidden><h2>くじの記録</h2><div id="history-list"></div></div></section>
+</section>
+<noscript>くじを引くには、ブラウザのJavaScriptを有効にしてください。</noscript>
+</main>
+<footer>くじは一日一回。次のくじは日本時間の午前0時から。<br>結果はこのブラウザに保存されます。<br>景品や出来事は、PC同士の交流やRPにご利用ください。</footer>
+</body></html>
