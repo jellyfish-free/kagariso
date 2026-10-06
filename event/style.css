@@ -175,3 +175,11 @@ footer { text-align:center; color:#ad9c85; font-size:12px; padding:28px 16px; }
   visibility: hidden;
   pointer-events: none;
 }
+
+/* 景品タイトル：中央寄せ・文字を大きくする */
+#result-description strong {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

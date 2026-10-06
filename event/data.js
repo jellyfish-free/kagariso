@@ -21,7 +21,7 @@ window.LOTTERY_CONFIG = {
 
   // 以前のサイトと同じく、取得済みの項目は再登場しません。
   // 繰り返し同じものが当たるようにする場合は true。
-  allowDuplicates: false,
+  allowDuplicates: true,
 };
 
 window.REQUEST_DATA = [
