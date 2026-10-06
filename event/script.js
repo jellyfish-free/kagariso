@@ -174,7 +174,7 @@
   function refresh() {
     if (testMode) {
       $("#daily-status").textContent =
-        "テストモード：何度でも引けます。景品は1つか2つ出ます。";
+        "テストモード：何度でも引けます。";
 
       handButtons.forEach(button => {
         button.disabled = busy;
@@ -193,7 +193,7 @@
         "本日のくじは、もう引きました。";
     } else if (available.length > 0) {
       $("#daily-status").textContent =
-        "本日のくじは、まだ引いていません。景品は1つか2つ出ます。";
+        "本日のくじは、まだ引いていません。";
     } else {
       $("#daily-status").textContent =
         "すべてのくじを引き終えました。";
