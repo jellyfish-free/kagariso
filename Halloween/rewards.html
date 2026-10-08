@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>神狩荘 Halloween 景品一覧</title>
+
+  <link
+    rel="stylesheet"
+    href="rewards.css"
+  >
+</head>
+
+<body>
+
+  <main class="reward-gallery">
+
+    <header class="gallery-header">
+
+      <div class="gallery-eyebrow">
+        神狩荘 Halloween
+      </div>
+
+      <h1>
+        景品一覧
+      </h1>
+
+      <p class="gallery-description">
+        ハロウィンイベントでもらえる景品一覧です。
+      </p>
+
+      <div class="gallery-count">
+        全
+        <strong id="rewardCount">
+          0
+        </strong>
+        種類
+      </div>
+
+    </header>
+
+
+    <section class="gallery-controls">
+
+      <input
+        type="search"
+        id="rewardSearch"
+        class="reward-search"
+        placeholder="景品名を検索"
+        autocomplete="off"
+      >
+
+
+      <div
+        class="category-buttons"
+        id="categoryButtons"
+      >
+
+        <button
+          type="button"
+          class="category-button active"
+          data-category="all"
+        >
+          すべて
+        </button>
+
+        <button
+          type="button"
+          class="category-button"
+          data-category="suit"
+        >
+          衣装
+        </button>
+
+        <button
+          type="button"
+          class="category-button"
+          data-category="sweets"
+        >
+          お菓子
+        </button>
+
+        <button
+          type="button"
+          class="category-button"
+          data-category="goods"
+        >
+          グッズ
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="reward-grid"
+      id="rewardGrid"
+    ></section>
+
+
+    <div
+      class="empty-message"
+      id="emptyMessage"
+      hidden
+    >
+      該当する景品がありません。
+    </div>
+
+
+    <footer class="gallery-footer">
+
+    </footer>
+
+  </main>
+
+
+  <!--
+    景品データ
+    必ず rewards.js より先に読み込む
+  -->
+  <script src="data.js"></script>
+
+  <script src="rewards.js"></script>
+
+</body>
+</html>
