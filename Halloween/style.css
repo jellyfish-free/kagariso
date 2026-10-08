@@ -1364,3 +1364,76 @@ button:disabled {
   }
 
 }
+
+.dialogue-insert-image-wrap {
+  margin: 14px 0;
+  text-align: center;
+}
+
+.dialogue-insert-image {
+  display: block;
+  margin: 0 auto;
+
+  max-width: 100%;
+  width: min(320px, 100%);
+
+  height: auto;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 24px
+    rgba(0, 0, 0, 0.32);
+}
+
+.dialogue-message {
+  line-height: 1.9;
+}
+
+/* ========================================
+   エンディング後のセリフ背景
+======================================== */
+
+.dialogue-halloween {
+  position: relative;
+
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(10, 7, 15, 0.48),
+      rgba(10, 7, 15, 0.62)
+    ),
+    url("images/happy-halloween-message.png");
+
+  background-size: 80% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  border-radius: 18px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  line-height: 2;
+
+  text-shadow:
+    0 2px 8px
+    rgba(0, 0, 0, 0.9);
+}

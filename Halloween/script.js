@@ -2177,8 +2177,7 @@ function showEnding() {
 なくしていたものを
 全部取り戻すことができました。
 
-これで神狩荘の
-ハロウィンの準備も完璧です。
+これでハロウィンの準備も完璧です。
 
 「ずっと探してくれて
 ありがとう！」
@@ -2393,8 +2392,9 @@ function showDailyRewardTop() {
 「なくしものは
 全部見つかったけど……
 
-今日も神狩荘に
-遊びに来てくれたから、
+今日もぼくたちに
+会いに来てくれてありがとう！
+遊びに来てくれたから
 
 ぼくたちから
 お礼をひとつあげるね！」
@@ -2537,16 +2537,10 @@ function showDailyReward() {
   </h2>
 
 
-  <div class="dialogue">
-「はい！
-
-今日も来てくれて
-ありがとう。
-
-また明日も
+<div class="dialogue dialogue-halloween">
+「また明日も
 遊びにきてね！」
-  </div>
-
+</div>
 
   <div class="reward-box">
 
