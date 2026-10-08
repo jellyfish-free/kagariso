@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>神狩荘 Halloween</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <main
+    class="game"
+    id="game"
+  >
+
+    <header class="game-header">
+
+      <h1>
+        神狩荘 Halloween
+      </h1>
+
+      <p class="subtitle">
+        おばけちゃんのなくしもの
+      </p>
+
+      <div
+        class="test-mode"
+        id="testModeLabel"
+        hidden
+      >
+        TEST MODE
+      </div>
+
+    </header>
+
+
+    <section
+      class="progress-panel"
+      id="progressPanel"
+    >
+
+      <div class="progress-row">
+
+        <span>
+          見つけたなくしもの
+        </span>
+
+        <strong id="totalProgress">
+          0 / 10
+        </strong>
+
+      </div>
+
+
+      <div class="progress-bar">
+
+        <div
+          class="progress-fill"
+          id="progressFill"
+        ></div>
+
+      </div>
+
+
+      <div class="ghost-progress">
+
+        <span id="redProgress">
+          🔴 0 / 5
+        </span>
+
+        <span id="blueProgress">
+          🔵 0 / 5
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <section
+      id="screen"
+    ></section>
+
+  </main>
+
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

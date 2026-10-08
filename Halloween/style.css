@@ -1,0 +1,1366 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(7, 5, 12, 0.68),
+      rgba(7, 5, 12, 0.78)
+    ),
+    url("images/site-bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #f7f4fb;
+
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+}
+
+
+/* ========================================
+   メイン
+======================================== */
+
+.game {
+  width: 100%;
+  max-width: 940px;
+
+  padding: 32px;
+
+  background:
+    rgba(18, 15, 25, 0.96);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 70px
+    rgba(0, 0, 0, 0.5);
+}
+
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+.game-header {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 6px;
+
+  font-size: 30px;
+
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  margin: 8px 0 20px;
+
+  font-size: 27px;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+
+  color: #b8b0c3;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   TEST MODE
+======================================== */
+
+.test-mode {
+  margin-bottom: 18px;
+
+  padding: 8px 12px;
+
+  border:
+    1px solid
+    rgba(255, 160, 160, 0.4);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 70, 70, 0.08);
+
+  color: #ffb0b0;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* ========================================
+   進行状況
+======================================== */
+
+.progress-panel {
+  margin-bottom: 24px;
+
+  padding: 14px 16px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+}
+
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+
+  color: #d0cad7;
+
+  font-size: 13px;
+}
+
+.progress-row strong {
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 7px;
+
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff7f8d,
+      #779dff
+    );
+
+  border-radius: inherit;
+
+  transition:
+    width 0.35s ease;
+}
+
+.ghost-progress {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  color: #b8b0c3;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   基本画面
+======================================== */
+
+.screen {
+  text-align: center;
+}
+
+.status {
+  margin-bottom: 18px;
+
+  color: #cac3d2;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.dialogue {
+  min-height: 140px;
+
+  margin-bottom: 24px;
+
+  padding: 22px;
+
+  text-align: left;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 16px;
+
+  line-height: 1.9;
+
+  white-space: pre-line;
+}
+
+.small {
+  margin-top: 18px;
+
+  color: #aaa3b2;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   おばけ登場アニメーション
+======================================== */
+
+@keyframes ghostAppear {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(18px)
+      scale(0.94);
+
+    filter:
+      brightness(0.8)
+      blur(3px);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      translateY(-2px)
+      scale(1.015);
+
+    filter:
+      brightness(1.04)
+      blur(0);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    filter:
+      brightness(1)
+      blur(0);
+  }
+
+}
+
+
+/* ========================================
+   TOP画像の弱い脈動
+======================================== */
+
+@keyframes ghostGlowPulse {
+
+  0%,
+  100% {
+    filter:
+      brightness(1)
+      drop-shadow(
+        0 0 10px
+        rgba(255, 255, 255, 0.08)
+      )
+      drop-shadow(
+        0 0 22px
+        rgba(180, 190, 255, 0.08)
+      );
+  }
+
+  50% {
+    filter:
+      brightness(1.035)
+      drop-shadow(
+        0 0 14px
+        rgba(255, 255, 255, 0.13)
+      )
+      drop-shadow(
+        0 0 32px
+        rgba(185, 195, 255, 0.12)
+      );
+  }
+
+}
+
+
+/* ========================================
+   赤単体のおばけ発光
+======================================== */
+
+@keyframes redGhostGlow {
+
+  0%,
+  100% {
+    filter:
+      brightness(1)
+      drop-shadow(
+        0 0 8px
+        rgba(255, 120, 90, 0.08)
+      )
+      drop-shadow(
+        0 0 18px
+        rgba(255, 90, 70, 0.06)
+      );
+  }
+
+  50% {
+    filter:
+      brightness(1.05)
+      drop-shadow(
+        0 0 16px
+        rgba(255, 140, 100, 0.18)
+      )
+      drop-shadow(
+        0 0 30px
+        rgba(255, 90, 70, 0.15)
+      );
+  }
+
+}
+
+
+/* ========================================
+   青単体のおばけ発光
+======================================== */
+
+@keyframes blueGhostGlow {
+
+  0%,
+  100% {
+    filter:
+      brightness(1)
+      drop-shadow(
+        0 0 8px
+        rgba(90, 140, 255, 0.08)
+      )
+      drop-shadow(
+        0 0 18px
+        rgba(80, 120, 255, 0.06)
+      );
+  }
+
+  50% {
+    filter:
+      brightness(1.05)
+      drop-shadow(
+        0 0 16px
+        rgba(110, 160, 255, 0.19)
+      )
+      drop-shadow(
+        0 0 30px
+        rgba(80, 120, 255, 0.16)
+      );
+  }
+
+}
+
+
+/* ========================================
+   TOPメッセージ
+======================================== */
+
+.ghost-select-message {
+  margin-bottom: 18px;
+
+  color: #d3ccd9;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   TOP画像
+======================================== */
+
+.ghost-select-scene {
+  position: relative;
+
+  width: 100%;
+
+  margin: 18px auto 22px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.42);
+
+  animation:
+    ghostAppear
+    0.9s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    both;
+}
+
+.ghost-select-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  user-select: none;
+
+  pointer-events: none;
+
+  animation:
+    ghostGlowPulse
+    4.5s
+    ease-in-out
+    infinite;
+
+  transition:
+    filter 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* ========================================
+   TOPクリック領域
+======================================== */
+
+.ghost-hotspot {
+  position: absolute;
+
+  top: 0;
+
+  width: 50%;
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.ghost-hotspot:hover {
+  transform: none;
+}
+
+.ghost-hotspot.red {
+  left: 0;
+}
+
+.ghost-hotspot.blue {
+  right: 0;
+}
+
+.ghost-hotspot:disabled {
+  cursor: default;
+
+  background:
+    rgba(0, 0, 0, 0.36);
+}
+
+
+/* ========================================
+   赤側ホバー
+======================================== */
+
+.ghost-hotspot.red:hover {
+  background:
+    radial-gradient(
+      circle at 42% 55%,
+      rgba(255, 110, 95, 0.22) 0%,
+      rgba(255, 80, 70, 0.10) 24%,
+      transparent 52%
+    );
+
+  box-shadow:
+    inset 0 0 100px
+    rgba(255, 70, 55, 0.10);
+}
+
+.ghost-select-scene:has(
+  .ghost-hotspot.red:hover
+)
+.ghost-select-image {
+  transform:
+    scale(1.012);
+
+  filter:
+    brightness(1.08)
+    saturate(1.06)
+    drop-shadow(
+      -18px 8px 28px
+      rgba(255, 95, 70, 0.32)
+    );
+}
+
+
+/* ========================================
+   青側ホバー
+======================================== */
+
+.ghost-hotspot.blue:hover {
+  background:
+    radial-gradient(
+      circle at 58% 55%,
+      rgba(105, 150, 255, 0.23) 0%,
+      rgba(70, 110, 255, 0.10) 24%,
+      transparent 52%
+    );
+
+  box-shadow:
+    inset 0 0 100px
+    rgba(75, 115, 255, 0.10);
+}
+
+.ghost-select-scene:has(
+  .ghost-hotspot.blue:hover
+)
+.ghost-select-image {
+  transform:
+    scale(1.012);
+
+  filter:
+    brightness(1.08)
+    saturate(1.06)
+    drop-shadow(
+      18px 8px 28px
+      rgba(80, 130, 255, 0.34)
+    );
+}
+
+
+/* ========================================
+   TOPラベル
+======================================== */
+
+.ghost-select-label {
+  position: absolute;
+
+  bottom: 18px;
+
+  min-width: 160px;
+
+  padding: 10px 16px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  border-radius: 999px;
+
+  background:
+    rgba(8, 8, 15, 0.74);
+
+  backdrop-filter:
+    blur(8px);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  pointer-events: none;
+
+  z-index: 3;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ghost-select-label.red {
+  left: 25%;
+
+  transform:
+    translateX(-50%);
+}
+
+.ghost-select-label.blue {
+  right: 25%;
+
+  transform:
+    translateX(50%);
+}
+
+
+/* ========================================
+   赤ラベルホバー
+======================================== */
+
+.ghost-select-scene:has(
+  .ghost-hotspot.red:hover
+)
+.ghost-select-label.red {
+  background:
+    rgba(125, 35, 35, 0.85);
+
+  box-shadow:
+    0 0 22px
+    rgba(255, 100, 80, 0.3);
+
+  transform:
+    translateX(-50%)
+    scale(1.035);
+}
+
+
+/* ========================================
+   青ラベルホバー
+======================================== */
+
+.ghost-select-scene:has(
+  .ghost-hotspot.blue:hover
+)
+.ghost-select-label.blue {
+  background:
+    rgba(35, 50, 125, 0.85);
+
+  box-shadow:
+    0 0 22px
+    rgba(90, 140, 255, 0.32);
+
+  transform:
+    translateX(50%)
+    scale(1.035);
+}
+
+
+/* ========================================
+   COMPLETE表示
+======================================== */
+
+.ghost-complete-mark {
+  position: absolute;
+
+  top: 18px;
+
+  padding: 8px 13px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(8, 8, 15, 0.82);
+
+  color: #dcffd8;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+.ghost-complete-mark.red {
+  left: 25%;
+
+  transform:
+    translateX(-50%);
+}
+
+.ghost-complete-mark.blue {
+  right: 25%;
+
+  transform:
+    translateX(50%);
+}
+
+
+/* ========================================
+   赤・青単体画像
+======================================== */
+
+.ghost-figure {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 12px auto 22px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 0, 0, 0.38);
+
+  animation:
+    ghostAppear
+    0.85s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    both;
+}
+
+.ghost-figure img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.ghost-figure.red img {
+  animation:
+    redGhostGlow
+    4.8s
+    ease-in-out
+    infinite;
+}
+
+.ghost-figure.blue img {
+  animation:
+    blueGhostGlow
+    4.8s
+    ease-in-out
+    infinite;
+}
+
+.ghost-name {
+  margin-bottom: 12px;
+
+  font-size: 19px;
+  font-weight: bold;
+}
+
+
+/* ========================================
+   選択肢
+======================================== */
+
+.choices {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+button {
+  width: 100%;
+  min-height: 54px;
+
+  padding: 13px 16px;
+
+  border: 0;
+  border-radius: 14px;
+
+  background: #f3efff;
+  color: #1d1922;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    opacity 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+button:hover {
+  transform:
+    translateY(-2px);
+
+  background: #ffffff;
+}
+
+button:focus-visible {
+  outline:
+    3px solid
+    rgba(210, 180, 255, 0.7);
+
+  outline-offset: 3px;
+}
+
+button:disabled {
+  opacity: 0.35;
+
+  cursor: default;
+
+  transform: none;
+}
+
+.primary-button {
+  background: #d9ccff;
+}
+
+.primary-button:hover {
+  background: #e7dfff;
+}
+
+.secondary-button {
+  background: #56505f;
+  color: #ffffff;
+}
+
+.secondary-button:hover {
+  background: #686171;
+}
+
+
+/* ========================================
+   最終回答
+   画像なし・文字だけ
+======================================== */
+
+.answer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.answer-text {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* ========================================
+   景品欄
+
+   背景画像：
+   images/景品背景.png
+======================================== */
+
+.reward-box {
+  position: relative;
+
+  margin-top: 24px;
+
+  padding:
+    30px
+    24px
+    32px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.24);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      rgba(13, 9, 18, 0.68),
+      rgba(13, 9, 18, 0.76)
+    ),
+    url("images/reward-bg.png");
+
+  background-size: cover;
+
+  background-position:
+    center center;
+
+  background-repeat:
+    no-repeat;
+
+  box-shadow:
+    inset 0 0 50px
+    rgba(0, 0, 0, 0.18),
+    0 12px 30px
+    rgba(0, 0, 0, 0.28);
+
+  line-height: 1.8;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 2px 8px
+    rgba(0, 0, 0, 0.75);
+}
+
+
+/* 背景の上に内容を置く */
+
+.reward-box > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* ========================================
+   景品そのもの
+======================================== */
+
+.reward-item {
+  margin-top: 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding:
+    20px
+    18px;
+
+  border-radius: 18px;
+
+  background:
+    rgba(8, 6, 12, 0.38);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  backdrop-filter:
+    blur(4px);
+
+  -webkit-backdrop-filter:
+    blur(4px);
+}
+
+
+/* ========================================
+   景品画像
+======================================== */
+
+.reward-image {
+  display: block;
+
+  width: auto;
+  max-width: 280px;
+
+  height: auto;
+  max-height: 280px;
+
+  object-fit: contain;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.42);
+
+  filter:
+    drop-shadow(
+      0 8px 14px
+      rgba(0, 0, 0, 0.28)
+    );
+
+  animation:
+    rewardAppear
+    0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    both;
+}
+
+
+/* ========================================
+   景品名
+======================================== */
+
+.reward-name {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  letter-spacing:
+    0.04em;
+
+  line-height: 1.5;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 5px
+    rgba(0, 0, 0, 0.95),
+    0 0 14px
+    rgba(0, 0, 0, 0.6);
+}
+
+
+/* ========================================
+   景品登場アニメーション
+======================================== */
+
+@keyframes rewardAppear {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(12px)
+      scale(0.88);
+  }
+
+  65% {
+    opacity: 1;
+
+    transform:
+      translateY(-2px)
+      scale(1.035);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* ========================================
+   景品画像保存ボタン
+======================================== */
+
+.reward-download-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 180px;
+  min-height: 46px;
+
+  padding:
+    10px
+    20px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.28);
+
+  border-radius: 999px;
+
+  background:
+    rgba(217, 204, 255, 0.94);
+
+  color: #211b27;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  text-shadow: none;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 22px
+    rgba(0, 0, 0, 0.32);
+
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.reward-download-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.4);
+}
+
+.reward-download-button:active {
+  transform:
+    translateY(0);
+}
+
+.reward-download-button:focus-visible {
+  outline:
+    3px solid
+    rgba(255, 255, 255, 0.75);
+
+  outline-offset:
+    4px;
+}
+
+
+/* ========================================
+   COMPLETE
+======================================== */
+
+.complete-box {
+  margin-top: 22px;
+
+  padding: 22px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  line-height: 1.9;
+}
+
+.complete-title {
+  margin-bottom: 8px;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* ========================================
+   TEST
+======================================== */
+
+.test-controls {
+  margin-top: 22px;
+
+  display: grid;
+
+  gap: 10px;
+}
+
+.test-button {
+  background: #754d66;
+
+  color: #ffffff;
+}
+
+.test-button:hover {
+  background: #895e79;
+}
+
+
+/* ========================================
+   スマホ
+======================================== */
+
+@media (max-width: 650px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .game {
+    padding:
+      22px
+      16px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .choices {
+    grid-template-columns:
+      1fr;
+  }
+
+  .ghost-select-scene {
+    border-radius: 14px;
+  }
+
+  .ghost-select-label {
+    bottom: 10px;
+
+    min-width: 105px;
+
+    padding:
+      8px
+      9px;
+
+    font-size: 11px;
+  }
+
+  .ghost-complete-mark {
+    top: 10px;
+
+    padding:
+      6px
+      8px;
+
+    font-size: 10px;
+  }
+
+  .ghost-figure {
+    max-width: 100%;
+
+    border-radius: 14px;
+  }
+
+  .dialogue {
+    padding: 18px;
+  }
+
+
+  /* 景品 */
+
+  .reward-box {
+    padding:
+      24px
+      14px;
+
+    background-position:
+      center center;
+  }
+
+  .reward-item {
+    padding:
+      16px
+      12px;
+
+    border-radius: 14px;
+  }
+
+  .reward-image {
+    max-width: 220px;
+
+    max-height: 220px;
+
+    border-radius: 12px;
+  }
+
+  .reward-name {
+    font-size: 21px;
+
+    line-height: 1.45;
+  }
+
+  .reward-download-button {
+    width: 100%;
+
+    max-width: 260px;
+
+    min-height: 46px;
+  }
+
+}
+
+
+/* ========================================
+   アニメーションを減らす設定の人向け
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ghost-select-scene,
+  .ghost-select-image,
+  .ghost-figure,
+  .ghost-figure img,
+  .reward-image {
+    animation: none;
+  }
+
+  .ghost-select-image,
+  .ghost-select-label,
+  .ghost-hotspot,
+  .reward-download-button,
+  button {
+    transition: none;
+  }
+
+}
