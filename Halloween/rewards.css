@@ -384,7 +384,7 @@ body {
   top: 10px;
   left: 10px;
 
-  z-index: 2;
+  z-index: 3;
 
   min-width: 36px;
 
@@ -412,6 +412,9 @@ body {
   text-align: center;
 
   backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
     blur(5px);
 }
 
@@ -453,6 +456,12 @@ body {
         0.015
       )
     );
+
+  user-select: none;
+
+  -webkit-user-select: none;
+
+  -webkit-touch-callout: none;
 }
 
 .reward-card-image {
@@ -463,6 +472,12 @@ body {
 
   object-fit: contain;
 
+  pointer-events: none;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+
   transition:
     transform 0.25s ease;
 }
@@ -471,6 +486,59 @@ body {
 .reward-card-image {
   transform:
     scale(1.035);
+}
+
+
+/* ========================================
+   SAMPLE表示
+======================================== */
+
+.reward-card-image-wrap::after {
+  content: "SAMPLE";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-18deg);
+
+  z-index: 2;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.38
+    );
+
+  font-size:
+    clamp(
+      22px,
+      3vw,
+      36px
+    );
+
+  font-weight: 900;
+
+  letter-spacing:
+    0.18em;
+
+  text-shadow:
+    0 2px 10px
+    rgba(
+      0,
+      0,
+      0,
+      0.45
+    );
+
+  pointer-events: none;
+
+  white-space: nowrap;
 }
 
 
@@ -509,6 +577,14 @@ body {
   line-height: 1.6;
 }
 
+
+/* ========================================
+   景品説明文
+
+   data.js のバッククォート内の
+   改行をそのまま表示
+======================================== */
+
 .reward-card-description {
   margin:
     10px
@@ -523,6 +599,9 @@ body {
 
   line-height:
     1.8;
+
+  white-space:
+    pre-line;
 }
 
 
@@ -686,6 +765,9 @@ body {
     font-size: 10px;
 
     line-height: 1.6;
+
+    white-space:
+      pre-line;
   }
 
   .reward-category {
@@ -703,6 +785,18 @@ body {
       6px;
 
     font-size: 9px;
+  }
+
+  .reward-card-image-wrap::after {
+    font-size:
+      clamp(
+        16px,
+        6vw,
+        24px
+      );
+
+    letter-spacing:
+      0.12em;
   }
 
 }
@@ -741,53 +835,4 @@ body {
       none;
   }
 
-}
-
-/* ========================================
-   一覧画像の保存対策
-======================================== */
-
-.reward-card-image-wrap {
-  position: relative;
-
-  user-select: none;
-
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-.reward-card-image {
-  pointer-events: none;
-}
-
-
-/* SAMPLE文字を重ねる */
-
-.reward-card-image-wrap::after {
-  content: "SAMPLE";
-
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform:
-    translate(-50%, -50%)
-    rotate(-18deg);
-
-  font-size: 32px;
-  font-weight: 900;
-
-  letter-spacing: 0.18em;
-
-  color:
-    rgba(255, 255, 255, 0.38);
-
-  text-shadow:
-    0 2px 10px
-    rgba(0, 0, 0, 0.45);
-
-  pointer-events: none;
-
-  z-index: 2;
 }
