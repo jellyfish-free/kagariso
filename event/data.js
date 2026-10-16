@@ -39,7 +39,7 @@ window.REQUEST_DATA = [
     id: "lottery_002",
     category: "お金・ちょっとした当たり",
     title: "お年玉・10,000円",
-    description: "「お年玉」と書かれたポチ袋。中には1,000円。",
+    description: "「お年玉」と書かれたポチ袋。中には10,000円。",
   },
   {
     id: "lottery_003",
