@@ -1,1 +1,56 @@
-
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102922" />
+  <meta name="description" content="神狩荘のクリスマス。スロットでツリーを育て、プレゼントを交換して、クリスマスくじを楽しもう。" />
+  <title>【テスト用】神狩荘のクリスマス | 2026</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <div class="test-banner" role="note">🧪 テスト環境｜本番データとは別のデータベースを使用</div>
+  <div class="shell">
+    <header class="site-header">
+      <a href="#home" class="wordmark" aria-label="神狩荘のクリスマス・トップ"><span class="wordmark-mark">✳</span><span>神狩荘 <small>KAGARISO CHRISTMAS 2026</small></span></a>
+      <div class="header-right"><span class="live-dot" id="connectionDot"></span><span class="connect-text" id="connectionText">接続確認中</span><span class="user-name" id="headerName">ゲスト</span></div>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="eyebrow">DECEMBER 1 — 24, 2026 · 神狩荘</div>
+        <h1>神狩荘の<br><em>クリスマス</em></h1>
+        <p>今年も、あの家に冬が来た。<br>みんなで灯す一本のツリーと、誰かのための贈り物。</p>
+        <div class="hero-status"><span id="eventPhase">開催情報を読み込み中...</span><span>✦</span><span id="currentDate">JST</span></div>
+      </section>
+      <nav class="tabs" aria-label="ゲームメニュー">
+        <button class="tab active" data-tab="tree" type="button">🎄 <span>ツリー</span></button>
+        <button class="tab" data-tab="slot" type="button">🎰 <span>スロット</span></button>
+        <button class="tab" data-tab="ranking" type="button">🏆 <span>ランキング</span></button>
+        <button class="tab" data-tab="exchange" type="button">🎁 <span>交換所</span></button>
+        <button class="tab" data-tab="lottery" type="button">✨ <span>くじ・履歴</span></button>
+      </nav>
+      <section class="account-strip" aria-label="プレイヤー情報"><div><span class="tiny-label">PLAYER</span><strong id="playerName">未登録</strong></div><div><span class="tiny-label">所持ポイント</span><strong><span id="myPoints">—</span> <small>pt</small></strong></div><div><span class="tiny-label">累計獲得</span><strong><span id="myTotal">—</span> <small>pt</small></strong></div><button id="registerOpen" class="small-button" type="button">参加登録</button></section>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <section class="pane active" id="pane-tree" aria-labelledby="treeHeading">
+        <div class="section-heading"><div><div class="eyebrow">THE SHARED TREE</div><h2 id="treeHeading">みんなのクリスマスツリー</h2></div><button class="text-button refresh" type="button">↻ 更新</button></div>
+        <div class="tree-feature"><div class="tree-art"><div class="tree-star">✦</div><div id="treeVisual" class="tree-shape level-1" aria-label="共有ツリー"><div class="branch b1"></div><div class="branch b2"></div><div class="branch b3"></div><div class="trunk"></div><div class="ornaments"><i>●</i><i>●</i><i>●</i><i>●</i><i>●</i><i>●</i></div></div><div class="tree-gifts">▣ 🎁 ▣</div></div><div class="tree-info"><div class="tiny-label">TREE LEVEL</div><div class="tree-level" id="treeLevel">1 <small>/ 6</small></div><h3 id="treeLevelName">小さなツリー</h3><p id="treeStory">みんなのポイントで、少しずつ飾りが増えていく。</p><div class="progress-label"><span>みんなの累計獲得ポイント</span><strong><span id="growthPoints">0</span> pt</strong></div><div class="progress"><div id="growthBar"></div></div><p class="muted" id="nextLevel">次の成長まで — pt</p></div></div>
+        <div class="stats-grid"><div class="stat"><span>参加者</span><strong id="playerCount">—</strong><small>住人</small></div><div class="stat"><span>くじのプレゼント</span><strong id="totalStock">—</strong><small>個</small></div><div class="stat"><span>開催期間</span><strong>12/1–24</strong><small>2026</small></div></div>
+        <div class="info-panel"><h3>この家のクリスマスの過ごし方</h3><p>スロットで貯めたポイントは、住人全員のツリーを成長させる。ポイントをプレゼントに交換すれば、ツリーの下の共通抽選箱にひとつ追加される。12月16日からは、毎日3回まで贈り物を引けるよ。</p></div>
+      </section>
+      <section class="pane" id="pane-slot" aria-labelledby="slotHeading">
+        <div class="section-heading"><div><div class="eyebrow">CHRISTMAS SLOT</div><h2 id="slotHeading">冬のスロット</h2></div><span class="pill">回数無制限</span></div>
+        <div class="slot-machine"><div class="slot-top">KAGARISO <span>✦</span> LUCKY SLOT</div><div class="reels" aria-label="スロットの絵柄"><div class="reel" id="reel0">❄️</div><div class="reel" id="reel1">🎁</div><div class="reel" id="reel2">🔔</div></div><div class="slot-message" id="slotMessage" role="status">ボタンを押して運試し！</div><button class="primary-button slot-button" id="spinButton" type="button">スロットを回す <span>✦</span></button><p class="muted centered">何度でも挑戦できます · 連続操作には約3秒の間隔が必要です</p></div>
+        <div class="info-panel"><h3>ポイントの目安</h3><div class="payouts"><span>通常 <b>+2pt</b></span><span>小当たり <b>+10pt</b></span><span>当たり <b>+30pt</b></span><span>大当たり <b>+100pt</b></span></div><p class="muted">実際の結果・ポイントはCloudflare側で確定し、全員のツリーに反映されます。</p></div>
+      </section>
+      <section class="pane" id="pane-ranking" aria-labelledby="rankingHeading"><div class="section-heading"><div><div class="eyebrow">HALL OF FAME</div><h2 id="rankingHeading">獲得ポイントランキング</h2></div><button class="text-button refresh" type="button">↻ 更新</button></div><p class="lead">ポイントを交換しても、ランキングの累計獲得数は減りません。</p><div id="rankingList" class="ranking-list"><p class="empty">ランキングを読み込み中...</p></div></section>
+      <section class="pane" id="pane-exchange" aria-labelledby="exchangeHeading"><div class="section-heading"><div><div class="eyebrow">GIFT WORKSHOP</div><h2 id="exchangeHeading">プレゼント交換所</h2></div><span class="pill">何個でも交換OK</span></div><p class="lead">ポイントを使うと、選んだ種類のプレゼントがひとつ生成され、共通の抽選箱へ入ります。</p><div class="gift-grid"><article class="gift-card"><div class="gift-emoji">🎁</div><h3>ささやかなプレゼント</h3><p>小さな気持ちを、誰かへ。</p><div class="gift-bottom"><strong>10 <small>pt</small></strong><button class="outline-button exchange-button" data-cost="10" type="button">交換する</button></div></article><article class="gift-card"><div class="gift-emoji">🎀</div><h3>まあまあなプレゼント</h3><p>きっと嬉しい、冬のお楽しみ。</p><div class="gift-bottom"><strong>50 <small>pt</small></strong><button class="outline-button exchange-button" data-cost="50" type="button">交換する</button></div></article><article class="gift-card"><div class="gift-emoji">✨</div><h3>豪華なプレゼント</h3><p>クリスマスを彩る特別な贈り物。</p><div class="gift-bottom"><strong>100 <small>pt</small></strong><button class="outline-button exchange-button" data-cost="100" type="button">交換する</button></div></article><article class="gift-card featured"><div class="gift-emoji">💌</div><h3>名前とメッセージ入り</h3><p>あなたの名前で、誰かに言葉を届けよう。</p><label class="input-label" for="giftMessage">添えるメッセージ（200文字以内）</label><textarea id="giftMessage" maxlength="200" rows="3" placeholder="例：メリークリスマス！素敵な冬を。"></textarea><div class="gift-bottom"><strong>150 <small>pt</small></strong><button class="outline-button exchange-button" data-cost="150" type="button">交換する</button></div></article></div><div class="info-panel"><h3>プレゼントはどうなるの？</h3><p>生成した瞬間に、くじの共通在庫へ追加されます。自分で引くことも、ほかの住人が引くこともあります。150ptの品には「〇〇からのプレゼント」とあなたのメッセージが残ります。</p></div></section>
+      <section class="pane" id="pane-lottery" aria-labelledby="lotteryHeading"><div class="section-heading"><div><div class="eyebrow">CHRISTMAS LOTTERY</div><h2 id="lotteryHeading">プレゼントくじ</h2></div><span class="pill">12月16日〜24日</span></div><div class="lottery-panel"><div class="lottery-graphic" aria-hidden="true">🎁</div><h3>ツリーの下から、ひとつ。</h3><p>住人たちが用意したプレゼントの中からランダムで当たります。</p><div class="lottery-counts"><div><small>本日の残り回数</small><strong><span id="drawRemaining">—</span> / 3</strong></div><div><small>プレゼントの在庫</small><strong><span id="drawStock">—</span> 個</strong></div></div><button id="drawButton" class="primary-button" type="button">プレゼントを引く</button><p class="muted centered" id="lotteryHint">12月16日から抽選できます。在庫がなくなり次第終了。</p></div><div id="prizeReveal" class="prize-reveal" hidden><div class="eyebrow">YOU GOT A PRESENT</div><div class="prize-icon">🎁</div><h3 id="prizeTitle"></h3><p id="prizeMessage"></p></div><div class="history-grid"><section class="history-panel"><h3>受け取ったプレゼント</h3><div id="drawHistory" class="history-list"><p class="empty">参加登録すると履歴を確認できます。</p></div></section><section class="history-panel"><h3>自分が用意したプレゼント</h3><div id="generatedHistory" class="history-list"><p class="empty">参加登録すると履歴を確認できます。</p></div></section></div></section>
+    </main>
+    <footer><div>神狩荘 <span>— 住所不特定13番地</span></div><p>© KAGARISO · CHRISTMAS 2026</p></footer>
+  </div>
+  <dialog id="registerDialog" class="register-dialog"><form id="registerForm"><div class="eyebrow">WELCOME TO KAGARISO</div><h2>クリスマスに参加する</h2><p>ログイン不要。初回だけキャラクター名を教えてね。</p><label class="input-label" for="characterName">キャラクター名</label><input id="characterName" type="text" maxlength="30" required placeholder="例：新田" autocomplete="off" /><p class="muted">このブラウザに参加用の識別情報を保存します。ブラウザのデータを消すと、元のポイントを引き継げなくなることがあります。</p><div class="dialog-actions"><button type="button" class="outline-button" id="registerClose">閉じる</button><button type="submit" class="primary-button" id="registerSubmit">参加する</button></div></form></dialog>
+  <dialog id="confirmDialog" class="register-dialog"><div class="eyebrow">GIFT EXCHANGE</div><h2>プレゼントを交換</h2><p id="confirmText"></p><div class="dialog-actions"><button class="outline-button" id="confirmCancel" type="button">やめる</button><button class="primary-button" id="confirmAccept" type="button">交換する</button></div></dialog>
+</body>
+</html>
