@@ -29,3 +29,9 @@
 .catalog-item strong{display:block;font-size:.91rem}
 .catalog-item small{display:block;opacity:.65;font-size:.76rem;margin:.2rem 0}
 .catalog-item p{font-size:.82rem;line-height:1.65;opacity:.85;margin:.35rem 0 0}
+
+/* 景品画像：画像がまだない場合は自動的に非表示 */
+.catalog-gift-image{display:block;width:100%;height:160px;object-fit:contain;margin-bottom:12px;border-radius:9px;background:rgba(255,255,255,.045)}
+.prize-gift-image{display:block;width:min(100%,280px);max-height:260px;object-fit:contain;margin:14px auto 0;border-radius:12px}
+.history-gift-image{width:76px;height:76px;object-fit:contain;float:left;margin:0 12px 8px 0;border-radius:7px;background:rgba(255,255,255,.05)}
+.history-item::after{content:"";display:block;clear:both}

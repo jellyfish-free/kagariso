@@ -1,4 +1,5 @@
-// 神狩荘クリスマス景品カタログ：ささやか50種・まあまあ55種・豪華50種
+// 神狩荘クリスマス景品カタログ
+// ささやか50 / まあまあ55 / 豪華80 / 名前入り66
 window.CHRISTMAS_GIFTS = [
   {
     "id": "gift_small_001",
@@ -1394,5 +1395,878 @@ window.CHRISTMAS_GIFTS = [
     "category": "特別な雑貨",
     "name": "あなた宛ての特別なクリスマスギフト",
     "description": "上質な箱に包まれた贈り物。中身は受け取る人によって異なり、必ずその人に向けた短い手紙が添えられている。"
+  },
+  {
+    "id": "gift_named_001",
+    "image": "../Christmas/images/gifts/gift_named_001.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "聖夜の王冠ケーキ",
+    "description": "王冠を模した飴細工と金箔で飾られた、特注のクリスマスケーキ。"
+  },
+  {
+    "id": "gift_named_002",
+    "image": "../Christmas/images/gifts/gift_named_002.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "七日間熟成のクリスマスパネットーネ",
+    "description": "芳醇な香りと果実の風味を楽しむ、限定製造の大型発酵菓子。"
+  },
+  {
+    "id": "gift_named_003",
+    "image": "../Christmas/images/gifts/gift_named_003.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "雪の結晶の琥珀糖コレクション",
+    "description": "透明な結晶のように仕上げた、繊細な和菓子の詰め合わせ。"
+  },
+  {
+    "id": "gift_named_004",
+    "image": "../Christmas/images/gifts/gift_named_004.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "聖夜の宝石ゼリー",
+    "description": "赤や緑、金色のゼリーを宝石箱のように詰めた限定品。"
+  },
+  {
+    "id": "gift_named_005",
+    "image": "../Christmas/images/gifts/gift_named_005.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "幻の白いカカオのチョコレート",
+    "description": "希少なカカオを使った、冬季限定の特別なチョコレート。"
+  },
+  {
+    "id": "gift_named_006",
+    "image": "../Christmas/images/gifts/gift_named_006.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "クリスマス限定のマロングラッセ",
+    "description": "栗を丁寧に糖衣で包んだ、上質な洋菓子。"
+  },
+  {
+    "id": "gift_named_007",
+    "image": "../Christmas/images/gifts/gift_named_007.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "星降る夜の砂糖菓子セット",
+    "description": "星や月、雪の結晶を精巧にかたどった飾り菓子。"
+  },
+  {
+    "id": "gift_named_008",
+    "image": "../Christmas/images/gifts/gift_named_008.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "特選クリスマスチーズボックス",
+    "description": "熟成チーズや果実のペーストを組み合わせた贅沢な詰め合わせ。"
+  },
+  {
+    "id": "gift_named_009",
+    "image": "../Christmas/images/gifts/gift_named_009.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "冬至のスパイスシュガーセット",
+    "description": "シナモンやカルダモンなど、冬の菓子作りに使える特別な砂糖。"
+  },
+  {
+    "id": "gift_named_010",
+    "image": "../Christmas/images/gifts/gift_named_010.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "聖夜のミニタルトコレクション",
+    "description": "果実やナッツを使った、一口サイズの高級タルト。"
+  },
+  {
+    "id": "gift_named_011",
+    "image": "../Christmas/images/gifts/gift_named_011.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "銀世界の和三盆干菓子",
+    "description": "雪景色や冬の星座をかたどった、口どけのよい上品な和菓子。"
+  },
+  {
+    "id": "gift_named_012",
+    "image": "../Christmas/images/gifts/gift_named_012.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "クリスマス限定のフルーツコンフィ",
+    "description": "柑橘やベリーを美しく糖漬けにした、華やかな贈答品。"
+  },
+  {
+    "id": "gift_named_013",
+    "image": "../Christmas/images/gifts/gift_named_013.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "世界のクリスマス菓子詰め合わせ",
+    "description": "各国の伝統菓子を集めた、特別な食べ比べセット。"
+  },
+  {
+    "id": "gift_named_014",
+    "image": "../Christmas/images/gifts/gift_named_014.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "聖夜のキャラメルアソート",
+    "description": "塩キャラメルやスパイスキャラメルなど、味の異なる高級キャラメル。"
+  },
+  {
+    "id": "gift_named_015",
+    "image": "../Christmas/images/gifts/gift_named_015.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "お菓子・飲み物",
+    "name": "ひと晩だけのクリスマスデザート券",
+    "description": "予約した夜にだけ提供される、特別なデザートコースの招待状。"
+  },
+  {
+    "id": "gift_named_016",
+    "image": "../Christmas/images/gifts/gift_named_016.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "星座を刻んだ純銀のカフリンクス",
+    "description": "夜空を思わせる細工を施した、特別な装身具。"
+  },
+  {
+    "id": "gift_named_017",
+    "image": "../Christmas/images/gifts/gift_named_017.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "雪の結晶を封じた天然石のペンダント",
+    "description": "冬らしい透明感のある石を使った一点もの。"
+  },
+  {
+    "id": "gift_named_018",
+    "image": "../Christmas/images/gifts/gift_named_018.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "職人手作りのクリスマス懐中鏡",
+    "description": "蓋に精巧な冬の花模様を刻んだ携帯用の鏡。"
+  },
+  {
+    "id": "gift_named_019",
+    "image": "../Christmas/images/gifts/gift_named_019.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "星空の箔押しを施した革財布",
+    "description": "小さな星々を散りばめた、限定デザインの革小物。"
+  },
+  {
+    "id": "gift_named_020",
+    "image": "../Christmas/images/gifts/gift_named_020.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "クリスマス限定のシルバータイピン",
+    "description": "小さな星と柊をあしらった、上品な装身具。"
+  },
+  {
+    "id": "gift_named_021",
+    "image": "../Christmas/images/gifts/gift_named_021.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "手彫りの木製万年筆ケース",
+    "description": "雪の結晶や冬の枝を彫刻した、特注の筆記具ケース。"
+  },
+  {
+    "id": "gift_named_022",
+    "image": "../Christmas/images/gifts/gift_named_022.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "誕生月の星を刻んだ銀のチャーム",
+    "description": "受け取る人に合わせて星座を選べる記念品。"
+  },
+  {
+    "id": "gift_named_023",
+    "image": "../Christmas/images/gifts/gift_named_023.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "職人仕立てのシルクポケットチーフ",
+    "description": "冬の星空を思わせる柄を織り込んだ上質な布小物。"
+  },
+  {
+    "id": "gift_named_024",
+    "image": "../Christmas/images/gifts/gift_named_024.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "世界に一つのクリスマス印章",
+    "description": "名前やイニシャルを彫刻した、手紙用の特注スタンプ。"
+  },
+  {
+    "id": "gift_named_025",
+    "image": "../Christmas/images/gifts/gift_named_025.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "装身具・小物",
+    "name": "星屑を閉じ込めたガラスペンダント",
+    "description": "光を受けると小さな星のように輝く、限定アクセサリー。"
+  },
+  {
+    "id": "gift_named_026",
+    "image": "../Christmas/images/gifts/gift_named_026.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "世界の銘菓・聖夜の特選アソート",
+    "description": "有名店や海外のクリスマス菓子を集めた、数量限定の豪華な詰め合わせ。"
+  },
+  {
+    "id": "gift_named_027",
+    "image": "../Christmas/images/gifts/gift_named_027.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "金箔仕立てのクリスマスショコラボックス",
+    "description": "宝石箱のような箱に、希少なカカオを使ったチョコレートが並ぶ。"
+  },
+  {
+    "id": "gift_named_028",
+    "image": "../Christmas/images/gifts/gift_named_028.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "オーダーメイドの香水",
+    "description": "好きな香りを組み合わせて、自分だけの一本を作れる特別なギフト。"
+  },
+  {
+    "id": "gift_named_029",
+    "image": "../Christmas/images/gifts/gift_named_029.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "クリスタルカットのワイングラス一客",
+    "description": "光を受けるたびに美しく輝く、飾っても使っても楽しめる逸品。"
+  },
+  {
+    "id": "gift_named_030",
+    "image": "../Christmas/images/gifts/gift_named_030.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "名入れの高級レザー小物",
+    "description": "カードケースやキーケースなどから選べる、名前入りの一点物。"
+  },
+  {
+    "id": "gift_named_031",
+    "image": "../Christmas/images/gifts/gift_named_031.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "クリスマス限定の宝石糖細工",
+    "description": "透明な飴細工や琥珀糖を宝石のように仕立てた、食べるのが惜しくなる贈り物。"
+  },
+  {
+    "id": "gift_named_032",
+    "image": "../Christmas/images/gifts/gift_named_032.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "老舗パティスリーの聖夜の焼き菓子缶",
+    "description": "クリスマス限定デザインの缶に、職人仕立ての焼き菓子がぎっしり詰まっている。"
+  },
+  {
+    "id": "gift_named_033",
+    "image": "../Christmas/images/gifts/gift_named_033.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "一点物の銀細工オーナメント",
+    "description": "職人が手作業で仕上げた、小さくても存在感のあるクリスマスツリー飾り。"
+  },
+  {
+    "id": "gift_named_034",
+    "image": "../Christmas/images/gifts/gift_named_034.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "特別仕立てのクリスマスティーセット",
+    "description": "希少な茶葉と限定ブレンド、茶葉を保管する小さな缶を組み合わせた贅沢なセット。"
+  },
+  {
+    "id": "gift_named_035",
+    "image": "../Christmas/images/gifts/gift_named_035.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "特選品・雑貨",
+    "name": "神狩荘の聖夜限定・秘密の贈答箱",
+    "description": "上質な包装箱の中に、何が入っているかは開けるまで分からない。中身は豪華な品物だが、ひとつだけ、差出人の名前がどこにも書かれていない。"
+  },
+  {
+    "id": "gift_named_036",
+    "image": "../Christmas/images/gifts/gift_named_036.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "ベルベットのテーラードベスト",
+    "description": "光沢のある深いボルドーの生地に、アンティーク調のボタンをあしらった上品な一着。"
+  },
+  {
+    "id": "gift_named_037",
+    "image": "../Christmas/images/gifts/gift_named_037.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "クラシカルなロングジレ",
+    "description": "黒を基調にした膝丈のロングジレ。重ね着するだけで華やかな雰囲気になる。"
+  },
+  {
+    "id": "gift_named_038",
+    "image": "../Christmas/images/gifts/gift_named_038.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "刺繍入りのドレスシャツ",
+    "description": "襟の裏やカフスに、雪の結晶を思わせる繊細な刺繍を施した仕立ての良いシャツ。"
+  },
+  {
+    "id": "gift_named_039",
+    "image": "../Christmas/images/gifts/gift_named_039.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "上質なサスペンダー付きスラックス",
+    "description": "美しいシルエットと丁寧な仕立てが魅力の、クラシカルな冬向けボトムス。"
+  },
+  {
+    "id": "gift_named_040",
+    "image": "../Christmas/images/gifts/gift_named_040.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "ウール素材のプリーツパンツ",
+    "description": "動くたびに綺麗なドレープが生まれる、上品で落ち着いたデザイン。"
+  },
+  {
+    "id": "gift_named_041",
+    "image": "../Christmas/images/gifts/gift_named_041.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "クリスマス限定のボウタイブラウス",
+    "description": "首元のリボンが印象的な、深緑やワインレッドの華やかな一着。"
+  },
+  {
+    "id": "gift_named_042",
+    "image": "../Christmas/images/gifts/gift_named_042.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "刺繍入りのロングカフスシャツ",
+    "description": "袖口を長めに仕立て、繊細な装飾を施したドレッシーなシャツ。"
+  },
+  {
+    "id": "gift_named_043",
+    "image": "../Christmas/images/gifts/gift_named_043.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "上質なトレンチケープ",
+    "description": "袖を通さず羽織れるケープ型のアウター。冬の装いに特別感を添える。"
+  },
+  {
+    "id": "gift_named_044",
+    "image": "../Christmas/images/gifts/gift_named_044.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "クラシカルなオールインワン",
+    "description": "落ち着いた色合いと端正なシルエットで、これ一着でもコーディネートが決まる。"
+  },
+  {
+    "id": "gift_named_045",
+    "image": "../Christmas/images/gifts/gift_named_045.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "高級シルクのロングガウン",
+    "description": "滑らかな生地に繊細なパイピングを施した、ホテルライクな室内着。"
+  },
+  {
+    "id": "gift_named_046",
+    "image": "../Christmas/images/gifts/gift_named_046.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "フォーマルなショールカラーのタキシード",
+    "description": "特別な夜に似合う、上質な仕立ての正装。"
+  },
+  {
+    "id": "gift_named_047",
+    "image": "../Christmas/images/gifts/gift_named_047.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "上質なウールのジョッパーズパンツ",
+    "description": "腰回りにゆとりを持たせ、裾に向かってすっきりと仕立てたクラシカルなパンツ。乗馬服を思わせる上品なシルエットで、ブーツとの相性もいい特別な一着。"
+  },
+  {
+    "id": "gift_named_048",
+    "image": "../Christmas/images/gifts/gift_named_048.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "クリスマスカラーのひざ掛け",
+    "description": "深緑と赤を織り交ぜたチェック柄の、冬らしいクラシカルで温かな一品。"
+  },
+  {
+    "id": "gift_named_049",
+    "image": "../Christmas/images/gifts/gift_named_049.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "上質なレッグウォーマー",
+    "description": "編み模様と素材にこだわった、足元を暖かく彩る冬の衣類。"
+  },
+  {
+    "id": "gift_named_050",
+    "image": "../Christmas/images/gifts/gift_named_050.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "シルク混のロングスリップ",
+    "description": "滑らかな光沢と繊細なレースをあしらった、上品なインナーウェア。"
+  },
+  {
+    "id": "gift_named_051",
+    "image": "../Christmas/images/gifts/gift_named_051.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "衣装・服飾",
+    "name": "一点物の刺繍入り燕尾服",
+    "description": "裾や襟元に金糸の刺繍を施した、舞踏会を思わせる特別な正装。"
+  },
+  {
+    "id": "gift_large_051",
+    "image": "../Christmas/images/gifts/gift_large_051.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "職人仕立てのオーダーメイド革靴",
+    "description": "足型から仕立てる、上質なカーフレザーの紳士靴。"
+  },
+  {
+    "id": "gift_large_052",
+    "image": "../Christmas/images/gifts/gift_large_052.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "高級レザーチェルシーブーツ",
+    "description": "艶のある黒革と洗練されたシルエットが魅力のブーツ。"
+  },
+  {
+    "id": "gift_large_053",
+    "image": "../Christmas/images/gifts/gift_large_053.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "イタリア製スエードローファー",
+    "description": "柔らかなスエードを使用した、上品な大人の一足。"
+  },
+  {
+    "id": "gift_large_054",
+    "image": "../Christmas/images/gifts/gift_large_054.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "限定モデルのレザースニーカー",
+    "description": "上質な革とミニマルなデザインを組み合わせた高級スニーカー。"
+  },
+  {
+    "id": "gift_large_055",
+    "image": "../Christmas/images/gifts/gift_large_055.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "パティーヌ仕上げの革靴",
+    "description": "職人が手作業で色の濃淡をつけた、深みのある一点物。"
+  },
+  {
+    "id": "gift_large_056",
+    "image": "../Christmas/images/gifts/gift_large_056.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "カシミヤ混の高級ソックスセット",
+    "description": "肌触りと保温性に優れた、上質な靴下の詰め合わせ。"
+  },
+  {
+    "id": "gift_large_057",
+    "image": "../Christmas/images/gifts/gift_large_057.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "イタリアンレザーの高級ベルト",
+    "description": "美しい艶と経年変化を楽しめる、上質な本革製。"
+  },
+  {
+    "id": "gift_large_058",
+    "image": "../Christmas/images/gifts/gift_large_058.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "リバーシブルのラグジュアリーベルト",
+    "description": "黒とブラウンを使い分けられる、洗練された一本。"
+  },
+  {
+    "id": "gift_large_059",
+    "image": "../Christmas/images/gifts/gift_large_059.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "シルバーバックルの特注ベルト",
+    "description": "彫金を施したバックルが主役の特別仕立て。"
+  },
+  {
+    "id": "gift_large_060",
+    "image": "../Christmas/images/gifts/gift_large_060.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "クロコダイルレザーのベルト",
+    "description": "独特の模様と高級感を備えた、存在感のある逸品。"
+  },
+  {
+    "id": "gift_large_061",
+    "image": "../Christmas/images/gifts/gift_large_061.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "高級レザーのカードケース",
+    "description": "薄型で使いやすく、丁寧なコバ処理が美しい一品。"
+  },
+  {
+    "id": "gift_large_062",
+    "image": "../Christmas/images/gifts/gift_large_062.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "職人仕立てのキーケース",
+    "description": "手縫いのステッチが映える、長く愛用できる革小物。"
+  },
+  {
+    "id": "gift_large_063",
+    "image": "../Christmas/images/gifts/gift_large_063.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "スイス製の機械式腕時計",
+    "description": "精巧なムーブメントを備えた、特別感のあるタイムピース。"
+  },
+  {
+    "id": "gift_large_064",
+    "image": "../Christmas/images/gifts/gift_large_064.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "シルバーのカフリンクス",
+    "description": "オニキスや天然石をあしらった、フォーマルな装いに似合う一対。"
+  },
+  {
+    "id": "gift_large_065",
+    "image": "../Christmas/images/gifts/gift_large_065.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "プラチナ仕上げのタイバー",
+    "description": "控えめな輝きが美しい、上質なネクタイピン。"
+  },
+  {
+    "id": "gift_large_066",
+    "image": "../Christmas/images/gifts/gift_large_066.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "彫金入りのシグネットリング",
+    "description": "紋章やイニシャルを刻める、クラシカルな指輪。"
+  },
+  {
+    "id": "gift_large_067",
+    "image": "../Christmas/images/gifts/gift_large_067.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "天然石をあしらったシルバーブレスレット",
+    "description": "深い色の石と銀細工を組み合わせたアクセサリー。"
+  },
+  {
+    "id": "gift_large_068",
+    "image": "../Christmas/images/gifts/gift_large_068.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "高級レザーの腕時計ベルトセット",
+    "description": "色や素材を変えて楽しめる、交換用ストラップの特別セット。"
+  },
+  {
+    "id": "gift_large_069",
+    "image": "../Christmas/images/gifts/gift_large_069.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "シルクの高級ネクタイ",
+    "description": "熟練職人による織りと、上品な光沢が魅力。"
+  },
+  {
+    "id": "gift_large_070",
+    "image": "../Christmas/images/gifts/gift_large_070.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "カシミヤの上質なネックウォーマー",
+    "description": "すっきりした形で、冬の装いに取り入れやすい一品。"
+  },
+  {
+    "id": "gift_large_071",
+    "image": "../Christmas/images/gifts/gift_large_071.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "シルクのポケットチーフセット",
+    "description": "季節や場面に合わせて使える、上質な柄違いのセット。"
+  },
+  {
+    "id": "gift_large_072",
+    "image": "../Christmas/images/gifts/gift_large_072.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "ウールフェルトの高級ハット",
+    "description": "クラシカルなシルエットが映える、仕立ての良い帽子。"
+  },
+  {
+    "id": "gift_large_073",
+    "image": "../Christmas/images/gifts/gift_large_073.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "レザー仕立てのキャスケット",
+    "description": "柔らかな革と落ち着いたデザインが特徴の一品。"
+  },
+  {
+    "id": "gift_large_074",
+    "image": "../Christmas/images/gifts/gift_large_074.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "天然素材の高級カフス付きシャツ小物セット",
+    "description": "白蝶貝などを使ったカフスボタンと襟元の装飾品のセット。"
+  },
+  {
+    "id": "gift_large_075",
+    "image": "../Christmas/images/gifts/gift_large_075.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "プラチナのチェーンネックレス",
+    "description": "シンプルながら上質な輝きを持つ、長く使えるアクセサリー。"
+  },
+  {
+    "id": "gift_large_076",
+    "image": "../Christmas/images/gifts/gift_large_076.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "オニキスのペンダント",
+    "description": "黒い天然石を主役にした、落ち着いたデザインのネックレス。"
+  },
+  {
+    "id": "gift_large_077",
+    "image": "../Christmas/images/gifts/gift_large_077.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "職人手作りのシルバーイヤーカフ",
+    "description": "耳元にさりげない存在感を添える、精巧な銀細工。"
+  },
+  {
+    "id": "gift_large_078",
+    "image": "../Christmas/images/gifts/gift_large_078.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "高級レザーのサスペンダー",
+    "description": "革と金属パーツの質感にこだわった、クラシカルな装身具。"
+  },
+  {
+    "id": "gift_large_079",
+    "image": "../Christmas/images/gifts/gift_large_079.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "オーダーメイドの香り付きレザーブレスレット",
+    "description": "革に好みの香りをまとわせる、個性的な一点物。"
+  },
+  {
+    "id": "gift_large_080",
+    "image": "../Christmas/images/gifts/gift_large_080.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "宝石をあしらったラペルピン",
+    "description": "小さなサファイアやガーネットを配した、ジャケットの襟元を飾る特別なアクセサリー。"
+  },
+  {
+    "id": "gift_named_052",
+    "image": "../Christmas/images/gifts/gift_named_052.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "菓子・飲料",
+    "name": "聖夜の琥珀糖ツリー",
+    "description": "小さなクリスマスツリーを模した琥珀糖。ひとつ食べるたび、どこか遠くで鈴の音が聞こえる。"
+  },
+  {
+    "id": "gift_named_053",
+    "image": "../Christmas/images/gifts/gift_named_053.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "菓子・飲料",
+    "name": "聖夜のヴィンテージワイン",
+    "description": "古い蔵から見つかったという、年代物の赤ワイン。ラベルには製造年と「神狩荘」の文字だけが記されている。"
+  },
+  {
+    "id": "gift_named_054",
+    "image": "../Christmas/images/gifts/gift_named_054.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "菓子・飲料",
+    "name": "雪待ちのブランデー",
+    "description": "琥珀色に輝く高級ブランデー。冬の夜にゆっくり楽しむための一本で、グラスに注ぐと一瞬だけ暖炉のような香りが漂う。"
+  },
+  {
+    "id": "gift_named_055",
+    "image": "../Christmas/images/gifts/gift_named_055.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "菓子・飲料",
+    "name": "クリスマス限定のシャンパン",
+    "description": "銀箔をあしらった特別なボトル。栓を開けると、泡の弾ける音に混じって小さな鈴の音が聞こえることがある。"
+  },
+  {
+    "id": "gift_named_056",
+    "image": "../Christmas/images/gifts/gift_named_056.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "菓子・飲料",
+    "name": "神狩荘の夜更けのウイスキー",
+    "description": "長期熟成された希少なウイスキー。古い木箱に収められ、ラベルの裏には誰かの筆跡で「夜更けに飲むこと」と書かれている。"
+  },
+  {
+    "id": "gift_named_057",
+    "image": "../Christmas/images/gifts/gift_named_057.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "特選黒毛和牛のサーロイン",
+    "description": "霜降りの美しい高級和牛。クリスマスの食卓を贅沢に彩る、分かりやすい目玉景品。"
+  },
+  {
+    "id": "gift_named_058",
+    "image": "../Christmas/images/gifts/gift_named_058.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "熟成肉のローストビーフセット",
+    "description": "丁寧に熟成させた牛肉を低温で仕上げた、専門店の特製ローストビーフ。ソースや薬味も付いた豪華なセット。"
+  },
+  {
+    "id": "gift_named_059",
+    "image": "../Christmas/images/gifts/gift_named_059.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "骨付き仔羊のローストセット",
+    "description": "ハーブとスパイスで味付けされた仔羊肉。焼くだけで特別なディナーが完成する、クリスマス向けのごちそう。"
+  },
+  {
+    "id": "gift_named_060",
+    "image": "../Christmas/images/gifts/gift_named_060.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "幻の燻製肉詰め合わせ",
+    "description": "熟成ハムやサラミ、燻製ベーコンを詰めた贅沢な木箱入りセット。どれも香りが深く、なぜか一種類だけ見覚えのない肉が混ざっている。"
+  },
+  {
+    "id": "gift_named_061",
+    "image": "../Christmas/images/gifts/gift_named_061.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "特選キャビアの聖夜缶",
+    "description": "小さな黒い缶に収められた高級キャビア。銀色のスプーンが添えられた、特別感のある贈り物。"
+  },
+  {
+    "id": "gift_named_062",
+    "image": "../Christmas/images/gifts/gift_named_062.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "冬の味覚・蟹尽くしセット",
+    "description": "毛蟹やズワイガニなどを楽しめる豪華な詰め合わせ。冬の食卓にぴったりの景品。"
+  },
+  {
+    "id": "gift_named_063",
+    "image": "../Christmas/images/gifts/gift_named_063.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "白トリュフの贅沢調味料セット",
+    "description": "トリュフ塩やトリュフオイルなど、普段の料理を一気に豪華にする調味料の詰め合わせ。"
+  },
+  {
+    "id": "gift_named_064",
+    "image": "../Christmas/images/gifts/gift_named_064.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "老舗の鴨鍋セット",
+    "description": "上質な鴨肉と特製出汁、冬野菜に合う薬味を揃えた鍋セット。神狩荘の住人たちで囲む食卓にも似合う。"
+  },
+  {
+    "id": "gift_named_065",
+    "image": "../Christmas/images/gifts/gift_named_065.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "聖夜のチーズ熟成箱",
+    "description": "熟成チーズを数種類詰め合わせた、ワイン好きにはたまらないセット。箱を開けると、ひとつだけ熟成期間が記されていないチーズがある。"
+  },
+  {
+    "id": "gift_named_066",
+    "image": "../Christmas/images/gifts/gift_named_066.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "冬限定の高級おでん種詰め合わせ",
+    "description": "老舗蒲鉾店の練り物や、出汁にこだわった特選おでんセット。豪華なのにどこか生活感があり、古いアパートの冬にもよく似合う。"
+  },
+  {
+    "id": "gift_named_067",
+    "image": "../Christmas/images/gifts/gift_named_067.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "食卓のごちそう",
+    "name": "神狩荘の聖夜のごちそう缶",
+    "description": "高級コンビーフ、燻製牡蠣、オイルサーディンなど、保存の利く贅沢な食材を集めた特製缶詰セット。缶の底には、見覚えのない日付が刻まれている。"
   }
 ];
