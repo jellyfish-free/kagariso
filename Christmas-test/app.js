@@ -122,12 +122,12 @@ async function spin(){
   }
 }
 let chosenCost=null;
-function askExchange(cost){if(!state.me)return openRegister();if(state.busy)return;const message=$('giftMessage').value.trim();if(cost===150&&!message){msg('150ptのプレゼントにはメッセージを入力してください。',true);$('giftMessage').focus();return;}chosenCost=cost;
-  $('confirmText').textContent=`${cost}ptを使って${cost===150?'「'+state.me.character_name+'からのプレゼント」':'プレゼント'}を1個生成します。共通のくじへ自動登録されます。${cost===150?' メッセージ：「'+message+'」':''}`;
+function askExchange(cost){if(!state.me)return openRegister();if(state.busy)return;const message=$('giftMessage').value.trim();if(cost===2500&&!message){msg('2,500ptのプレゼントにはメッセージを入力してください。',true);$('giftMessage').focus();return;}chosenCost=cost;
+  $('confirmText').textContent=`${cost}ptを使って${cost===2500?'「'+state.me.character_name+'からのプレゼント」':'プレゼント'}を1個生成します。共通のくじへ自動登録されます。${cost===2500?' メッセージ：「'+message+'」':''}`;
   $('confirmDialog').showModal();
 }
 async function exchange(){if(state.busy||chosenCost===null)return;const cost=chosenCost;state.busy=true;updateButtons();$('confirmAccept').disabled=true;
-  try{const d=await api('/api/exchange',{method:'POST',body:{cost,...(cost===150?{message:$('giftMessage').value.trim()}:{})}});$('confirmDialog').close();if(cost===150)$('giftMessage').value='';state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;renderMe();msg(`「${d.present.title}」を共通の抽選箱へ追加しました！`);await refreshPublic();await refreshHistory();}
+  try{const d=await api('/api/exchange',{method:'POST',body:{cost,...(cost===2500?{message:$('giftMessage').value.trim()}:{})}});$('confirmDialog').close();if(cost===2500)$('giftMessage').value='';state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;renderMe();msg(`「${d.present.title}」を共通の抽選箱へ追加しました！`);await refreshPublic();await refreshHistory();}
   catch(err){safeError(err);}finally{chosenCost=null;state.busy=false;$('confirmAccept').disabled=false;updateButtons();}
 }
 async function draw(){if(state.busy)return;if(!state.me)return openRegister();if(!window.confirm('本日のくじを1回引きます。よろしいですか？'))return;
@@ -136,8 +136,9 @@ async function draw(){if(state.busy)return;if(!state.me)return openRegister();if
     state.me.draw_count_today=d.draw_count_today;renderMe();msg('プレゼントが当たりました！');await refreshPublic();await refreshHistory();$('prizeReveal').scrollIntoView({behavior:'smooth',block:'center'});}
   catch(err){safeError(err);}finally{state.busy=false;updateButtons();}
 }
+const GIFT_LABELS = {10:'ささやかなプレゼント',50:'まあまあなプレゼント',100:'豪華なプレゼント',150:'名前とメッセージ入り'};
 function fillHistory(target,items,kind){const root=$(target);root.replaceChildren();if(!items?.length){const p=document.createElement('p');p.className='empty';p.textContent=kind==='draw'?'まだプレゼントを受け取っていません。':'まだプレゼントを用意していません。';root.append(p);return;}
-  for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${item.gift_type}pt${item.creator_name?' · '+item.creator_name+'作':''}`:`${item.gift_type}pt · ${item.status==='claimed'?'当選済':'抽選待ち'}`;row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
+  for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${GIFT_LABELS[item.gift_type] || "プレゼント"}${item.creator_name?' · '+item.creator_name+'作':''}`:`${GIFT_LABELS[item.gift_type] || "プレゼント"} · ${item.status==='claimed'?'当選済':'抽選待ち'}`;row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
 }
 async function refreshHistory(){if(!state.me)return;try{const data=await api('/api/history');fillHistory('drawHistory',data.draws,'draw');fillHistory('generatedHistory',data.generated,'generated');}catch(err){safeError(err);}}
 function bind(){document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));document.querySelectorAll('.refresh').forEach(b=>b.addEventListener('click',refreshAll));
