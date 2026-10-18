@@ -79,10 +79,47 @@ async function register(e){e.preventDefault();if(state.busy)return;const name=$(
   try{const d=await api('/api/register',{method:'POST',body:{character_name:name}});state.token=d.token;localStorage.setItem(TOKEN_KEY,state.token);$('registerDialog').close();msg('ようこそ、'+d.character_name+'さん！ クリスマスを楽しもう。');await refreshAll();}
   catch(err){safeError(err);}finally{state.busy=false;$('registerSubmit').disabled=false;updateButtons();}
 }
-async function spin(){if(state.busy)return;if(!state.me)return openRegister();state.busy=true;updateButtons();$('slotMessage').textContent='くるくる…';const reels=[0,1,2].map(i=>$('reel'+i));reels.forEach(r=>r.classList.add('spinning'));
-  try{const d=await api('/api/slot',{method:'POST',body:{}});reels.forEach((r,i)=>{r.textContent=d.symbols?.[i]||'✦';});$('slotMessage').textContent=`${d.outcome}！ +${format(d.earned_points)} pt`;
-    state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;renderMe();await refreshPublic();}
-  catch(err){$('slotMessage').textContent='スロットを回せませんでした';safeError(err);}finally{reels.forEach(r=>r.classList.remove('spinning'));state.busy=false;updateButtons();}
+const SLOT_SYMBOLS = ['🍬','❄️','🔔','🎁','⭐'];
+const pause = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+async function spin(){
+  if(state.busy)return;
+  if(!state.me)return openRegister();
+  state.busy=true;updateButtons();
+  const reels=[0,1,2].map(i=>$('reel'+i));
+  const spinning=reels.map(()=>true);
+  const started=performance.now();
+  $('slotMessage').textContent='リール回転中…';
+  reels.forEach(r=>r.classList.add('spinning'));
+  // Animate independently of the server response. Only the server decides the prize.
+  const interval=setInterval(()=>{
+    reels.forEach((r,i)=>{if(spinning[i]){
+      r.textContent=SLOT_SYMBOLS[Math.floor(Math.random()*SLOT_SYMBOLS.length)];
+    }});
+  },75);
+  try{
+    const d=await api('/api/slot',{method:'POST',body:{}});
+    // Keep animation visible even if the API responds very quickly.
+    await pause(Math.max(0,480-(performance.now()-started)));
+    for(let i=0;i<reels.length;i++){
+      spinning[i]=false;
+      reels[i].textContent=d.symbols?.[i]||'✦';
+      reels[i].classList.remove('spinning');
+      reels[i].classList.add('reel-stopped');
+      await pause(145);
+    }
+    $('slotMessage').textContent=`${d.outcome}！ +${format(d.earned_points)} pt`;
+    state.me.points=d.player.points;
+    state.me.total_earned=d.player.total_earned;
+    renderMe();
+    // Let the next spin start immediately; refresh shared data without locking the slot.
+    refreshPublic();
+  }catch(err){
+    $('slotMessage').textContent='スロットを回せませんでした';safeError(err);
+  }finally{
+    clearInterval(interval);
+    reels.forEach(r=>{r.classList.remove('spinning');r.classList.remove('reel-stopped');});
+    state.busy=false;updateButtons();
+  }
 }
 let chosenCost=null;
 function askExchange(cost){if(!state.me)return openRegister();if(state.busy)return;const message=$('giftMessage').value.trim();if(cost===150&&!message){msg('150ptのプレゼントにはメッセージを入力してください。',true);$('giftMessage').focus();return;}chosenCost=cost;
