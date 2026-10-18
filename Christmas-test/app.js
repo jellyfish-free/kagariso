@@ -5,9 +5,13 @@
 const API = 'https://kagariso-christmas-test-api.jinchyo-hiromi.workers.dev';
 const TOKEN_KEY = 'kagariso_christmas_2026_TEST_player_token';
 const LEVELS = [
-  { min:0, title:'小さなツリー' },{ min:5000,title:'小さな飾り' },
-  { min:15000,title:'冬色のリボン' },{ min:30000,title:'明かりが灯る' },
-  { min:50000,title:'てっぺんの星' },{ min:80000,title:'みんなのクリスマス' },
+  { min:0, title:'ツリーの準備' },
+  { min:20000, title:'小さなツリー' },
+  { min:60000, title:'飾り付け' },
+  { min:120000, title:'冬色のリボン' },
+  { min:200000, title:'明かりが灯る' },
+  { min:300000, title:'てっぺんの星' },
+  { min:480000, title:'みんなのクリスマス' },
 ];
 const $ = (id) => document.getElementById(id);
 const state = { token:localStorage.getItem(TOKEN_KEY) || '', me:null, public:null, busy:false, noticeTimer:null };
@@ -35,13 +39,13 @@ function renderPublic(){
   const data=state.public;if(!data)return;
   const growth=Number(data.tree?.growth_points||0);
   const lv=LEVELS.reduce((n,x,i)=>growth>=x.min?i:n,0), cur=LEVELS[lv],next=LEVELS[lv+1];
-  $('growthPoints').textContent=format(growth);$('treeLevel').innerHTML=`${lv+1} <small>/ 6</small>`;
+  $('growthPoints').textContent=format(growth);$('treeLevel').innerHTML=`${lv} <small>/ 6</small>`;
   $('treeLevelName').textContent=cur.title;
   const treeImage=$('treeVisual');
-  const newImage=`../Christmas/images/step${lv+1}.png`;
+  const newImage=`../Christmas/images/step${lv}.png`;
   if(treeImage.getAttribute('src')!==newImage)treeImage.setAttribute('src',newImage);
-  treeImage.alt=`みんなのクリスマスツリー：レベル${lv+1}（${cur.title}）`;
-  $('treeStory').textContent=lv===5?'みんなで飾ったツリーが完成！':'次の飾りは、住人たちのポイントが運んできます。';
+  treeImage.alt=`みんなのクリスマスツリー：レベル${lv}（${cur.title}）`;
+  $('treeStory').textContent=lv===6?'みんなで飾ったツリーが完成！':'次の飾りは、住人たちのポイントが運んできます。';
   $('growthBar').style.width=`${next?Math.min(100,Math.max(0,(growth-cur.min)/(next.min-cur.min)*100)):100}%`;
   $('nextLevel').textContent=next?`次の成長まで ${format(Math.max(0,next.min-growth))} pt`:'ツリーは最大まで成長しました';
   $('totalStock').textContent=format(data.total_stock);$('drawStock').textContent=format(data.total_stock);
