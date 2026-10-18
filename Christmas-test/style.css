@@ -16,3 +16,7 @@
 .self-gift-panel h4{margin:20px 0 10px;font-size:1rem;}
 .self-gift-panel p{line-height:1.75;}
 .self-gift-result{margin-top:14px;padding:13px;border-radius:10px;background:rgba(222,184,107,.2);font-weight:700;}
+
+/* 共有ツリー画像：6段階をimages/step1.png〜step6.pngで表示 */
+.tree-art .tree-image{display:block;width:100%;max-width:100%;height:370px;object-fit:contain;object-position:center;filter:drop-shadow(0 12px 20px #0005);transition:opacity .2s ease;}
+@media(max-width:680px){.tree-art .tree-image{height:310px;}}

@@ -36,7 +36,11 @@ function renderPublic(){
   const growth=Number(data.tree?.growth_points||0);
   const lv=LEVELS.reduce((n,x,i)=>growth>=x.min?i:n,0), cur=LEVELS[lv],next=LEVELS[lv+1];
   $('growthPoints').textContent=format(growth);$('treeLevel').innerHTML=`${lv+1} <small>/ 6</small>`;
-  $('treeLevelName').textContent=cur.title;$('treeVisual').className=`tree-shape level-${lv+1}`;
+  $('treeLevelName').textContent=cur.title;
+  const treeImage=$('treeVisual');
+  const newImage=`../Christmas/images/step${lv+1}.png`;
+  if(treeImage.getAttribute('src')!==newImage)treeImage.setAttribute('src',newImage);
+  treeImage.alt=`みんなのクリスマスツリー：レベル${lv+1}（${cur.title}）`;
   $('treeStory').textContent=lv===5?'みんなで飾ったツリーが完成！':'次の飾りは、住人たちのポイントが運んできます。';
   $('growthBar').style.width=`${next?Math.min(100,Math.max(0,(growth-cur.min)/(next.min-cur.min)*100)):100}%`;
   $('nextLevel').textContent=next?`次の成長まで ${format(Math.max(0,next.min-growth))} pt`:'ツリーは最大まで成長しました';
