@@ -172,4 +172,17 @@ function bind(){document.querySelectorAll('.tab').forEach(b=>b.addEventListener(
   document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAll();});
 }
-bind();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);
+function renderGiftCatalog(){
+  const box=document.getElementById('giftCatalogList');
+  if(!box)return;
+  box.replaceChildren();
+  const items=(window.CHRISTMAS_GIFTS||[]).filter(g=>g.gift_type===10);
+  for(const gift of items){
+    const item=document.createElement('div');item.className='catalog-item';
+    const title=document.createElement('strong');title.textContent=gift.name;
+    const category=document.createElement('small');category.textContent=gift.category;
+    const description=document.createElement('p');description.textContent=gift.description;
+    item.append(title,category,description);box.append(item);
+  }
+}
+renderGiftCatalog();bind();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);

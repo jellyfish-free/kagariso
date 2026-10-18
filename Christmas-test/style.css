@@ -20,3 +20,12 @@
 /* 共有ツリー画像：6段階をimages/step1.png〜step6.pngで表示 */
 .tree-art .tree-image{display:block;width:100%;max-width:100%;height:370px;object-fit:contain;object-position:center;filter:drop-shadow(0 12px 20px #0005);transition:opacity .2s ease;}
 @media(max-width:680px){.tree-art .tree-image{height:310px;}}
+
+/* ささやかなプレゼント：景品一覧 */
+.catalog-details{margin:1.2rem 0;padding:1rem;border:1px solid rgba(223,194,132,.28);border-radius:12px;background:rgba(255,255,255,.025)}
+.catalog-details summary{cursor:pointer;font-weight:700;color:#efd19a}
+.catalog-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.65rem;margin-top:1rem}
+.catalog-item{padding:.75rem;border:1px solid rgba(230,207,151,.18);border-radius:9px;background:rgba(0,0,0,.14)}
+.catalog-item strong{display:block;font-size:.91rem}
+.catalog-item small{display:block;opacity:.65;font-size:.76rem;margin:.2rem 0}
+.catalog-item p{font-size:.82rem;line-height:1.65;opacity:.85;margin:.35rem 0 0}
