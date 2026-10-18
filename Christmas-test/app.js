@@ -29,7 +29,7 @@ function phase(){const d=state.public?.date_jst || dateJST();return d<'2026-12-0
 function switchTab(name){
   document.querySelectorAll('.tab').forEach(b=>{const active=b.dataset.tab===name;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));});
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id===`pane-${name}`));
-  if(name==='lottery')refreshHistory();
+  if(name==='lottery'||name==='exchange')refreshHistory();
 }
 function renderPublic(){
   const data=state.public;if(!data)return;
@@ -60,19 +60,20 @@ function renderRanking(){
 function renderMe(){
   $('playerName').textContent=state.me?.character_name||'未登録';$('headerName').textContent=state.me?.character_name||'ゲスト';
   $('myPoints').textContent=state.me?format(state.me.points):'—';$('myTotal').textContent=state.me?format(state.me.total_earned):'—';
-  $('registerOpen').textContent=state.me?'参加済み':'参加登録';$('drawRemaining').textContent=state.me?Math.max(0,3-Number(state.me.draw_count_today||0)):'—';
+  $('selfGiftStatus').textContent=state.me?.self_gift_used_today?'本日は交換済み（翌日0時に更新）':'1日1回交換できます';$('registerOpen').textContent=state.me?'参加済み':'参加登録';$('drawRemaining').textContent=state.me?Math.max(0,3-Number(state.me.draw_count_today||0)):'—';
   renderRanking();updateButtons();
 }
 function updateButtons(){
   const hasPlayer=Boolean(state.me), play=eligible('2026-12-01'),draw=eligible('2026-12-16');
   $('spinButton').disabled=state.busy||!hasPlayer||!play;
   document.querySelectorAll('.exchange-button').forEach(button=>{button.disabled=state.busy||!hasPlayer||!play||Number(state.me?.points||0)<Number(button.dataset.cost);});
+  $('selfGiftButton').disabled=state.busy||!hasPlayer||!play||Number(state.me?.points||0)<800||Boolean(state.me?.self_gift_used_today);
   const remaining=hasPlayer?Math.max(0,3-Number(state.me.draw_count_today||0)):0;
   $('drawButton').disabled=state.busy||!hasPlayer||!draw||remaining===0||Number(state.public?.total_stock||0)===0;
   $('lotteryHint').textContent=!draw?'くじは2026年12月16日〜24日に開催します。':Number(state.public?.total_stock||0)===0?'プレゼントがなくなり次第終了です。在庫は現在0個です。':remaining===0?'今日の抽選は3回終了しました。翌日0時（日本時間）に再び引けます。':'1日3回まで。引いたプレゼントは共通在庫からなくなります。';
 }
 async function refreshPublic(){try{const d=await api('/api/state');state.public=d;$('connectionDot').classList.add('online');$('connectionText').textContent='接続中';renderPublic();}catch(e){$('connectionDot').classList.remove('online');$('connectionText').textContent='接続エラー';safeError(e);}}
-async function refreshMe(){if(!state.token){state.me=null;renderMe();return;}try{const d=await api('/api/me');state.me={...d.player,draw_count_today:d.draw_count_today};renderMe();}catch(e){state.me=null;renderMe();msg('参加者情報を確認できません。保存済みトークンをご確認ください。',true);}}
+async function refreshMe(){if(!state.token){state.me=null;renderMe();return;}try{const d=await api('/api/me');state.me={...d.player,draw_count_today:d.draw_count_today,self_gift_used_today:d.self_gift_used_today};renderMe();}catch(e){state.me=null;renderMe();msg('参加者情報を確認できません。保存済みトークンをご確認ください。',true);}}
 async function refreshAll(){await Promise.all([refreshPublic(),refreshMe()]);}
 function openRegister(){if(state.me){msg('このブラウザではすでに「'+state.me.character_name+'」として参加しています。');return;}if(state.token){msg('保存済みの参加情報を確認できません。ページ更新後も続く場合は運営へ連絡してください。',true);return;}$('registerDialog').showModal();}
 async function register(e){e.preventDefault();if(state.busy)return;const name=$('characterName').value.trim();if(!name)return;state.busy=true;$('registerSubmit').disabled=true;
@@ -130,6 +131,23 @@ async function exchange(){if(state.busy||chosenCost===null)return;const cost=cho
   try{const d=await api('/api/exchange',{method:'POST',body:{cost,...(cost===2500?{message:$('giftMessage').value.trim()}:{})}});$('confirmDialog').close();if(cost===2500)$('giftMessage').value='';state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;renderMe();msg(`「${d.present.title}」を共通の抽選箱へ追加しました！`);await refreshPublic();await refreshHistory();}
   catch(err){safeError(err);}finally{chosenCost=null;state.busy=false;$('confirmAccept').disabled=false;updateButtons();}
 }
+async function claimSelfGift(){
+  if(state.busy)return;
+  if(!state.me)return openRegister();
+  if(!window.confirm('800ptを使って自分へのプレゼントを交換しますか？（1日1回）'))return;
+  state.busy=true;updateButtons();
+  try{
+    const d=await api('/api/self-gift',{method:'POST',body:{}});
+    state.me.points=d.player.points;
+    state.me.total_earned=d.player.total_earned;
+    state.me.self_gift_used_today=true;
+    renderMe();
+    $('selfGiftResult').textContent=`🎁 ${d.gift.title} が当たりました！`;
+    $('selfGiftResult').hidden=false;
+    msg(`自分へのプレゼント：${d.gift.title}を受け取りました！`);
+    await refreshHistory();
+  }catch(err){safeError(err);}finally{state.busy=false;updateButtons();}
+}
 async function draw(){if(state.busy)return;if(!state.me)return openRegister();if(!window.confirm('本日のくじを1回引きます。よろしいですか？'))return;
   state.busy=true;updateButtons();$('prizeReveal').hidden=true;
   try{const d=await api('/api/draw',{method:'POST',body:{}});$('prizeTitle').textContent=d.prize.title;$('prizeMessage').textContent=d.prize.message||'素敵なクリスマスを！';$('prizeReveal').hidden=false;
@@ -140,10 +158,10 @@ const GIFT_LABELS = {10:'ささやかなプレゼント',50:'まあまあなプ�
 function fillHistory(target,items,kind){const root=$(target);root.replaceChildren();if(!items?.length){const p=document.createElement('p');p.className='empty';p.textContent=kind==='draw'?'まだプレゼントを受け取っていません。':'まだプレゼントを用意していません。';root.append(p);return;}
   for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${GIFT_LABELS[item.gift_type] || "プレゼント"}${item.creator_name?' · '+item.creator_name+'作':''}`:`${GIFT_LABELS[item.gift_type] || "プレゼント"} · ${item.status==='claimed'?'当選済':'抽選待ち'}`;row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
 }
-async function refreshHistory(){if(!state.me)return;try{const data=await api('/api/history');fillHistory('drawHistory',data.draws,'draw');fillHistory('generatedHistory',data.generated,'generated');}catch(err){safeError(err);}}
+async function refreshHistory(){if(!state.me)return;try{const data=await api('/api/history');fillHistory('drawHistory',data.draws,'draw');fillHistory('generatedHistory',data.generated,'generated');const root=$('selfGiftHistory');root.replaceChildren();if(!data.self_gifts?.length){const e=document.createElement('p');e.className='empty';e.textContent='まだ交換していません。';root.append(e);}else for(const gift of data.self_gifts){const e=document.createElement('article');e.className='history-item';e.textContent=`${gift.claim_date} · ${GIFT_LABELS[gift.gift_type]}`;root.append(e);}}catch(err){safeError(err);}}
 function bind(){document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));document.querySelectorAll('.refresh').forEach(b=>b.addEventListener('click',refreshAll));
   $('registerOpen').addEventListener('click',openRegister);$('registerClose').addEventListener('click',()=>$('registerDialog').close());$('registerForm').addEventListener('submit',register);$('spinButton').addEventListener('click',spin);
-  document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);
+  document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAll();});
 }
 bind();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);

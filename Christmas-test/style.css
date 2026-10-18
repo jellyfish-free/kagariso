@@ -9,3 +9,10 @@
 @keyframes slot-reel-bounce{0%{transform:translateY(-7px) scaleY(.92)}50%{transform:translateY(7px) scaleY(1.03)}100%{transform:translateY(-7px) scaleY(.92)}}
 @keyframes slot-reel-stop{0%{transform:translateY(-8px) scaleY(1.07)}65%{transform:translateY(3px) scaleY(.98)}100%{transform:translateY(0) scaleY(1)}}
 @media(prefers-reduced-motion:reduce){.reel.spinning,.reel.reel-stopped{animation:none;filter:none}}
+
+/* 自分へのプレゼント交換枠 */
+.self-gift-panel{margin:24px 0;padding:24px;border:1px solid rgba(214,180,108,.65);border-radius:18px;background:linear-gradient(145deg,rgba(99,53,49,.32),rgba(39,74,60,.42));}
+.self-gift-panel h3{margin:9px 0;font-size:1.35rem;}
+.self-gift-panel h4{margin:20px 0 10px;font-size:1rem;}
+.self-gift-panel p{line-height:1.75;}
+.self-gift-result{margin-top:14px;padding:13px;border-radius:10px;background:rgba(222,184,107,.2);font-weight:700;}
