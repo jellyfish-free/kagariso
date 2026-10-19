@@ -17,21 +17,15 @@
 .self-gift-panel p{line-height:1.75;}
 .self-gift-result{margin-top:14px;padding:13px;border-radius:10px;background:rgba(222,184,107,.2);font-weight:700;}
 
-/* 共有ツリー画像：6段階をimages/step1.png〜step6.pngで表示 */
-.tree-art .tree-image{display:block;width:100%;max-width:100%;height:370px;object-fit:contain;object-position:center;filter:drop-shadow(0 12px 20px #0005);transition:opacity .2s ease;}
-@media(max-width:680px){.tree-art .tree-image{height:310px;}}
-
-/* ささやかなプレゼント：景品一覧 */
-.catalog-details{margin:1.2rem 0;padding:1rem;border:1px solid rgba(223,194,132,.28);border-radius:12px;background:rgba(255,255,255,.025)}
-.catalog-details summary{cursor:pointer;font-weight:700;color:#efd19a}
-.catalog-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.65rem;margin-top:1rem}
-.catalog-item{padding:.75rem;border:1px solid rgba(230,207,151,.18);border-radius:9px;background:rgba(0,0,0,.14)}
-.catalog-item strong{display:block;font-size:.91rem}
-.catalog-item small{display:block;opacity:.65;font-size:.76rem;margin:.2rem 0}
-.catalog-item p{font-size:.82rem;line-height:1.65;opacity:.85;margin:.35rem 0 0}
-
-/* 景品画像：画像がまだない場合は自動的に非表示 */
-.catalog-gift-image{display:block;width:100%;height:160px;object-fit:contain;margin-bottom:12px;border-radius:9px;background:rgba(255,255,255,.045)}
-.prize-gift-image{display:block;width:min(100%,280px);max-height:260px;object-fit:contain;margin:14px auto 0;border-radius:12px}
-.history-gift-image{width:76px;height:76px;object-fit:contain;float:left;margin:0 12px 8px 0;border-radius:7px;background:rgba(255,255,255,.05)}
-.history-item::after{content:"";display:block;clear:both}
+/* 景品は当選結果のみ画像表示。交換所のカタログはテキストのみ */
+.catalog-item img {display:none!important;}
+.prize-item-card {display:flex;align-items:center;gap:18px;text-align:left;padding:16px;border:1px solid rgba(185,150,84,.4);border-radius:16px;background:rgba(255,255,255,.07);margin:12px auto;max-width:620px;}
+.prize-image-frame {flex:0 0 180px;width:180px;min-height:180px;aspect-ratio:1/1;display:flex;justify-content:center;align-items:center;border-radius:13px;background:rgba(255,255,255,.08);overflow:hidden;}
+.prize-result-image {display:block;max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;}
+.prize-placeholder {font-size:64px;}
+.prize-item-details {min-width:0;flex:1;display:flex;flex-direction:column;gap:7px;}
+.prize-item-details small {opacity:.75;}
+.prize-item-details strong {font-size:1.12rem;line-height:1.5;}
+.prize-item-details p {margin:0;white-space:pre-wrap;line-height:1.75;}
+.self-gift-result {margin-top:12px;}
+@media(max-width:540px){.prize-item-card {flex-direction:column;text-align:center;}.prize-image-frame{width:min(100%,260px);flex-basis:auto;min-height:200px;}.prize-item-details{text-align:center;}}
