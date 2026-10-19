@@ -3102,7 +3102,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "手作りの飾り",
-    "name": "仮屋くん手作りの松ぼっくりツリー",
+    "name": "松ぼっくりツリー",
     "description": "裏庭で拾った松ぼっくりに色を塗り、赤いリボンを結んだ小さなツリー。"
   },
   {
@@ -3111,7 +3111,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "手作りの飾り",
-    "name": "仮屋くん作・木片のクリスマスオーナメント",
+    "name": "木片のクリスマスオーナメント",
     "description": "余った木片を星型に削って紐を通したもの。少し歪んでいる。"
   },
   {
@@ -3120,7 +3120,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "手作りの飾り",
-    "name": "仮屋くんの手縫いクリスマス靴下",
+    "name": "手縫いクリスマス靴下",
     "description": "余り布で作った小さな靴下。飴玉が二、三個入る程度の大きさ。"
   },
   {
@@ -3129,7 +3129,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "手作りの飾り",
-    "name": "仮屋くん作・神狩荘のミニ看板",
+    "name": "神狩荘のミニ看板",
     "description": "段ボールに「MERRY CHRISTMAS」と書き、裏に小さな支えを付けた卓上看板。"
   },
   {
@@ -3138,7 +3138,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "日用品・裁縫小物",
-    "name": "仮屋くんの手作りペン立て",
+    "name": "手作りペン立て",
     "description": "空き缶に麻紐と赤いリボンを巻いたもの。ペンを立てると少し傾く。"
   },
   {
@@ -3147,7 +3147,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "日用品・裁縫小物",
-    "name": "仮屋くん作・鍵置きトレイ",
+    "name": "鍵置きトレイ",
     "description": "端材を浅い皿状に組み合わせたもの。鍵を置くと木の音がする。"
   },
   {
@@ -3156,7 +3156,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "日用品・裁縫小物",
-    "name": "仮屋くんの手作り貯金箱",
+    "name": "手作り貯金箱",
     "description": "空き缶にクリスマス柄の紙を巻き、投入口を開けたもの。正面には「神狩荘修繕費」と書かれている。"
   },
   {
@@ -3165,7 +3165,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "日用品・裁縫小物",
-    "name": "仮屋くん作・卓上ごみ箱",
+    "name": "卓上ごみ箱",
     "description": "クリスマスのチラシで折った小さなごみ箱。みかんの皮や机の上で出た紙くずを捨てるのにちょうどいい。"
   },
   {
