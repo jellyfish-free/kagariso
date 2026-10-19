@@ -29,3 +29,16 @@
 .prize-item-details p {margin:0;white-space:pre-wrap;line-height:1.75;}
 .self-gift-result {margin-top:12px;}
 @media(max-width:540px){.prize-item-card {flex-direction:column;text-align:center;}.prize-image-frame{width:min(100%,260px);flex-basis:auto;min-height:200px;}.prize-item-details{text-align:center;}}
+
+
+/* 交換所：画像を出さず、各景品を独立したカードで表示 */
+.catalog-details {margin-top:18px;border:1px solid var(--border);border-radius:14px;background:rgba(20,44,39,.67);overflow:hidden;}
+.catalog-details summary {cursor:pointer;padding:15px 19px;color:var(--gold2);font-weight:700;list-style-position:inside;}
+.catalog-details[open] summary {border-bottom:1px solid var(--border);}
+.catalog-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:16px;}
+.catalog-list .catalog-item {min-width:0;display:flex;flex-direction:column;gap:6px;padding:16px 17px;border:1px solid rgba(231,200,135,.28);border-radius:12px;background:linear-gradient(135deg,rgba(36,65,54,.95),rgba(18,43,36,.98));box-shadow:0 4px 12px rgba(0,0,0,.1);}
+.catalog-list .catalog-item strong {display:block;color:var(--gold2);font-size:14px;line-height:1.5;overflow-wrap:anywhere;}
+.catalog-list .catalog-item small {display:block;color:var(--gold);font-size:11px;opacity:.88;}
+.catalog-list .catalog-item p {margin:0;color:var(--muted);font-size:12px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;}
+.catalog-list .catalog-item img {display:none!important;}
+@media(max-width:650px){.catalog-list {grid-template-columns:1fr;padding:12px;gap:10px;}.catalog-list .catalog-item {padding:14px 15px;}}
