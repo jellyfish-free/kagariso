@@ -721,6 +721,187 @@ window.CHRISTMAS_GIFTS = [
     "description": "余った糸を巻いた、色とりどりの糸巻き。"
   },
   {
+    "id": "gift_small_081",
+    "image": "../Christmas/images/gifts/gift_small_081.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "仮屋くんの名言（仮）湯のみ",
+    "description": "紙コップに「管理人のありがたいお言葉」と手書きしたもの。中身は普通の紙コップ。"
+  },
+  {
+    "id": "gift_small_082",
+    "image": "../Christmas/images/gifts/gift_small_082.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "手作り糸電話",
+    "description": "紙コップで作った赤と緑の手作り糸電話。壁にあてると隣の部屋の音が聞こえるかも……？"
+  },
+  {
+    "id": "gift_small_083",
+    "image": "../Christmas/images/gifts/gift_small_083.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "手作りのポチ袋",
+    "description": "中身は当然ない。お正月にお年玉が欲しいと仮屋からのアピールかも……？"
+  },
+  {
+    "id": "gift_small_084",
+    "image": "../Christmas/images/gifts/gift_small_084.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "裏庭の土を少しだけ入れた小瓶",
+    "description": "「神狩荘産」と手書きのラベルが貼られている。"
+  },
+  {
+    "id": "gift_small_085",
+    "image": "../Christmas/images/gifts/gift_small_085.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "中身のないクリスマス靴下",
+    "description": "何度確認しても何も入っていない。"
+  },
+  {
+    "id": "gift_small_086",
+    "image": "../Christmas/images/gifts/gift_small_086.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "誰かの足跡を写した紙",
+    "description": "裏庭の泥に残った足跡を鉛筆で写し取ったもの。"
+  },
+  {
+    "id": "gift_small_087",
+    "image": "../Christmas/images/gifts/gift_small_087.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "一枚だけの古い切符",
+    "description": "行き先の欄が空白になっている。"
+  },
+  {
+    "id": "gift_small_088",
+    "image": "../Christmas/images/gifts/gift_small_088.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "13先輩のクリスマス限定指差し棒",
+    "description": "ただの木の棒に赤いリボンを巻き、「13先輩公認」と書いた紙を貼ったもの。公認かどうかは不明。"
+  },
+  {
+    "id": "gift_small_089",
+    "image": "../Christmas/images/gifts/gift_small_089.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "神狩荘・空気おすそ分け袋",
+    "description": "小さな紙袋に「神狩荘のクリスマスの空気入り」と書いてある。中身はもちろん空気。"
+  },
+  {
+    "id": "gift_small_090",
+    "image": "../Christmas/images/gifts/gift_small_090.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "松ぼっくりツリー",
+    "description": "裏庭で拾った松ぼっくりに色を塗り、赤いリボンを結んだ小さなツリー。"
+  },
+  {
+    "id": "gift_small_091",
+    "image": "../Christmas/images/gifts/gift_small_091.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "木片のクリスマスオーナメント",
+    "description": "余った木片を星型に削って紐を通したもの。少し歪んでいる。"
+  },
+  {
+    "id": "gift_small_092",
+    "image": "../Christmas/images/gifts/gift_small_092.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "手縫いクリスマス靴下",
+    "description": "余り布で作った小さな靴下。飴玉が二、三個入る程度の大きさ。"
+  },
+  {
+    "id": "gift_small_093",
+    "image": "../Christmas/images/gifts/gift_small_093.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "神狩荘のミニ看板",
+    "description": "段ボールに「MERRY CHRISTMAS」と書き、裏に小さな支えを付けた卓上看板。"
+  },
+  {
+    "id": "gift_small_094",
+    "image": "../Christmas/images/gifts/gift_small_094.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りペン立て",
+    "description": "空き缶に麻紐と赤いリボンを巻いたもの。ペンを立てると少し傾く。"
+  },
+  {
+    "id": "gift_small_095",
+    "image": "../Christmas/images/gifts/gift_small_095.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "鍵置きトレイ",
+    "description": "端材を浅い皿状に組み合わせたもの。鍵を置くと木の音がする。"
+  },
+  {
+    "id": "gift_small_096",
+    "image": "../Christmas/images/gifts/gift_small_096.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作り貯金箱",
+    "description": "空き缶にクリスマス柄の紙を巻き、投入口を開けたもの。正面には「神狩荘修繕費」と書かれている。"
+  },
+  {
+    "id": "gift_small_097",
+    "image": "../Christmas/images/gifts/gift_small_097.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "卓上ごみ箱",
+    "description": "クリスマスのチラシで折った小さなごみ箱。みかんの皮や机の上で出た紙くずを捨てるのにちょうどいい。"
+  },
+  {
+    "id": "gift_small_098",
+    "image": "../Christmas/images/gifts/gift_small_098.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手編みの冬小物",
+    "name": "手編み手袋",
+    "description": "赤と緑の毛糸で編んだ手袋。左右で微妙に大きさが違うけれど、手首には小さな雪の結晶が刺繍されている。"
+  },
+  {
+    "id": "gift_small_099",
+    "image": "../Christmas/images/gifts/gift_small_099.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手編みの冬小物",
+    "name": "手編み靴下",
+    "description": "余った毛糸を組み合わせて編んだ厚手の靴下。クリスマスカラーの縞模様で、履き口には小さなポンポン付き。"
+  },
+  {
+    "id": "gift_small_100",
+    "image": "../Christmas/images/gifts/gift_small_100.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手編みの冬小物",
+    "name": "特製・手編みマフラー",
+    "description": "深緑と赤の毛糸で長めに編んだマフラー。端には「Merry Christmas」の小さな布タグが縫い付けられている。"
+  },
+
+  {
     "id": "gift_medium_001",
     "image": "../Christmas/images/gifts/gift_medium_001.png",
     "gift_type": 50,
@@ -1611,6 +1792,15 @@ window.CHRISTMAS_GIFTS = [
     "name": "赤い実のついた小枝のブローチ",
     "description": "赤い実をつけた小枝をかたどったブローチ。"
   },
+    {
+    "id": "gift_medium_100",
+    "image": "../Christmas/images/gifts/gift_medium_100.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "仮屋くん人形",
+    "description": "手のひらサイズのぬいぐるみ。小さなサンタ帽を被せ、首元には赤いリボンを結んである。"
+  },
   {
     "id": "gift_large_001",
     "image": "../Christmas/images/gifts/gift_large_001.png",
@@ -2060,6 +2250,276 @@ window.CHRISTMAS_GIFTS = [
     "category": "特別な雑貨",
     "name": "あなた宛ての特別なクリスマスギフト",
     "description": "上質な箱に包まれた贈り物。中身は受け取る人によって異なり、必ずその人に向けた短い手紙が添えられている。"
+  },
+　{
+    "id": "gift_large_051",
+    "image": "../Christmas/images/gifts/gift_large_051.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "職人仕立てのオーダーメイド革靴",
+    "description": "足型から仕立てる、上質なカーフレザーの紳士靴。"
+  },
+  {
+    "id": "gift_large_052",
+    "image": "../Christmas/images/gifts/gift_large_052.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "高級レザーチェルシーブーツ",
+    "description": "艶のある黒革と洗練されたシルエットが魅力のブーツ。"
+  },
+  {
+    "id": "gift_large_053",
+    "image": "../Christmas/images/gifts/gift_large_053.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "イタリア製スエードローファー",
+    "description": "柔らかなスエードを使用した、上品な大人の一足。"
+  },
+  {
+    "id": "gift_large_054",
+    "image": "../Christmas/images/gifts/gift_large_054.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "限定モデルのレザースニーカー",
+    "description": "上質な革とミニマルなデザインを組み合わせた高級スニーカー。"
+  },
+  {
+    "id": "gift_large_055",
+    "image": "../Christmas/images/gifts/gift_large_055.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "パティーヌ仕上げの革靴",
+    "description": "職人が手作業で色の濃淡をつけた、深みのある一点物。"
+  },
+  {
+    "id": "gift_large_056",
+    "image": "../Christmas/images/gifts/gift_large_056.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "靴・足元",
+    "name": "カシミヤ混の高級ソックスセット",
+    "description": "肌触りと保温性に優れた、上質な靴下の詰め合わせ。"
+  },
+  {
+    "id": "gift_large_057",
+    "image": "../Christmas/images/gifts/gift_large_057.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "イタリアンレザーの高級ベルト",
+    "description": "美しい艶と経年変化を楽しめる、上質な本革製。"
+  },
+  {
+    "id": "gift_large_058",
+    "image": "../Christmas/images/gifts/gift_large_058.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "リバーシブルのラグジュアリーベルト",
+    "description": "黒とブラウンを使い分けられる、洗練された一本。"
+  },
+  {
+    "id": "gift_large_059",
+    "image": "../Christmas/images/gifts/gift_large_059.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "シルバーバックルの特注ベルト",
+    "description": "彫金を施したバックルが主役の特別仕立て。"
+  },
+  {
+    "id": "gift_large_060",
+    "image": "../Christmas/images/gifts/gift_large_060.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "クロコダイルレザーのベルト",
+    "description": "独特の模様と高級感を備えた、存在感のある逸品。"
+  },
+  {
+    "id": "gift_large_061",
+    "image": "../Christmas/images/gifts/gift_large_061.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "高級レザーのカードケース",
+    "description": "薄型で使いやすく、丁寧なコバ処理が美しい一品。"
+  },
+  {
+    "id": "gift_large_062",
+    "image": "../Christmas/images/gifts/gift_large_062.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "ベルト・革小物",
+    "name": "職人仕立てのキーケース",
+    "description": "手縫いのステッチが映える、長く愛用できる革小物。"
+  },
+  {
+    "id": "gift_large_063",
+    "image": "../Christmas/images/gifts/gift_large_063.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "スイス製の機械式腕時計",
+    "description": "精巧なムーブメントを備えた、特別感のあるタイムピース。"
+  },
+  {
+    "id": "gift_large_064",
+    "image": "../Christmas/images/gifts/gift_large_064.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "シルバーのカフリンクス",
+    "description": "オニキスや天然石をあしらった、フォーマルな装いに似合う一対。"
+  },
+  {
+    "id": "gift_large_065",
+    "image": "../Christmas/images/gifts/gift_large_065.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "プラチナ仕上げのタイバー",
+    "description": "控えめな輝きが美しい、上質なネクタイピン。"
+  },
+  {
+    "id": "gift_large_066",
+    "image": "../Christmas/images/gifts/gift_large_066.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "彫金入りのシグネットリング",
+    "description": "紋章やイニシャルを刻める、クラシカルな指輪。"
+  },
+  {
+    "id": "gift_large_067",
+    "image": "../Christmas/images/gifts/gift_large_067.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "天然石をあしらったシルバーブレスレット",
+    "description": "深い色の石と銀細工を組み合わせたアクセサリー。"
+  },
+  {
+    "id": "gift_large_068",
+    "image": "../Christmas/images/gifts/gift_large_068.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "腕・手元",
+    "name": "高級レザーの腕時計ベルトセット",
+    "description": "色や素材を変えて楽しめる、交換用ストラップの特別セット。"
+  },
+  {
+    "id": "gift_large_069",
+    "image": "../Christmas/images/gifts/gift_large_069.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "シルクの高級ネクタイ",
+    "description": "熟練職人による織りと、上品な光沢が魅力。"
+  },
+  {
+    "id": "gift_large_070",
+    "image": "../Christmas/images/gifts/gift_large_070.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "カシミヤの上質なネックウォーマー",
+    "description": "すっきりした形で、冬の装いに取り入れやすい一品。"
+  },
+  {
+    "id": "gift_large_071",
+    "image": "../Christmas/images/gifts/gift_large_071.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "シルクのポケットチーフセット",
+    "description": "季節や場面に合わせて使える、上質な柄違いのセット。"
+  },
+  {
+    "id": "gift_large_072",
+    "image": "../Christmas/images/gifts/gift_large_072.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "ウールフェルトの高級ハット",
+    "description": "クラシカルなシルエットが映える、仕立ての良い帽子。"
+  },
+  {
+    "id": "gift_large_073",
+    "image": "../Christmas/images/gifts/gift_large_073.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "レザー仕立てのキャスケット",
+    "description": "柔らかな革と落ち着いたデザインが特徴の一品。"
+  },
+  {
+    "id": "gift_large_074",
+    "image": "../Christmas/images/gifts/gift_large_074.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "首元・頭まわり",
+    "name": "天然素材の高級カフス付きシャツ小物セット",
+    "description": "白蝶貝などを使ったカフスボタンと襟元の装飾品のセット。"
+  },
+  {
+    "id": "gift_large_075",
+    "image": "../Christmas/images/gifts/gift_large_075.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "プラチナのチェーンネックレス",
+    "description": "シンプルながら上質な輝きを持つ、長く使えるアクセサリー。"
+  },
+  {
+    "id": "gift_large_076",
+    "image": "../Christmas/images/gifts/gift_large_076.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "オニキスのペンダント",
+    "description": "黒い天然石を主役にした、落ち着いたデザインのネックレス。"
+  },
+  {
+    "id": "gift_large_077",
+    "image": "../Christmas/images/gifts/gift_large_077.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "職人手作りのシルバーイヤーカフ",
+    "description": "耳元にさりげない存在感を添える、精巧な銀細工。"
+  },
+  {
+    "id": "gift_large_078",
+    "image": "../Christmas/images/gifts/gift_large_078.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "高級レザーのサスペンダー",
+    "description": "革と金属パーツの質感にこだわった、クラシカルな装身具。"
+  },
+  {
+    "id": "gift_large_079",
+    "image": "../Christmas/images/gifts/gift_large_079.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "オーダーメイドの香り付きレザーブレスレット",
+    "description": "革に好みの香りをまとわせる、個性的な一点物。"
+  },
+  {
+    "id": "gift_large_080",
+    "image": "../Christmas/images/gifts/gift_large_080.png",
+    "gift_type": 100,
+    "cost": 1200,
+    "category": "アクセサリー・その他",
+    "name": "宝石をあしらったラペルピン",
+    "description": "小さなサファイアやガーネットを配した、ジャケットの襟元を飾る特別なアクセサリー。"
   },
   {
     "id": "gift_named_001",
@@ -2521,276 +2981,6 @@ window.CHRISTMAS_GIFTS = [
     "description": "裾や襟元に金糸の刺繍を施した、舞踏会を思わせる特別な正装。"
   },
   {
-    "id": "gift_large_051",
-    "image": "../Christmas/images/gifts/gift_large_051.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "靴・足元",
-    "name": "職人仕立てのオーダーメイド革靴",
-    "description": "足型から仕立てる、上質なカーフレザーの紳士靴。"
-  },
-  {
-    "id": "gift_large_052",
-    "image": "../Christmas/images/gifts/gift_large_052.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "靴・足元",
-    "name": "高級レザーチェルシーブーツ",
-    "description": "艶のある黒革と洗練されたシルエットが魅力のブーツ。"
-  },
-  {
-    "id": "gift_large_053",
-    "image": "../Christmas/images/gifts/gift_large_053.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "靴・足元",
-    "name": "イタリア製スエードローファー",
-    "description": "柔らかなスエードを使用した、上品な大人の一足。"
-  },
-  {
-    "id": "gift_large_054",
-    "image": "../Christmas/images/gifts/gift_large_054.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "靴・足元",
-    "name": "限定モデルのレザースニーカー",
-    "description": "上質な革とミニマルなデザインを組み合わせた高級スニーカー。"
-  },
-  {
-    "id": "gift_large_055",
-    "image": "../Christmas/images/gifts/gift_large_055.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "靴・足元",
-    "name": "パティーヌ仕上げの革靴",
-    "description": "職人が手作業で色の濃淡をつけた、深みのある一点物。"
-  },
-  {
-    "id": "gift_large_056",
-    "image": "../Christmas/images/gifts/gift_large_056.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "靴・足元",
-    "name": "カシミヤ混の高級ソックスセット",
-    "description": "肌触りと保温性に優れた、上質な靴下の詰め合わせ。"
-  },
-  {
-    "id": "gift_large_057",
-    "image": "../Christmas/images/gifts/gift_large_057.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "ベルト・革小物",
-    "name": "イタリアンレザーの高級ベルト",
-    "description": "美しい艶と経年変化を楽しめる、上質な本革製。"
-  },
-  {
-    "id": "gift_large_058",
-    "image": "../Christmas/images/gifts/gift_large_058.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "ベルト・革小物",
-    "name": "リバーシブルのラグジュアリーベルト",
-    "description": "黒とブラウンを使い分けられる、洗練された一本。"
-  },
-  {
-    "id": "gift_large_059",
-    "image": "../Christmas/images/gifts/gift_large_059.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "ベルト・革小物",
-    "name": "シルバーバックルの特注ベルト",
-    "description": "彫金を施したバックルが主役の特別仕立て。"
-  },
-  {
-    "id": "gift_large_060",
-    "image": "../Christmas/images/gifts/gift_large_060.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "ベルト・革小物",
-    "name": "クロコダイルレザーのベルト",
-    "description": "独特の模様と高級感を備えた、存在感のある逸品。"
-  },
-  {
-    "id": "gift_large_061",
-    "image": "../Christmas/images/gifts/gift_large_061.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "ベルト・革小物",
-    "name": "高級レザーのカードケース",
-    "description": "薄型で使いやすく、丁寧なコバ処理が美しい一品。"
-  },
-  {
-    "id": "gift_large_062",
-    "image": "../Christmas/images/gifts/gift_large_062.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "ベルト・革小物",
-    "name": "職人仕立てのキーケース",
-    "description": "手縫いのステッチが映える、長く愛用できる革小物。"
-  },
-  {
-    "id": "gift_large_063",
-    "image": "../Christmas/images/gifts/gift_large_063.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "腕・手元",
-    "name": "スイス製の機械式腕時計",
-    "description": "精巧なムーブメントを備えた、特別感のあるタイムピース。"
-  },
-  {
-    "id": "gift_large_064",
-    "image": "../Christmas/images/gifts/gift_large_064.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "腕・手元",
-    "name": "シルバーのカフリンクス",
-    "description": "オニキスや天然石をあしらった、フォーマルな装いに似合う一対。"
-  },
-  {
-    "id": "gift_large_065",
-    "image": "../Christmas/images/gifts/gift_large_065.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "腕・手元",
-    "name": "プラチナ仕上げのタイバー",
-    "description": "控えめな輝きが美しい、上質なネクタイピン。"
-  },
-  {
-    "id": "gift_large_066",
-    "image": "../Christmas/images/gifts/gift_large_066.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "腕・手元",
-    "name": "彫金入りのシグネットリング",
-    "description": "紋章やイニシャルを刻める、クラシカルな指輪。"
-  },
-  {
-    "id": "gift_large_067",
-    "image": "../Christmas/images/gifts/gift_large_067.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "腕・手元",
-    "name": "天然石をあしらったシルバーブレスレット",
-    "description": "深い色の石と銀細工を組み合わせたアクセサリー。"
-  },
-  {
-    "id": "gift_large_068",
-    "image": "../Christmas/images/gifts/gift_large_068.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "腕・手元",
-    "name": "高級レザーの腕時計ベルトセット",
-    "description": "色や素材を変えて楽しめる、交換用ストラップの特別セット。"
-  },
-  {
-    "id": "gift_large_069",
-    "image": "../Christmas/images/gifts/gift_large_069.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "首元・頭まわり",
-    "name": "シルクの高級ネクタイ",
-    "description": "熟練職人による織りと、上品な光沢が魅力。"
-  },
-  {
-    "id": "gift_large_070",
-    "image": "../Christmas/images/gifts/gift_large_070.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "首元・頭まわり",
-    "name": "カシミヤの上質なネックウォーマー",
-    "description": "すっきりした形で、冬の装いに取り入れやすい一品。"
-  },
-  {
-    "id": "gift_large_071",
-    "image": "../Christmas/images/gifts/gift_large_071.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "首元・頭まわり",
-    "name": "シルクのポケットチーフセット",
-    "description": "季節や場面に合わせて使える、上質な柄違いのセット。"
-  },
-  {
-    "id": "gift_large_072",
-    "image": "../Christmas/images/gifts/gift_large_072.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "首元・頭まわり",
-    "name": "ウールフェルトの高級ハット",
-    "description": "クラシカルなシルエットが映える、仕立ての良い帽子。"
-  },
-  {
-    "id": "gift_large_073",
-    "image": "../Christmas/images/gifts/gift_large_073.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "首元・頭まわり",
-    "name": "レザー仕立てのキャスケット",
-    "description": "柔らかな革と落ち着いたデザインが特徴の一品。"
-  },
-  {
-    "id": "gift_large_074",
-    "image": "../Christmas/images/gifts/gift_large_074.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "首元・頭まわり",
-    "name": "天然素材の高級カフス付きシャツ小物セット",
-    "description": "白蝶貝などを使ったカフスボタンと襟元の装飾品のセット。"
-  },
-  {
-    "id": "gift_large_075",
-    "image": "../Christmas/images/gifts/gift_large_075.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "アクセサリー・その他",
-    "name": "プラチナのチェーンネックレス",
-    "description": "シンプルながら上質な輝きを持つ、長く使えるアクセサリー。"
-  },
-  {
-    "id": "gift_large_076",
-    "image": "../Christmas/images/gifts/gift_large_076.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "アクセサリー・その他",
-    "name": "オニキスのペンダント",
-    "description": "黒い天然石を主役にした、落ち着いたデザインのネックレス。"
-  },
-  {
-    "id": "gift_large_077",
-    "image": "../Christmas/images/gifts/gift_large_077.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "アクセサリー・その他",
-    "name": "職人手作りのシルバーイヤーカフ",
-    "description": "耳元にさりげない存在感を添える、精巧な銀細工。"
-  },
-  {
-    "id": "gift_large_078",
-    "image": "../Christmas/images/gifts/gift_large_078.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "アクセサリー・その他",
-    "name": "高級レザーのサスペンダー",
-    "description": "革と金属パーツの質感にこだわった、クラシカルな装身具。"
-  },
-  {
-    "id": "gift_large_079",
-    "image": "../Christmas/images/gifts/gift_large_079.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "アクセサリー・その他",
-    "name": "オーダーメイドの香り付きレザーブレスレット",
-    "description": "革に好みの香りをまとわせる、個性的な一点物。"
-  },
-  {
-    "id": "gift_large_080",
-    "image": "../Christmas/images/gifts/gift_large_080.png",
-    "gift_type": 100,
-    "cost": 1200,
-    "category": "アクセサリー・その他",
-    "name": "宝石をあしらったラペルピン",
-    "description": "小さなサファイアやガーネットを配した、ジャケットの襟元を飾る特別なアクセサリー。"
-  },
-  {
     "id": "gift_named_052",
     "image": "../Christmas/images/gifts/gift_named_052.png",
     "gift_type": 150,
@@ -2961,184 +3151,5 @@ window.CHRISTMAS_GIFTS = [
     "name": "仮屋くんのクリスマス靴下人形",
     "description": "靴下に綿を詰めて作った人形。目つきが妙に本人らしい。"
   },
-  {
-    "id": "gift_small_081",
-    "image": "../Christmas/images/gifts/gift_small_081.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "仮屋くんの名言（仮）湯のみ",
-    "description": "紙コップに「管理人のありがたいお言葉」と手書きしたもの。中身は普通の紙コップ。"
-  },
-  {
-    "id": "gift_small_082",
-    "image": "../Christmas/images/gifts/gift_small_082.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "手作り糸電話",
-    "description": "紙コップで作った赤と緑の手作り糸電話。壁にあてると隣の部屋の音が聞こえるかも……？"
-  },
-  {
-    "id": "gift_small_083",
-    "image": "../Christmas/images/gifts/gift_small_083.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "手作りのポチ袋",
-    "description": "中身は当然ない。お正月にお年玉が欲しいと仮屋からのアピールかも……？"
-  },
-  {
-    "id": "gift_small_084",
-    "image": "../Christmas/images/gifts/gift_small_084.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "裏庭の土を少しだけ入れた小瓶",
-    "description": "「神狩荘産」と手書きのラベルが貼られている。"
-  },
-  {
-    "id": "gift_small_085",
-    "image": "../Christmas/images/gifts/gift_small_085.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "中身のないクリスマス靴下",
-    "description": "何度確認しても何も入っていない。"
-  },
-  {
-    "id": "gift_small_086",
-    "image": "../Christmas/images/gifts/gift_small_086.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "誰かの足跡を写した紙",
-    "description": "裏庭の泥に残った足跡を鉛筆で写し取ったもの。"
-  },
-  {
-    "id": "gift_small_087",
-    "image": "../Christmas/images/gifts/gift_small_087.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "一枚だけの古い切符",
-    "description": "行き先の欄が空白になっている。"
-  },
-  {
-    "id": "gift_small_088",
-    "image": "../Christmas/images/gifts/gift_small_088.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "13先輩のクリスマス限定指差し棒",
-    "description": "ただの木の棒に赤いリボンを巻き、「13先輩公認」と書いた紙を貼ったもの。公認かどうかは不明。"
-  },
-  {
-    "id": "gift_small_089",
-    "image": "../Christmas/images/gifts/gift_small_089.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "神狩荘の珍品",
-    "name": "神狩荘・空気おすそ分け袋",
-    "description": "小さな紙袋に「神狩荘のクリスマスの空気入り」と書いてある。中身はもちろん空気。"
-  },
-  {
-    "id": "gift_small_090",
-    "image": "../Christmas/images/gifts/gift_small_090.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手作りの飾り",
-    "name": "松ぼっくりツリー",
-    "description": "裏庭で拾った松ぼっくりに色を塗り、赤いリボンを結んだ小さなツリー。"
-  },
-  {
-    "id": "gift_small_091",
-    "image": "../Christmas/images/gifts/gift_small_091.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手作りの飾り",
-    "name": "木片のクリスマスオーナメント",
-    "description": "余った木片を星型に削って紐を通したもの。少し歪んでいる。"
-  },
-  {
-    "id": "gift_small_092",
-    "image": "../Christmas/images/gifts/gift_small_092.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手作りの飾り",
-    "name": "手縫いクリスマス靴下",
-    "description": "余り布で作った小さな靴下。飴玉が二、三個入る程度の大きさ。"
-  },
-  {
-    "id": "gift_small_093",
-    "image": "../Christmas/images/gifts/gift_small_093.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手作りの飾り",
-    "name": "神狩荘のミニ看板",
-    "description": "段ボールに「MERRY CHRISTMAS」と書き、裏に小さな支えを付けた卓上看板。"
-  },
-  {
-    "id": "gift_small_094",
-    "image": "../Christmas/images/gifts/gift_small_094.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "日用品・裁縫小物",
-    "name": "手作りペン立て",
-    "description": "空き缶に麻紐と赤いリボンを巻いたもの。ペンを立てると少し傾く。"
-  },
-  {
-    "id": "gift_small_095",
-    "image": "../Christmas/images/gifts/gift_small_095.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "日用品・裁縫小物",
-    "name": "鍵置きトレイ",
-    "description": "端材を浅い皿状に組み合わせたもの。鍵を置くと木の音がする。"
-  },
-  {
-    "id": "gift_small_096",
-    "image": "../Christmas/images/gifts/gift_small_096.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "日用品・裁縫小物",
-    "name": "手作り貯金箱",
-    "description": "空き缶にクリスマス柄の紙を巻き、投入口を開けたもの。正面には「神狩荘修繕費」と書かれている。"
-  },
-  {
-    "id": "gift_small_097",
-    "image": "../Christmas/images/gifts/gift_small_097.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "日用品・裁縫小物",
-    "name": "卓上ごみ箱",
-    "description": "クリスマスのチラシで折った小さなごみ箱。みかんの皮や机の上で出た紙くずを捨てるのにちょうどいい。"
-  },
-  {
-    "id": "gift_small_098",
-    "image": "../Christmas/images/gifts/gift_small_098.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手編みの冬小物",
-    "name": "手編み手袋",
-    "description": "赤と緑の毛糸で編んだ手袋。左右で微妙に大きさが違うけれど、手首には小さな雪の結晶が刺繍されている。"
-  },
-  {
-    "id": "gift_small_099",
-    "image": "../Christmas/images/gifts/gift_small_099.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手編みの冬小物",
-    "name": "手編み靴下",
-    "description": "余った毛糸を組み合わせて編んだ厚手の靴下。クリスマスカラーの縞模様で、履き口には小さなポンポン付き。"
-  },
-  {
-    "id": "gift_small_100",
-    "image": "../Christmas/images/gifts/gift_small_100.png",
-    "gift_type": 10,
-    "cost": 300,
-    "category": "手編みの冬小物",
-    "name": "特製・手編みマフラー",
-    "description": "深緑と赤の毛糸で長めに編んだマフラー。端には「Merry Christmas」の小さな布タグが縫い付けられている。"
-  }
+
 ];
