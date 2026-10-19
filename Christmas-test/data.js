@@ -1,4 +1,4 @@
-// 神狩荘クリスマス景品カタログ：ささやか100 / まあまあ105 / 豪華80 / 名前入り70
+// 神狩荘クリスマス景品カタログ：ささやか100 / まあまあ99 / 豪華80 / 名前入り70
 window.CHRISTMAS_GIFTS = [
   {
     "id": "gift_small_001",
@@ -780,8 +780,8 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 50,
     "cost": 600,
     "category": "冬のファッション",
-    "name": "雪の結晶を模したシルバーブローチ",
-    "description": "クリスマスの贈り物に選ばれた「雪の結晶を模したシルバーブローチ」。冬のひとときを彩る一品。"
+    "name": "ウール素材のルームシューズ",
+    "description": "クリスマスの贈り物に選ばれた「ウール素材のルームシューズ」。冬のひとときを彩る一品。"
   },
   {
     "id": "gift_medium_008",
@@ -789,8 +789,8 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 50,
     "cost": 600,
     "category": "冬のファッション",
-    "name": "ウール素材のルームシューズ",
-    "description": "クリスマスの贈り物に選ばれた「ウール素材のルームシューズ」。冬のひとときを彩る一品。"
+    "name": "クリスマス限定デザインの腕時計",
+    "description": "クリスマスの贈り物に選ばれた「クリスマス限定デザインの腕時計」。冬のひとときを彩る一品。"
   },
   {
     "id": "gift_medium_009",
@@ -798,21 +798,12 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 50,
     "cost": 600,
     "category": "冬のファッション",
-    "name": "クリスマス限定デザインの腕時計",
-    "description": "クリスマスの贈り物に選ばれた「クリスマス限定デザインの腕時計」。冬のひとときを彩る一品。"
-  },
-  {
-    "id": "gift_medium_010",
-    "image": "../Christmas/images/gifts/gift_medium_010.png",
-    "gift_type": 50,
-    "cost": 600,
-    "category": "冬のファッション",
     "name": "赤いベルベットのポーチ",
     "description": "クリスマスの贈り物に選ばれた「赤いベルベットのポーチ」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_011",
-    "image": "../Christmas/images/gifts/gift_medium_011.png",
+    "id": "gift_medium_010",
+    "image": "../Christmas/images/gifts/gift_medium_010.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -820,8 +811,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「焼き菓子のアソートボックス」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_012",
-    "image": "../Christmas/images/gifts/gift_medium_012.png",
+    "id": "gift_medium_011",
+    "image": "../Christmas/images/gifts/gift_medium_011.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -829,8 +820,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマス限定のチョコレート詰め合わせ」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_013",
-    "image": "../Christmas/images/gifts/gift_medium_013.png",
+    "id": "gift_medium_012",
+    "image": "../Christmas/images/gifts/gift_medium_012.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -838,8 +829,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「紅茶とビスケットのギフトセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_014",
-    "image": "../Christmas/images/gifts/gift_medium_014.png",
+    "id": "gift_medium_013",
+    "image": "../Christmas/images/gifts/gift_medium_013.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -847,8 +838,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「ホットワイン用スパイスセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_015",
-    "image": "../Christmas/images/gifts/gift_medium_015.png",
+    "id": "gift_medium_014",
+    "image": "../Christmas/images/gifts/gift_medium_014.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -856,8 +847,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「小さなシュトーレンとジャムのセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_016",
-    "image": "../Christmas/images/gifts/gift_medium_016.png",
+    "id": "gift_medium_015",
+    "image": "../Christmas/images/gifts/gift_medium_015.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -865,8 +856,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「雪だるま型のマカロン詰め合わせ」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_017",
-    "image": "../Christmas/images/gifts/gift_medium_017.png",
+    "id": "gift_medium_016",
+    "image": "../Christmas/images/gifts/gift_medium_016.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -874,8 +865,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「高級ココアとマシュマロのセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_018",
-    "image": "../Christmas/images/gifts/gift_medium_018.png",
+    "id": "gift_medium_017",
+    "image": "../Christmas/images/gifts/gift_medium_017.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -883,8 +874,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマス限定ブレンドのコーヒー豆」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_019",
-    "image": "../Christmas/images/gifts/gift_medium_019.png",
+    "id": "gift_medium_018",
+    "image": "../Christmas/images/gifts/gift_medium_018.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -892,8 +883,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「はちみつとハーブティーのセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_020",
-    "image": "../Christmas/images/gifts/gift_medium_020.png",
+    "id": "gift_medium_019",
+    "image": "../Christmas/images/gifts/gift_medium_019.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子・飲み物",
@@ -901,8 +892,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「ジンジャーブレッドハウスの組み立てキット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_021",
-    "image": "../Christmas/images/gifts/gift_medium_021.png",
+    "id": "gift_medium_020",
+    "image": "../Christmas/images/gifts/gift_medium_020.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -910,8 +901,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「LEDライト付きのミニクリスマスハウス」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_022",
-    "image": "../Christmas/images/gifts/gift_medium_022.png",
+    "id": "gift_medium_021",
+    "image": "../Christmas/images/gifts/gift_medium_021.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -919,8 +910,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「木製のクリスマスオルゴール」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_023",
-    "image": "../Christmas/images/gifts/gift_medium_023.png",
+    "id": "gift_medium_022",
+    "image": "../Christmas/images/gifts/gift_medium_022.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -928,8 +919,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「少し大きめのスノードーム」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_024",
-    "image": "../Christmas/images/gifts/gift_medium_024.png",
+    "id": "gift_medium_023",
+    "image": "../Christmas/images/gifts/gift_medium_023.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -937,8 +928,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「アンティーク風のキャンドルスタンド」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_025",
-    "image": "../Christmas/images/gifts/gift_medium_025.png",
+    "id": "gift_medium_024",
+    "image": "../Christmas/images/gifts/gift_medium_024.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -946,8 +937,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「星型の間接照明」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_026",
-    "image": "../Christmas/images/gifts/gift_medium_026.png",
+    "id": "gift_medium_025",
+    "image": "../Christmas/images/gifts/gift_medium_025.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -955,8 +946,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマスリース」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_027",
-    "image": "../Christmas/images/gifts/gift_medium_027.png",
+    "id": "gift_medium_026",
+    "image": "../Christmas/images/gifts/gift_medium_026.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -964,8 +955,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「雪景色を描いた額入りアート」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_028",
-    "image": "../Christmas/images/gifts/gift_medium_028.png",
+    "id": "gift_medium_027",
+    "image": "../Christmas/images/gifts/gift_medium_027.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -973,8 +964,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「ガラス製のツリーオブジェ」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_029",
-    "image": "../Christmas/images/gifts/gift_medium_029.png",
+    "id": "gift_medium_028",
+    "image": "../Christmas/images/gifts/gift_medium_028.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -982,8 +973,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「小型のアドベントカレンダー」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_030",
-    "image": "../Christmas/images/gifts/gift_medium_030.png",
+    "id": "gift_medium_029",
+    "image": "../Christmas/images/gifts/gift_medium_029.png",
     "gift_type": 50,
     "cost": 600,
     "category": "インテリア・飾り",
@@ -991,8 +982,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマス柄のクッションカバーセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_031",
-    "image": "../Christmas/images/gifts/gift_medium_031.png",
+    "id": "gift_medium_030",
+    "image": "../Christmas/images/gifts/gift_medium_030.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1000,8 +991,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「ペアのクリスマスマグカップ」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_032",
-    "image": "../Christmas/images/gifts/gift_medium_032.png",
+    "id": "gift_medium_031",
+    "image": "../Christmas/images/gifts/gift_medium_031.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1009,8 +1000,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「肌触りの良いブランケット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_033",
-    "image": "../Christmas/images/gifts/gift_medium_033.png",
+    "id": "gift_medium_032",
+    "image": "../Christmas/images/gifts/gift_medium_032.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1018,8 +1009,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「香りを選べるアロマキャンドルセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_034",
-    "image": "../Christmas/images/gifts/gift_medium_034.png",
+    "id": "gift_medium_033",
+    "image": "../Christmas/images/gifts/gift_medium_033.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1027,8 +1018,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「木製のティートレイ」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_035",
-    "image": "../Christmas/images/gifts/gift_medium_035.png",
+    "id": "gift_medium_034",
+    "image": "../Christmas/images/gifts/gift_medium_034.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1036,8 +1027,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「冬用の上質なタンブラー」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_036",
-    "image": "../Christmas/images/gifts/gift_medium_036.png",
+    "id": "gift_medium_035",
+    "image": "../Christmas/images/gifts/gift_medium_035.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1045,8 +1036,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマス柄のテーブルランナー」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_037",
-    "image": "../Christmas/images/gifts/gift_medium_037.png",
+    "id": "gift_medium_036",
+    "image": "../Christmas/images/gifts/gift_medium_036.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1054,8 +1045,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「刺繍入りのタオルセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_038",
-    "image": "../Christmas/images/gifts/gift_medium_038.png",
+    "id": "gift_medium_037",
+    "image": "../Christmas/images/gifts/gift_medium_037.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1063,8 +1054,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「小さな卓上加湿器」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_039",
-    "image": "../Christmas/images/gifts/gift_medium_039.png",
+    "id": "gift_medium_038",
+    "image": "../Christmas/images/gifts/gift_medium_038.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1072,8 +1063,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「陶器製のティーポット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_040",
-    "image": "../Christmas/images/gifts/gift_medium_040.png",
+    "id": "gift_medium_039",
+    "image": "../Christmas/images/gifts/gift_medium_039.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1081,8 +1072,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「ハンドケア用品のギフトセット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_041",
-    "image": "../Christmas/images/gifts/gift_medium_041.png",
+    "id": "gift_medium_040",
+    "image": "../Christmas/images/gifts/gift_medium_040.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1090,17 +1081,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「木製の引き出し式アドベントカレンダー」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_042",
-    "image": "../Christmas/images/gifts/gift_medium_042.png",
-    "gift_type": 50,
-    "cost": 600,
-    "category": "特別な冬の贈り物",
-    "name": "ガラスドーム入りの冬景色",
-    "description": "クリスマスの贈り物に選ばれた「ガラスドーム入りの冬景色」。冬のひとときを彩る一品。"
-  },
-  {
-    "id": "gift_medium_043",
-    "image": "../Christmas/images/gifts/gift_medium_043.png",
+    "id": "gift_medium_041",
+    "image": "../Christmas/images/gifts/gift_medium_041.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1108,8 +1090,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「松ぼっくりと木の実のクリスマスリース」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_044",
-    "image": "../Christmas/images/gifts/gift_medium_044.png",
+    "id": "gift_medium_042",
+    "image": "../Christmas/images/gifts/gift_medium_042.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1117,8 +1099,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「名前を刻印できる木製オーナメント」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_045",
-    "image": "../Christmas/images/gifts/gift_medium_045.png",
+    "id": "gift_medium_043",
+    "image": "../Christmas/images/gifts/gift_medium_043.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1126,8 +1108,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「小さな暖炉を模したインテリアライト」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_046",
-    "image": "../Christmas/images/gifts/gift_medium_046.png",
+    "id": "gift_medium_044",
+    "image": "../Christmas/images/gifts/gift_medium_044.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1135,8 +1117,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「雪の結晶をモチーフにしたガラス細工」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_047",
-    "image": "../Christmas/images/gifts/gift_medium_047.png",
+    "id": "gift_medium_045",
+    "image": "../Christmas/images/gifts/gift_medium_045.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1144,8 +1126,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマス限定のテディベア」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_048",
-    "image": "../Christmas/images/gifts/gift_medium_048.png",
+    "id": "gift_medium_046",
+    "image": "../Christmas/images/gifts/gift_medium_046.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1153,8 +1135,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「仕掛け絵本『クリスマスの夜』」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_049",
-    "image": "../Christmas/images/gifts/gift_medium_049.png",
+    "id": "gift_medium_047",
+    "image": "../Christmas/images/gifts/gift_medium_047.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1162,8 +1144,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「ミニチュアのクリスマスマーケット」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_050",
-    "image": "../Christmas/images/gifts/gift_medium_050.png",
+    "id": "gift_medium_048",
+    "image": "../Christmas/images/gifts/gift_medium_048.png",
     "gift_type": 50,
     "cost": 600,
     "category": "特別な冬の贈り物",
@@ -1171,8 +1153,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「手紙と小さな贈り物が入ったクリスマスギフトボックス」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_051",
-    "image": "../Christmas/images/gifts/gift_medium_051.png",
+    "id": "gift_medium_049",
+    "image": "../Christmas/images/gifts/gift_medium_049.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマスの不思議",
@@ -1180,8 +1162,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「金色の鍵のクリスマスオーナメント」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_052",
-    "image": "../Christmas/images/gifts/gift_medium_052.png",
+    "id": "gift_medium_050",
+    "image": "../Christmas/images/gifts/gift_medium_050.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマスの不思議",
@@ -1189,8 +1171,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「真鍮のクリスマスランタン」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_053",
-    "image": "../Christmas/images/gifts/gift_medium_053.png",
+    "id": "gift_medium_051",
+    "image": "../Christmas/images/gifts/gift_medium_051.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマスの不思議",
@@ -1198,8 +1180,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「木の実と深紅のリボンのクリスマスリース」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_054",
-    "image": "../Christmas/images/gifts/gift_medium_054.png",
+    "id": "gift_medium_052",
+    "image": "../Christmas/images/gifts/gift_medium_052.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマスの不思議",
@@ -1207,8 +1189,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「クリスマス仕様の部屋番号プレート」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_055",
-    "image": "../Christmas/images/gifts/gift_medium_055.png",
+    "id": "gift_medium_053",
+    "image": "../Christmas/images/gifts/gift_medium_053.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマスの不思議",
@@ -1216,8 +1198,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの贈り物に選ばれた「差出人不明のクリスマスギフト」。冬のひとときを彩る一品。"
   },
   {
-    "id": "gift_medium_056",
-    "image": "../Christmas/images/gifts/gift_medium_056.png",
+    "id": "gift_medium_054",
+    "image": "../Christmas/images/gifts/gift_medium_054.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1225,8 +1207,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "赤と白のしま模様が愛らしい、クリスマス定番のキャンディ。"
   },
   {
-    "id": "gift_medium_057",
-    "image": "../Christmas/images/gifts/gift_medium_057.png",
+    "id": "gift_medium_055",
+    "image": "../Christmas/images/gifts/gift_medium_055.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1234,8 +1216,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "きらきらの砂糖をまぶした、星の形のクッキー。"
   },
   {
-    "id": "gift_medium_058",
-    "image": "../Christmas/images/gifts/gift_medium_058.png",
+    "id": "gift_medium_056",
+    "image": "../Christmas/images/gifts/gift_medium_056.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1243,8 +1225,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "小さな人の形に焼かれた、スパイス香るクッキー。"
   },
   {
-    "id": "gift_medium_059",
-    "image": "../Christmas/images/gifts/gift_medium_059.png",
+    "id": "gift_medium_057",
+    "image": "../Christmas/images/gifts/gift_medium_057.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1252,8 +1234,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "温かい飲み物に浮かべたい、雪だるま形のマシュマロ。"
   },
   {
-    "id": "gift_medium_060",
-    "image": "../Christmas/images/gifts/gift_medium_060.png",
+    "id": "gift_medium_058",
+    "image": "../Christmas/images/gifts/gift_medium_058.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1261,8 +1243,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "ひと口サイズのチョコレートを詰めた、小さな箱。"
   },
   {
-    "id": "gift_medium_061",
-    "image": "../Christmas/images/gifts/gift_medium_061.png",
+    "id": "gift_medium_059",
+    "image": "../Christmas/images/gifts/gift_medium_059.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1270,8 +1252,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの模様が描かれた、小ぶりのキャンディ缶。"
   },
   {
-    "id": "gift_medium_062",
-    "image": "../Christmas/images/gifts/gift_medium_062.png",
+    "id": "gift_medium_060",
+    "image": "../Christmas/images/gifts/gift_medium_060.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1279,8 +1261,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "リボンで口を結んだ、焼き菓子入りの小袋。"
   },
   {
-    "id": "gift_medium_063",
-    "image": "../Christmas/images/gifts/gift_medium_063.png",
+    "id": "gift_medium_061",
+    "image": "../Christmas/images/gifts/gift_medium_061.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1288,8 +1270,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "粉砂糖をまとった、手のひらサイズのシュトーレン。"
   },
   {
-    "id": "gift_medium_064",
-    "image": "../Christmas/images/gifts/gift_medium_064.png",
+    "id": "gift_medium_062",
+    "image": "../Christmas/images/gifts/gift_medium_062.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1297,8 +1279,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "ベリーの甘酸っぱさが楽しめる棒付きキャンディ。"
   },
   {
-    "id": "gift_medium_065",
-    "image": "../Christmas/images/gifts/gift_medium_065.png",
+    "id": "gift_medium_063",
+    "image": "../Christmas/images/gifts/gift_medium_063.png",
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
@@ -1306,8 +1288,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "サンタの姿をかたどった、可愛らしいチョコレート。"
   },
   {
-    "id": "gift_medium_066",
-    "image": "../Christmas/images/gifts/gift_medium_066.png",
+    "id": "gift_medium_064",
+    "image": "../Christmas/images/gifts/gift_medium_064.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1315,8 +1297,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "枝先に飾れる、星形の小さなオーナメント。"
   },
   {
-    "id": "gift_medium_067",
-    "image": "../Christmas/images/gifts/gift_medium_067.png",
+    "id": "gift_medium_065",
+    "image": "../Christmas/images/gifts/gift_medium_065.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1324,8 +1306,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "光を受けて艶めく、赤いガラス玉の飾り。"
   },
   {
-    "id": "gift_medium_068",
-    "image": "../Christmas/images/gifts/gift_medium_068.png",
+    "id": "gift_medium_066",
+    "image": "../Christmas/images/gifts/gift_medium_066.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1333,8 +1315,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "繊細な雪の結晶を模した、小さなチャーム。"
   },
   {
-    "id": "gift_medium_069",
-    "image": "../Christmas/images/gifts/gift_medium_069.png",
+    "id": "gift_medium_067",
+    "image": "../Christmas/images/gifts/gift_medium_067.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1342,8 +1324,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "帽子と白いひげが目印の、手のひらサイズのサンタ。"
   },
   {
-    "id": "gift_medium_070",
-    "image": "../Christmas/images/gifts/gift_medium_070.png",
+    "id": "gift_medium_068",
+    "image": "../Christmas/images/gifts/gift_medium_068.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1351,8 +1333,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "丸い体と小さな鼻が可愛らしい、雪だるまの置物。"
   },
   {
-    "id": "gift_medium_071",
-    "image": "../Christmas/images/gifts/gift_medium_071.png",
+    "id": "gift_medium_069",
+    "image": "../Christmas/images/gifts/gift_medium_069.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1360,8 +1342,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "木のぬくもりが残る、素朴なトナカイの飾り。"
   },
   {
-    "id": "gift_medium_072",
-    "image": "../Christmas/images/gifts/gift_medium_072.png",
+    "id": "gift_medium_070",
+    "image": "../Christmas/images/gifts/gift_medium_070.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1369,8 +1351,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "小さなベルが揺れる、手のひらサイズのリース。"
   },
   {
-    "id": "gift_medium_073",
-    "image": "../Christmas/images/gifts/gift_medium_073.png",
+    "id": "gift_medium_071",
+    "image": "../Christmas/images/gifts/gift_medium_071.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1378,8 +1360,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスカラーの、ミニチュアの靴下飾り。"
   },
   {
-    "id": "gift_medium_074",
-    "image": "../Christmas/images/gifts/gift_medium_074.png",
+    "id": "gift_medium_072",
+    "image": "../Christmas/images/gifts/gift_medium_072.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1387,8 +1369,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "木目が美しい、ツリー形の小さなオブジェ。"
   },
   {
-    "id": "gift_medium_075",
-    "image": "../Christmas/images/gifts/gift_medium_075.png",
+    "id": "gift_medium_073",
+    "image": "../Christmas/images/gifts/gift_medium_073.png",
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
@@ -1396,8 +1378,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "振ると雪が舞う、手のひらサイズのスノードーム。"
   },
   {
-    "id": "gift_medium_076",
-    "image": "../Christmas/images/gifts/gift_medium_076.png",
+    "id": "gift_medium_074",
+    "image": "../Christmas/images/gifts/gift_medium_074.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1405,8 +1387,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "サンタクロースを描いた、冬のグリーティングカード。"
   },
   {
-    "id": "gift_medium_077",
-    "image": "../Christmas/images/gifts/gift_medium_077.png",
+    "id": "gift_medium_075",
+    "image": "../Christmas/images/gifts/gift_medium_075.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1414,17 +1396,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "大小の雪の結晶を集めた、シールのセット。"
   },
   {
-    "id": "gift_medium_078",
-    "image": "../Christmas/images/gifts/gift_medium_078.png",
-    "gift_type": 50,
-    "cost": 600,
-    "category": "雑貨・文具",
-    "name": "クリスマス柄のマスキングテープ",
-    "description": "包み紙や手帳を飾れる、クリスマス柄のテープ。"
-  },
-  {
-    "id": "gift_medium_079",
-    "image": "../Christmas/images/gifts/gift_medium_079.png",
+    "id": "gift_medium_076",
+    "image": "../Christmas/images/gifts/gift_medium_076.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1432,17 +1405,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "ページの間から小さなツリーがのぞく、木製のしおり。"
   },
   {
-    "id": "gift_medium_080",
-    "image": "../Christmas/images/gifts/gift_medium_080.png",
-    "gift_type": 50,
-    "cost": 600,
-    "category": "雑貨・文具",
-    "name": "赤いリボンのボールペン",
-    "description": "赤いリボンをあしらった、持ち歩きやすいペン。"
-  },
-  {
-    "id": "gift_medium_081",
-    "image": "../Christmas/images/gifts/gift_medium_081.png",
+    "id": "gift_medium_077",
+    "image": "../Christmas/images/gifts/gift_medium_077.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1450,8 +1414,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "トナカイのシルエットが揺れる、キーホルダー。"
   },
   {
-    "id": "gift_medium_082",
-    "image": "../Christmas/images/gifts/gift_medium_082.png",
+    "id": "gift_medium_078",
+    "image": "../Christmas/images/gifts/gift_medium_078.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1459,8 +1423,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "雪だるまの絵柄を閉じ込めた、透明なチャーム。"
   },
   {
-    "id": "gift_medium_083",
-    "image": "../Christmas/images/gifts/gift_medium_083.png",
+    "id": "gift_medium_079",
+    "image": "../Christmas/images/gifts/gift_medium_079.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1468,8 +1432,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "冬らしい表紙を付けた、ポケットサイズのメモ帳。"
   },
   {
-    "id": "gift_medium_084",
-    "image": "../Christmas/images/gifts/gift_medium_084.png",
+    "id": "gift_medium_080",
+    "image": "../Christmas/images/gifts/gift_medium_080.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1477,8 +1441,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "マッチ箱のように引き出して開ける、小さなケース。"
   },
   {
-    "id": "gift_medium_085",
-    "image": "../Christmas/images/gifts/gift_medium_085.png",
+    "id": "gift_medium_081",
+    "image": "../Christmas/images/gifts/gift_medium_081.png",
     "gift_type": 50,
     "cost": 600,
     "category": "雑貨・文具",
@@ -1486,8 +1450,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "さりげなく使える、星形のミニキーホルダー。"
   },
   {
-    "id": "gift_medium_086",
-    "image": "../Christmas/images/gifts/gift_medium_086.png",
+    "id": "gift_medium_082",
+    "image": "../Christmas/images/gifts/gift_medium_082.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1495,8 +1459,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "雪の結晶が描かれた、冬らしい小さなコースター。"
   },
   {
-    "id": "gift_medium_087",
-    "image": "../Christmas/images/gifts/gift_medium_087.png",
+    "id": "gift_medium_083",
+    "image": "../Christmas/images/gifts/gift_medium_083.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1504,8 +1468,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "持ち歩きやすい小瓶に入った、冬の手肌をいたわるクリーム。"
   },
   {
-    "id": "gift_medium_088",
-    "image": "../Christmas/images/gifts/gift_medium_088.png",
+    "id": "gift_medium_084",
+    "image": "../Christmas/images/gifts/gift_medium_084.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1513,8 +1477,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスの模様があしらわれた、柔らかなハンカチ。"
   },
   {
-    "id": "gift_medium_089",
-    "image": "../Christmas/images/gifts/gift_medium_089.png",
+    "id": "gift_medium_085",
+    "image": "../Christmas/images/gifts/gift_medium_085.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1522,8 +1486,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "足元を温める、ふんわりしたルームソックス。"
   },
   {
-    "id": "gift_medium_090",
-    "image": "../Christmas/images/gifts/gift_medium_090.png",
+    "id": "gift_medium_086",
+    "image": "../Christmas/images/gifts/gift_medium_086.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1531,8 +1495,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "毛糸で編まれた、小さなミトン形の飾り。"
   },
   {
-    "id": "gift_medium_091",
-    "image": "../Christmas/images/gifts/gift_medium_091.png",
+    "id": "gift_medium_087",
+    "image": "../Christmas/images/gifts/gift_medium_087.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1540,8 +1504,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "温かいミルクに溶かして楽しむ、ホットチョコレートの素。"
   },
   {
-    "id": "gift_medium_092",
-    "image": "../Christmas/images/gifts/gift_medium_092.png",
+    "id": "gift_medium_088",
+    "image": "../Christmas/images/gifts/gift_medium_088.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1549,8 +1513,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "シナモンがほのかに香る、小さな香り袋。"
   },
   {
-    "id": "gift_medium_093",
-    "image": "../Christmas/images/gifts/gift_medium_093.png",
+    "id": "gift_medium_089",
+    "image": "../Christmas/images/gifts/gift_medium_089.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1558,8 +1522,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "冬の夜にそっと灯したい、小さなキャンドル。"
   },
   {
-    "id": "gift_medium_094",
-    "image": "../Christmas/images/gifts/gift_medium_094.png",
+    "id": "gift_medium_090",
+    "image": "../Christmas/images/gifts/gift_medium_090.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1567,8 +1531,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "雪模様が入った、温かい飲み物に似合うマグカップ。"
   },
   {
-    "id": "gift_medium_095",
-    "image": "../Christmas/images/gifts/gift_medium_095.png",
+    "id": "gift_medium_091",
+    "image": "../Christmas/images/gifts/gift_medium_091.png",
     "gift_type": 50,
     "cost": 600,
     "category": "暮らしの雑貨",
@@ -1576,8 +1540,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマス柄の包みがかわいい、ティーバッグのセット。"
   },
   {
-    "id": "gift_medium_096",
-    "image": "../Christmas/images/gifts/gift_medium_096.png",
+    "id": "gift_medium_092",
+    "image": "../Christmas/images/gifts/gift_medium_092.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1585,8 +1549,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "送り主の名前がどこにも書かれていないクリスマスカード。"
   },
   {
-    "id": "gift_medium_097",
-    "image": "../Christmas/images/gifts/gift_medium_097.png",
+    "id": "gift_medium_093",
+    "image": "../Christmas/images/gifts/gift_medium_093.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1594,8 +1558,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "少し色あせた、昔のクリスマス柄の切手。"
   },
   {
-    "id": "gift_medium_098",
-    "image": "../Christmas/images/gifts/gift_medium_098.png",
+    "id": "gift_medium_094",
+    "image": "../Christmas/images/gifts/gift_medium_094.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1603,8 +1567,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "光を受けてきらめく、小さな星形のガラス細工。"
   },
   {
-    "id": "gift_medium_099",
-    "image": "../Christmas/images/gifts/gift_medium_099.png",
+    "id": "gift_medium_095",
+    "image": "../Christmas/images/gifts/gift_medium_095.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1612,8 +1576,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "小瓶の中に雪の結晶のようなものが閉じ込められている。"
   },
   {
-    "id": "gift_medium_100",
-    "image": "../Christmas/images/gifts/gift_medium_100.png",
+    "id": "gift_medium_096",
+    "image": "../Christmas/images/gifts/gift_medium_096.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1621,8 +1585,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "サンタクロースが落としたという噂の、小さな鈴。"
   },
   {
-    "id": "gift_medium_101",
-    "image": "../Christmas/images/gifts/gift_medium_101.png",
+    "id": "gift_medium_097",
+    "image": "../Christmas/images/gifts/gift_medium_097.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1630,8 +1594,8 @@ window.CHRISTMAS_GIFTS = [
     "description": "木目が温かい、開けられそうなミニチュアの贈り物箱。"
   },
   {
-    "id": "gift_medium_102",
-    "image": "../Christmas/images/gifts/gift_medium_102.png",
+    "id": "gift_medium_098",
+    "image": "../Christmas/images/gifts/gift_medium_098.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
@@ -1639,31 +1603,13 @@ window.CHRISTMAS_GIFTS = [
     "description": "クリスマスツリーの種だという、小さな紙袋。"
   },
   {
-    "id": "gift_medium_103",
-    "image": "../Christmas/images/gifts/gift_medium_103.png",
+    "id": "gift_medium_099",
+    "image": "../Christmas/images/gifts/gift_medium_099.png",
     "gift_type": 50,
     "cost": 600,
     "category": "小さな不思議",
     "name": "赤い実のついた小枝のブローチ",
     "description": "赤い実をつけた小枝をかたどったブローチ。"
-  },
-  {
-    "id": "gift_medium_104",
-    "image": "../Christmas/images/gifts/gift_medium_104.png",
-    "gift_type": 50,
-    "cost": 600,
-    "category": "小さな不思議",
-    "name": "小さなベルベットの巾着袋",
-    "description": "手のひらに収まる、柔らかなベルベットの巾着。"
-  },
-  {
-    "id": "gift_medium_105",
-    "image": "../Christmas/images/gifts/gift_medium_105.png",
-    "gift_type": 50,
-    "cost": 600,
-    "category": "小さな不思議",
-    "name": "中身の分からない小さな包み",
-    "description": "包みを開けるまで、中身が何か分からない小さな贈り物。"
   },
   {
     "id": "gift_large_001",
