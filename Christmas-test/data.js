@@ -1,455 +1,724 @@
-// 神狩荘クリスマス景品カタログ
-// ささやか50 / まあまあ55 / 豪華80 / 名前入り66
+// 神狩荘クリスマス景品カタログ：ささやか100 / まあまあ105 / 豪華80 / 名前入り70
 window.CHRISTMAS_GIFTS = [
   {
     "id": "gift_small_001",
     "image": "../Christmas/images/gifts/gift_small_001.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "赤白のキャンディケイン",
-    "description": "赤と白のしま模様が愛らしい、クリスマス定番のキャンディ。"
+    "category": "手作りのお菓子",
+    "name": "ちょっと焦げたジンジャークッキー",
+    "description": "星型のつもりが、焼いたら何だか分からない形になった。"
   },
   {
     "id": "gift_small_002",
     "image": "../Christmas/images/gifts/gift_small_002.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "星型のシュガークッキー",
-    "description": "きらきらの砂糖をまぶした、星の形のクッキー。"
+    "category": "手作りのお菓子",
+    "name": "形の歪んだクリスマス型クッキー",
+    "description": "ツリーや星の形を目指した手作りクッキー。"
   },
   {
     "id": "gift_small_003",
     "image": "../Christmas/images/gifts/gift_small_003.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "ジンジャーブレッドマン",
-    "description": "小さな人の形に焼かれた、スパイス香るクッキー。"
+    "category": "手作りのお菓子",
+    "name": "砂糖をまぶしすぎたラスク",
+    "description": "触るだけで砂糖が落ちてくる。"
   },
   {
     "id": "gift_small_004",
     "image": "../Christmas/images/gifts/gift_small_004.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "雪だるまのマシュマロ",
-    "description": "温かい飲み物に浮かべたい、雪だるま形のマシュマロ。"
+    "category": "手作りのお菓子",
+    "name": "小さな焼き芋一個",
+    "description": "裏庭で焼いたものをアルミホイルに包んだ。"
   },
   {
     "id": "gift_small_005",
     "image": "../Christmas/images/gifts/gift_small_005.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "ミニチュアのチョコレートボックス",
-    "description": "ひと口サイズのチョコレートを詰めた、小さな箱。"
+    "category": "手作りのお菓子",
+    "name": "手作りのホットココアの素",
+    "description": "ココアと砂糖を小袋に詰めただけ。"
   },
   {
     "id": "gift_small_006",
     "image": "../Christmas/images/gifts/gift_small_006.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "クリスマス柄のキャンディ缶",
-    "description": "クリスマスの模様が描かれた、小ぶりのキャンディ缶。"
+    "category": "手作りのお菓子",
+    "name": "一粒だけの手作りトリュフ",
+    "description": "形は不揃いだが、クリスマスらしく粉砂糖をまぶした。"
   },
   {
     "id": "gift_small_007",
     "image": "../Christmas/images/gifts/gift_small_007.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "リボン付きのクッキー袋",
-    "description": "リボンで口を結んだ、焼き菓子入りの小袋。"
+    "category": "手作りのお菓子",
+    "name": "クリスマスカラーの琥珀糖三粒",
+    "description": "赤と緑と白の小さな寒天菓子。"
   },
   {
     "id": "gift_small_008",
     "image": "../Christmas/images/gifts/gift_small_008.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "小さなシュトーレン",
-    "description": "粉砂糖をまとった、手のひらサイズのシュトーレン。"
+    "category": "手作りのお菓子",
+    "name": "瓶詰めの自家製ジャム",
+    "description": "少量だけ作った、ラベルも手書きのジャム。"
   },
   {
     "id": "gift_small_009",
     "image": "../Christmas/images/gifts/gift_small_009.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "ベリー味のロリポップ",
-    "description": "ベリーの甘酸っぱさが楽しめる棒付きキャンディ。"
+    "category": "手作りのお菓子",
+    "name": "一枚だけの手焼きパンケーキ",
+    "description": "粉砂糖で小さな星を描いたもの。"
   },
   {
     "id": "gift_small_010",
     "image": "../Christmas/images/gifts/gift_small_010.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "お菓子",
-    "name": "サンタクロースのチョコレート",
-    "description": "サンタの姿をかたどった、可愛らしいチョコレート。"
+    "category": "手作りのお菓子",
+    "name": "手作りの砂糖漬けレモン",
+    "description": "ほんの数枚を小瓶に入れた。"
   },
   {
     "id": "gift_small_011",
     "image": "../Christmas/images/gifts/gift_small_011.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "星型のミニオーナメント",
-    "description": "枝先に飾れる、星形の小さなオーナメント。"
+    "category": "手作りのお菓子",
+    "name": "不格好な雪だるまマシュマロ",
+    "description": "マシュマロを重ねて顔を描いたもの。"
   },
   {
     "id": "gift_small_012",
     "image": "../Christmas/images/gifts/gift_small_012.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "赤いガラス玉のオーナメント",
-    "description": "光を受けて艶めく、赤いガラス玉の飾り。"
+    "category": "手作りのお菓子",
+    "name": "三粒入りのキャラメル",
+    "description": "包み紙まで手作りした小さなキャラメル。"
   },
   {
     "id": "gift_small_013",
     "image": "../Christmas/images/gifts/gift_small_013.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "雪の結晶のチャーム",
-    "description": "繊細な雪の結晶を模した、小さなチャーム。"
+    "category": "手作りのお菓子",
+    "name": "クリスマス柄の折り紙に包んだ飴玉",
+    "description": "中身は普通の飴。"
   },
   {
     "id": "gift_small_014",
     "image": "../Christmas/images/gifts/gift_small_014.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "小さなサンタの置物",
-    "description": "帽子と白いひげが目印の、手のひらサイズのサンタ。"
+    "category": "手作りのお菓子",
+    "name": "手作りのシナモンシュガー",
+    "description": "砂糖とシナモンを混ぜただけの小袋。"
   },
   {
     "id": "gift_small_015",
     "image": "../Christmas/images/gifts/gift_small_015.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "ミニチュアの雪だるま",
-    "description": "丸い体と小さな鼻が可愛らしい、雪だるまの置物。"
+    "category": "手作りのお菓子",
+    "name": "一口サイズのフルーツケーキ",
+    "description": "余った材料で焼いた小さなケーキ。"
   },
   {
     "id": "gift_small_016",
     "image": "../Christmas/images/gifts/gift_small_016.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "木製のトナカイ飾り",
-    "description": "木のぬくもりが残る、素朴なトナカイの飾り。"
+    "category": "手作りのお菓子",
+    "name": "手作りのチョコがけビスケット",
+    "description": "市販のビスケットにチョコをかけただけ。"
   },
   {
     "id": "gift_small_017",
     "image": "../Christmas/images/gifts/gift_small_017.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "ベル付きのミニリース",
-    "description": "小さなベルが揺れる、手のひらサイズのリース。"
+    "category": "手作りのお菓子",
+    "name": "クリスマス色の寒天ゼリー",
+    "description": "赤と緑の二層にした小さなゼリー。"
   },
   {
     "id": "gift_small_018",
     "image": "../Christmas/images/gifts/gift_small_018.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "小さなクリスマス靴下",
-    "description": "クリスマスカラーの、ミニチュアの靴下飾り。"
+    "category": "手作りのお菓子",
+    "name": "一個だけの手作りスノーボール",
+    "description": "粉砂糖をまとわせた丸いクッキー。"
   },
   {
     "id": "gift_small_019",
     "image": "../Christmas/images/gifts/gift_small_019.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "ツリー型の木製オブジェ",
-    "description": "木目が美しい、ツリー形の小さなオブジェ。"
+    "category": "手作りのお菓子",
+    "name": "小瓶入りのミックススパイス",
+    "description": "紅茶やココアに入れるための少量のスパイス。"
   },
   {
     "id": "gift_small_020",
     "image": "../Christmas/images/gifts/gift_small_020.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "クリスマス飾り",
-    "name": "雪が舞うミニスノードーム",
-    "description": "振ると雪が舞う、手のひらサイズのスノードーム。"
+    "category": "手作りのお菓子",
+    "name": "手書きレシピ付きのポップコーン",
+    "description": "味付けの方法を書いた紙と、小袋のポップコーン。"
   },
   {
     "id": "gift_small_021",
     "image": "../Christmas/images/gifts/gift_small_021.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "サンタ柄のポストカード",
-    "description": "サンタクロースを描いた、冬のグリーティングカード。"
+    "category": "紙・手描きの贈り物",
+    "name": "折り紙のクリスマスツリー",
+    "description": "緑の折り紙を折っただけの卓上飾り。"
   },
   {
     "id": "gift_small_022",
     "image": "../Christmas/images/gifts/gift_small_022.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "雪の結晶のシールセット",
-    "description": "大小の雪の結晶を集めた、シールのセット。"
+    "category": "紙・手描きの贈り物",
+    "name": "手作りの紙製リース",
+    "description": "色紙を輪にして、赤い紙片を貼り付けたもの。"
   },
   {
     "id": "gift_small_023",
     "image": "../Christmas/images/gifts/gift_small_023.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "クリスマス柄のマスキングテープ",
-    "description": "包み紙や手帳を飾れる、クリスマス柄のテープ。"
+    "category": "紙・手描きの贈り物",
+    "name": "不揃いな星のガーランド",
+    "description": "大小ばらばらの星を糸で繋いだ飾り。"
   },
   {
     "id": "gift_small_024",
     "image": "../Christmas/images/gifts/gift_small_024.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "小さなツリー型のしおり",
-    "description": "ページの間から小さなツリーがのぞく、木製のしおり。"
+    "category": "紙・手描きの贈り物",
+    "name": "手描きのクリスマスカード",
+    "description": "絵心の有無がはっきり出る一枚。"
   },
   {
     "id": "gift_small_025",
     "image": "../Christmas/images/gifts/gift_small_025.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "赤いリボンのボールペン",
-    "description": "赤いリボンをあしらった、持ち歩きやすいペン。"
+    "category": "紙・手描きの贈り物",
+    "name": "神狩荘の間取りを描いたメモ",
+    "description": "なぜか部屋の配置が少しだけ間違っている。"
   },
   {
     "id": "gift_small_026",
     "image": "../Christmas/images/gifts/gift_small_026.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "トナカイのキーホルダー",
-    "description": "トナカイのシルエットが揺れる、キーホルダー。"
+    "category": "紙・手描きの贈り物",
+    "name": "手作りのしおり",
+    "description": "厚紙を切り、紐を一本通しただけのもの。"
   },
   {
     "id": "gift_small_027",
     "image": "../Christmas/images/gifts/gift_small_027.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "雪だるまのアクリルチャーム",
-    "description": "雪だるまの絵柄を閉じ込めた、透明なチャーム。"
+    "category": "紙・手描きの贈り物",
+    "name": "クリスマス柄の手作り封筒",
+    "description": "包装紙の余りで作った封筒。"
   },
   {
     "id": "gift_small_028",
     "image": "../Christmas/images/gifts/gift_small_028.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "ミニサイズのメモ帳",
-    "description": "冬らしい表紙を付けた、ポケットサイズのメモ帳。"
+    "category": "紙・手描きの贈り物",
+    "name": "一言だけ書かれた手紙",
+    "description": "「メリークリスマス」とだけ書いてある。"
   },
   {
     "id": "gift_small_029",
     "image": "../Christmas/images/gifts/gift_small_029.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "クリスマス柄のマッチ箱風ケース",
-    "description": "マッチ箱のように引き出して開ける、小さなケース。"
+    "category": "紙・手描きの贈り物",
+    "name": "謎の暗号が書かれたメモ",
+    "description": "解読しても「靴下を履け」程度の内容。"
   },
   {
     "id": "gift_small_030",
     "image": "../Christmas/images/gifts/gift_small_030.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "雑貨・文具",
-    "name": "星型のミニキーホルダー",
-    "description": "さりげなく使える、星形のミニキーホルダー。"
+    "category": "紙・手描きの贈り物",
+    "name": "手描きの星座カード",
+    "description": "夜空を見ながら描いた、少し不正確な星座図。"
   },
   {
     "id": "gift_small_031",
     "image": "../Christmas/images/gifts/gift_small_031.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "雪柄のコースター",
-    "description": "雪の結晶が描かれた、冬らしい小さなコースター。"
+    "category": "紙・手描きの贈り物",
+    "name": "紙製の小さなプレゼント箱",
+    "description": "中身は入っていない。"
   },
   {
     "id": "gift_small_032",
     "image": "../Christmas/images/gifts/gift_small_032.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "ミニサイズのハンドクリーム",
-    "description": "持ち歩きやすい小瓶に入った、冬の手肌をいたわるクリーム。"
+    "category": "紙・手描きの贈り物",
+    "name": "手作りの飛び出すクリスマスカード",
+    "description": "開くと紙のツリーが立ち上がる。"
   },
   {
     "id": "gift_small_033",
     "image": "../Christmas/images/gifts/gift_small_033.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "クリスマス柄のハンカチ",
-    "description": "クリスマスの模様があしらわれた、柔らかなハンカチ。"
+    "category": "紙・手描きの贈り物",
+    "name": "クリスマス限定のしりとり帳",
+    "description": "最初の一文字だけ書いてある。"
   },
   {
     "id": "gift_small_034",
     "image": "../Christmas/images/gifts/gift_small_034.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "ふわふわのルームソックス",
-    "description": "足元を温める、ふんわりしたルームソックス。"
+    "category": "紙・手描きの贈り物",
+    "name": "手書きの冬の俳句集",
+    "description": "住人が詠んだ、上手いかどうか微妙な俳句。"
   },
   {
     "id": "gift_small_035",
     "image": "../Christmas/images/gifts/gift_small_035.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "小さな毛糸のミトン飾り",
-    "description": "毛糸で編まれた、小さなミトン形の飾り。"
+    "category": "紙・手描きの贈り物",
+    "name": "神狩荘のクリスマス新聞",
+    "description": "ほとんどがどうでもいい日常のニュース。"
   },
   {
     "id": "gift_small_036",
     "image": "../Christmas/images/gifts/gift_small_036.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "ホットチョコレートの素",
-    "description": "温かいミルクに溶かして楽しむ、ホットチョコレートの素。"
+    "category": "紙・手描きの贈り物",
+    "name": "手作りの紙製メダル",
+    "description": "「よくできました」と書かれている。"
   },
   {
     "id": "gift_small_037",
     "image": "../Christmas/images/gifts/gift_small_037.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "シナモンの香りのサシェ",
-    "description": "シナモンがほのかに香る、小さな香り袋。"
+    "category": "紙・手描きの贈り物",
+    "name": "クリスマスの間違い探し",
+    "description": "自分で描いた二枚の絵に違いが三つある。"
   },
   {
     "id": "gift_small_038",
     "image": "../Christmas/images/gifts/gift_small_038.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "小さなキャンドル",
-    "description": "冬の夜にそっと灯したい、小さなキャンドル。"
+    "category": "紙・手描きの贈り物",
+    "name": "手作りの福引券",
+    "description": "引いても「おめでとう」と書かれているだけ。"
   },
   {
     "id": "gift_small_039",
     "image": "../Christmas/images/gifts/gift_small_039.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "雪柄のマグカップ",
-    "description": "雪模様が入った、温かい飲み物に似合うマグカップ。"
+    "category": "紙・手描きの贈り物",
+    "name": "一日限定の住人表彰状",
+    "description": "何を表彰されたのかは人によって違う。"
   },
   {
     "id": "gift_small_040",
     "image": "../Christmas/images/gifts/gift_small_040.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "暮らしの雑貨",
-    "name": "クリスマス柄のティーバッグセット",
-    "description": "クリスマス柄の包みがかわいい、ティーバッグのセット。"
+    "category": "紙・手描きの贈り物",
+    "name": "誰かの落書き入りメモ帳",
+    "description": "最初のページに謎の似顔絵が描かれている"
   },
   {
     "id": "gift_small_041",
     "image": "../Christmas/images/gifts/gift_small_041.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "差出人のないクリスマスカード",
-    "description": "送り主の名前がどこにも書かれていないクリスマスカード。"
+    "category": "手作りの飾り",
+    "name": "毛糸で編んだ小さな星",
+    "description": "余った毛糸で作った、少し歪な飾り。"
   },
   {
     "id": "gift_small_042",
     "image": "../Christmas/images/gifts/gift_small_042.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "古いクリスマス切手",
-    "description": "少し色あせた、昔のクリスマス柄の切手。"
+    "category": "手作りの飾り",
+    "name": "端切れ布のクリスマス靴下",
+    "description": "お菓子が一粒入る程度の小さな靴下。"
   },
   {
     "id": "gift_small_043",
     "image": "../Christmas/images/gifts/gift_small_043.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "小さな星形のガラス細工",
-    "description": "光を受けてきらめく、小さな星形のガラス細工。"
+    "category": "手作りの飾り",
+    "name": "ボタンで作った雪だるま",
+    "description": "古いボタンを二つ縫い合わせた飾り。"
   },
   {
     "id": "gift_small_044",
     "image": "../Christmas/images/gifts/gift_small_044.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "雪の結晶を閉じ込めた瓶",
-    "description": "小瓶の中に雪の結晶のようなものが閉じ込められている。"
+    "category": "手作りの飾り",
+    "name": "端切れのリボン飾り",
+    "description": "余った布を結んだだけのもの。"
   },
   {
     "id": "gift_small_045",
     "image": "../Christmas/images/gifts/gift_small_045.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "サンタの落とし物らしい小さな鈴",
-    "description": "サンタクロースが落としたという噂の、小さな鈴。"
+    "category": "手作りの飾り",
+    "name": "松ぼっくりのミニツリー",
+    "description": "裏庭で拾った松ぼっくりを緑色に塗ったもの。"
   },
   {
     "id": "gift_small_046",
     "image": "../Christmas/images/gifts/gift_small_046.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "木製のミニチュアプレゼント箱",
-    "description": "木目が温かい、開けられそうなミニチュアの贈り物箱。"
+    "category": "手作りの飾り",
+    "name": "木の枝のクリスマスオーナメント",
+    "description": "枝に糸を巻きつけて吊るせるようにした。"
   },
   {
     "id": "gift_small_047",
     "image": "../Christmas/images/gifts/gift_small_047.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "クリスマスツリーの種袋",
-    "description": "クリスマスツリーの種だという、小さな紙袋。"
+    "category": "手作りの飾り",
+    "name": "手作りのフェルト製トナカイ",
+    "description": "余ったフェルトを切って縫い合わせたもの。"
   },
   {
     "id": "gift_small_048",
     "image": "../Christmas/images/gifts/gift_small_048.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "赤い実のついた小枝のブローチ",
-    "description": "赤い実をつけた小枝をかたどったブローチ。"
+    "category": "手作りの飾り",
+    "name": "毛糸のポンポン雪玉",
+    "description": "白い毛糸で作った小さな玉。"
   },
   {
     "id": "gift_small_049",
     "image": "../Christmas/images/gifts/gift_small_049.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "小さなベルベットの巾着袋",
-    "description": "手のひらに収まる、柔らかなベルベットの巾着。"
+    "category": "手作りの飾り",
+    "name": "手作りの布製コースター",
+    "description": "端切れを四角く縫っただけのもの。"
   },
   {
     "id": "gift_small_050",
     "image": "../Christmas/images/gifts/gift_small_050.png",
     "gift_type": 10,
     "cost": 300,
-    "category": "小さな不思議",
-    "name": "中身の分からない小さな包み",
-    "description": "包みを開けるまで、中身が何か分からない小さな贈り物。"
+    "category": "手作りの飾り",
+    "name": "空き瓶のクリスマス飾り",
+    "description": "瓶に紐と紙を巻いて飾りつけた。"
+  },
+  {
+    "id": "gift_small_051",
+    "image": "../Christmas/images/gifts/gift_small_051.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "手描きの石ころオーナメント",
+    "description": "裏庭で拾った平たい石に星を描いた。"
+  },
+  {
+    "id": "gift_small_052",
+    "image": "../Christmas/images/gifts/gift_small_052.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "紙粘土の小さな雪だるま",
+    "description": "乾かしたら少し傾いてしまった。"
+  },
+  {
+    "id": "gift_small_053",
+    "image": "../Christmas/images/gifts/gift_small_053.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "端材の木製クリスマスタグ",
+    "description": "小さな木片に日付を書いたもの。"
+  },
+  {
+    "id": "gift_small_054",
+    "image": "../Christmas/images/gifts/gift_small_054.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "手作りの毛糸タッセル",
+    "description": "余った毛糸を束ねて結んだ飾り。"
+  },
+  {
+    "id": "gift_small_055",
+    "image": "../Christmas/images/gifts/gift_small_055.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "古布で作った小さな人形",
+    "description": "顔の刺繍が少し不格好。"
+  },
+  {
+    "id": "gift_small_056",
+    "image": "../Christmas/images/gifts/gift_small_056.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "手作りのフェルト製ブックカバー",
+    "description": "端切れで作った簡素なカバー。"
+  },
+  {
+    "id": "gift_small_057",
+    "image": "../Christmas/images/gifts/gift_small_057.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "クリスマス柄の手縫い巾着",
+    "description": "小物が一つ入る程度のサイズ。"
+  },
+  {
+    "id": "gift_small_058",
+    "image": "../Christmas/images/gifts/gift_small_058.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "手作りの紙製コースター",
+    "description": "厚紙を丸く切って模様を描いたもの。"
+  },
+  {
+    "id": "gift_small_059",
+    "image": "../Christmas/images/gifts/gift_small_059.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "糸で作った小さな星飾り",
+    "description": "糸を巻いて星型に整えたもの。"
+  },
+  {
+    "id": "gift_small_060",
+    "image": "../Christmas/images/gifts/gift_small_060.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "手作りのミニほうき飾り",
+    "description": "細い枝と紐を使った、玄関に飾れる小さなほうき。"
+  },
+  {
+    "id": "gift_small_061",
+    "image": "../Christmas/images/gifts/gift_small_061.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "片方だけの軍手",
+    "description": "クリスマスらしい赤いリボン付き。"
+  },
+  {
+    "id": "gift_small_062",
+    "image": "../Christmas/images/gifts/gift_small_062.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りの靴磨き布",
+    "description": "古い綿布を切っただけのもの。"
+  },
+  {
+    "id": "gift_small_063",
+    "image": "../Christmas/images/gifts/gift_small_063.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "小さなボタンの詰め合わせ",
+    "description": "服の修繕に使える、色も形もばらばらなボタン。"
+  },
+  {
+    "id": "gift_small_064",
+    "image": "../Christmas/images/gifts/gift_small_064.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りの布製眼鏡拭き",
+    "description": "柔らかい布に雪の結晶を刺繍したもの。"
+  },
+  {
+    "id": "gift_small_065",
+    "image": "../Christmas/images/gifts/gift_small_065.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "紐で束ねた鉛筆三本",
+    "description": "クリスマスカラーの紐でまとめてある。"
+  },
+  {
+    "id": "gift_small_066",
+    "image": "../Christmas/images/gifts/gift_small_066.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りのケーブル留め",
+    "description": "余った布やボタンで作った簡素な留め具。"
+  },
+  {
+    "id": "gift_small_067",
+    "image": "../Christmas/images/gifts/gift_small_067.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "端切れ布のハンカチ",
+    "description": "少し小さめで、端の縫い目が不揃い。"
+  },
+  {
+    "id": "gift_small_068",
+    "image": "../Christmas/images/gifts/gift_small_068.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りのティッシュケース",
+    "description": "余った布を縫って作ったもの。"
+  },
+  {
+    "id": "gift_small_069",
+    "image": "../Christmas/images/gifts/gift_small_069.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "紙紐で作った荷札",
+    "description": "名前を書く欄があるだけの荷札。"
+  },
+  {
+    "id": "gift_small_070",
+    "image": "../Christmas/images/gifts/gift_small_070.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "小さな安全ピンのセット",
+    "description": "赤い紙にクリスマスの絵を描いて包んだもの。"
+  },
+  {
+    "id": "gift_small_071",
+    "image": "../Christmas/images/gifts/gift_small_071.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りのブックバンド",
+    "description": "ゴム紐とボタンで作った簡単なバンド。"
+  },
+  {
+    "id": "gift_small_072",
+    "image": "../Christmas/images/gifts/gift_small_072.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "余り布の指ぬき",
+    "description": "裁縫用に作った小さな指ぬき。"
+  },
+  {
+    "id": "gift_small_073",
+    "image": "../Christmas/images/gifts/gift_small_073.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りの小さな巾着袋",
+    "description": "飴玉が数個入る程度のサイズ。"
+  },
+  {
+    "id": "gift_small_074",
+    "image": "../Christmas/images/gifts/gift_small_074.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "紙製の靴サイズ記録カード",
+    "description": "自分の靴のサイズを書いておくカード。"
+  },
+  {
+    "id": "gift_small_075",
+    "image": "../Christmas/images/gifts/gift_small_075.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りの洋服ブラシ用カバー",
+    "description": "余り布で作った簡単なカバー。"
+  },
+  {
+    "id": "gift_small_076",
+    "image": "../Christmas/images/gifts/gift_small_076.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "クリスマス柄の手作り鍋敷き",
+    "description": "古布を重ねて縫ったもの。"
+  },
+  {
+    "id": "gift_small_077",
+    "image": "../Christmas/images/gifts/gift_small_077.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りの小さな雑巾",
+    "description": "クリスマスカラーの糸で縁を縫ってある。"
+  },
+  {
+    "id": "gift_small_078",
+    "image": "../Christmas/images/gifts/gift_small_078.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "余り革のコードホルダー",
+    "description": "革の端材に切れ込みを入れた簡単な留め具。"
+  },
+  {
+    "id": "gift_small_079",
+    "image": "../Christmas/images/gifts/gift_small_079.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "手作りの靴紐飾り",
+    "description": "細いリボンを小さく結んだもの。"
+  },
+  {
+    "id": "gift_small_080",
+    "image": "../Christmas/images/gifts/gift_small_080.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "小さな糸巻きセット",
+    "description": "余った糸を巻いた、色とりどりの糸巻き。"
   },
   {
     "id": "gift_medium_001",
@@ -945,6 +1214,456 @@ window.CHRISTMAS_GIFTS = [
     "category": "クリスマスの不思議",
     "name": "差出人不明のクリスマスギフト",
     "description": "クリスマスの贈り物に選ばれた「差出人不明のクリスマスギフト」。冬のひとときを彩る一品。"
+  },
+  {
+    "id": "gift_medium_056",
+    "image": "../Christmas/images/gifts/gift_medium_056.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "赤白のキャンディケイン",
+    "description": "赤と白のしま模様が愛らしい、クリスマス定番のキャンディ。"
+  },
+  {
+    "id": "gift_medium_057",
+    "image": "../Christmas/images/gifts/gift_medium_057.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "星型のシュガークッキー",
+    "description": "きらきらの砂糖をまぶした、星の形のクッキー。"
+  },
+  {
+    "id": "gift_medium_058",
+    "image": "../Christmas/images/gifts/gift_medium_058.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "ジンジャーブレッドマン",
+    "description": "小さな人の形に焼かれた、スパイス香るクッキー。"
+  },
+  {
+    "id": "gift_medium_059",
+    "image": "../Christmas/images/gifts/gift_medium_059.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "雪だるまのマシュマロ",
+    "description": "温かい飲み物に浮かべたい、雪だるま形のマシュマロ。"
+  },
+  {
+    "id": "gift_medium_060",
+    "image": "../Christmas/images/gifts/gift_medium_060.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "ミニチュアのチョコレートボックス",
+    "description": "ひと口サイズのチョコレートを詰めた、小さな箱。"
+  },
+  {
+    "id": "gift_medium_061",
+    "image": "../Christmas/images/gifts/gift_medium_061.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "クリスマス柄のキャンディ缶",
+    "description": "クリスマスの模様が描かれた、小ぶりのキャンディ缶。"
+  },
+  {
+    "id": "gift_medium_062",
+    "image": "../Christmas/images/gifts/gift_medium_062.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "リボン付きのクッキー袋",
+    "description": "リボンで口を結んだ、焼き菓子入りの小袋。"
+  },
+  {
+    "id": "gift_medium_063",
+    "image": "../Christmas/images/gifts/gift_medium_063.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "小さなシュトーレン",
+    "description": "粉砂糖をまとった、手のひらサイズのシュトーレン。"
+  },
+  {
+    "id": "gift_medium_064",
+    "image": "../Christmas/images/gifts/gift_medium_064.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "ベリー味のロリポップ",
+    "description": "ベリーの甘酸っぱさが楽しめる棒付きキャンディ。"
+  },
+  {
+    "id": "gift_medium_065",
+    "image": "../Christmas/images/gifts/gift_medium_065.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "お菓子",
+    "name": "サンタクロースのチョコレート",
+    "description": "サンタの姿をかたどった、可愛らしいチョコレート。"
+  },
+  {
+    "id": "gift_medium_066",
+    "image": "../Christmas/images/gifts/gift_medium_066.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "星型のミニオーナメント",
+    "description": "枝先に飾れる、星形の小さなオーナメント。"
+  },
+  {
+    "id": "gift_medium_067",
+    "image": "../Christmas/images/gifts/gift_medium_067.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "赤いガラス玉のオーナメント",
+    "description": "光を受けて艶めく、赤いガラス玉の飾り。"
+  },
+  {
+    "id": "gift_medium_068",
+    "image": "../Christmas/images/gifts/gift_medium_068.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "雪の結晶のチャーム",
+    "description": "繊細な雪の結晶を模した、小さなチャーム。"
+  },
+  {
+    "id": "gift_medium_069",
+    "image": "../Christmas/images/gifts/gift_medium_069.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "小さなサンタの置物",
+    "description": "帽子と白いひげが目印の、手のひらサイズのサンタ。"
+  },
+  {
+    "id": "gift_medium_070",
+    "image": "../Christmas/images/gifts/gift_medium_070.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "ミニチュアの雪だるま",
+    "description": "丸い体と小さな鼻が可愛らしい、雪だるまの置物。"
+  },
+  {
+    "id": "gift_medium_071",
+    "image": "../Christmas/images/gifts/gift_medium_071.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "木製のトナカイ飾り",
+    "description": "木のぬくもりが残る、素朴なトナカイの飾り。"
+  },
+  {
+    "id": "gift_medium_072",
+    "image": "../Christmas/images/gifts/gift_medium_072.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "ベル付きのミニリース",
+    "description": "小さなベルが揺れる、手のひらサイズのリース。"
+  },
+  {
+    "id": "gift_medium_073",
+    "image": "../Christmas/images/gifts/gift_medium_073.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "小さなクリスマス靴下",
+    "description": "クリスマスカラーの、ミニチュアの靴下飾り。"
+  },
+  {
+    "id": "gift_medium_074",
+    "image": "../Christmas/images/gifts/gift_medium_074.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "ツリー型の木製オブジェ",
+    "description": "木目が美しい、ツリー形の小さなオブジェ。"
+  },
+  {
+    "id": "gift_medium_075",
+    "image": "../Christmas/images/gifts/gift_medium_075.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "クリスマス飾り",
+    "name": "雪が舞うミニスノードーム",
+    "description": "振ると雪が舞う、手のひらサイズのスノードーム。"
+  },
+  {
+    "id": "gift_medium_076",
+    "image": "../Christmas/images/gifts/gift_medium_076.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "サンタ柄のポストカード",
+    "description": "サンタクロースを描いた、冬のグリーティングカード。"
+  },
+  {
+    "id": "gift_medium_077",
+    "image": "../Christmas/images/gifts/gift_medium_077.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "雪の結晶のシールセット",
+    "description": "大小の雪の結晶を集めた、シールのセット。"
+  },
+  {
+    "id": "gift_medium_078",
+    "image": "../Christmas/images/gifts/gift_medium_078.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "クリスマス柄のマスキングテープ",
+    "description": "包み紙や手帳を飾れる、クリスマス柄のテープ。"
+  },
+  {
+    "id": "gift_medium_079",
+    "image": "../Christmas/images/gifts/gift_medium_079.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "小さなツリー型のしおり",
+    "description": "ページの間から小さなツリーがのぞく、木製のしおり。"
+  },
+  {
+    "id": "gift_medium_080",
+    "image": "../Christmas/images/gifts/gift_medium_080.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "赤いリボンのボールペン",
+    "description": "赤いリボンをあしらった、持ち歩きやすいペン。"
+  },
+  {
+    "id": "gift_medium_081",
+    "image": "../Christmas/images/gifts/gift_medium_081.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "トナカイのキーホルダー",
+    "description": "トナカイのシルエットが揺れる、キーホルダー。"
+  },
+  {
+    "id": "gift_medium_082",
+    "image": "../Christmas/images/gifts/gift_medium_082.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "雪だるまのアクリルチャーム",
+    "description": "雪だるまの絵柄を閉じ込めた、透明なチャーム。"
+  },
+  {
+    "id": "gift_medium_083",
+    "image": "../Christmas/images/gifts/gift_medium_083.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "ミニサイズのメモ帳",
+    "description": "冬らしい表紙を付けた、ポケットサイズのメモ帳。"
+  },
+  {
+    "id": "gift_medium_084",
+    "image": "../Christmas/images/gifts/gift_medium_084.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "クリスマス柄のマッチ箱風ケース",
+    "description": "マッチ箱のように引き出して開ける、小さなケース。"
+  },
+  {
+    "id": "gift_medium_085",
+    "image": "../Christmas/images/gifts/gift_medium_085.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "雑貨・文具",
+    "name": "星型のミニキーホルダー",
+    "description": "さりげなく使える、星形のミニキーホルダー。"
+  },
+  {
+    "id": "gift_medium_086",
+    "image": "../Christmas/images/gifts/gift_medium_086.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "雪柄のコースター",
+    "description": "雪の結晶が描かれた、冬らしい小さなコースター。"
+  },
+  {
+    "id": "gift_medium_087",
+    "image": "../Christmas/images/gifts/gift_medium_087.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "ミニサイズのハンドクリーム",
+    "description": "持ち歩きやすい小瓶に入った、冬の手肌をいたわるクリーム。"
+  },
+  {
+    "id": "gift_medium_088",
+    "image": "../Christmas/images/gifts/gift_medium_088.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "クリスマス柄のハンカチ",
+    "description": "クリスマスの模様があしらわれた、柔らかなハンカチ。"
+  },
+  {
+    "id": "gift_medium_089",
+    "image": "../Christmas/images/gifts/gift_medium_089.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "ふわふわのルームソックス",
+    "description": "足元を温める、ふんわりしたルームソックス。"
+  },
+  {
+    "id": "gift_medium_090",
+    "image": "../Christmas/images/gifts/gift_medium_090.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "小さな毛糸のミトン飾り",
+    "description": "毛糸で編まれた、小さなミトン形の飾り。"
+  },
+  {
+    "id": "gift_medium_091",
+    "image": "../Christmas/images/gifts/gift_medium_091.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "ホットチョコレートの素",
+    "description": "温かいミルクに溶かして楽しむ、ホットチョコレートの素。"
+  },
+  {
+    "id": "gift_medium_092",
+    "image": "../Christmas/images/gifts/gift_medium_092.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "シナモンの香りのサシェ",
+    "description": "シナモンがほのかに香る、小さな香り袋。"
+  },
+  {
+    "id": "gift_medium_093",
+    "image": "../Christmas/images/gifts/gift_medium_093.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "小さなキャンドル",
+    "description": "冬の夜にそっと灯したい、小さなキャンドル。"
+  },
+  {
+    "id": "gift_medium_094",
+    "image": "../Christmas/images/gifts/gift_medium_094.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "雪柄のマグカップ",
+    "description": "雪模様が入った、温かい飲み物に似合うマグカップ。"
+  },
+  {
+    "id": "gift_medium_095",
+    "image": "../Christmas/images/gifts/gift_medium_095.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "暮らしの雑貨",
+    "name": "クリスマス柄のティーバッグセット",
+    "description": "クリスマス柄の包みがかわいい、ティーバッグのセット。"
+  },
+  {
+    "id": "gift_medium_096",
+    "image": "../Christmas/images/gifts/gift_medium_096.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "差出人のないクリスマスカード",
+    "description": "送り主の名前がどこにも書かれていないクリスマスカード。"
+  },
+  {
+    "id": "gift_medium_097",
+    "image": "../Christmas/images/gifts/gift_medium_097.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "古いクリスマス切手",
+    "description": "少し色あせた、昔のクリスマス柄の切手。"
+  },
+  {
+    "id": "gift_medium_098",
+    "image": "../Christmas/images/gifts/gift_medium_098.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "小さな星形のガラス細工",
+    "description": "光を受けてきらめく、小さな星形のガラス細工。"
+  },
+  {
+    "id": "gift_medium_099",
+    "image": "../Christmas/images/gifts/gift_medium_099.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "雪の結晶を閉じ込めた瓶",
+    "description": "小瓶の中に雪の結晶のようなものが閉じ込められている。"
+  },
+  {
+    "id": "gift_medium_100",
+    "image": "../Christmas/images/gifts/gift_medium_100.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "サンタの落とし物らしい小さな鈴",
+    "description": "サンタクロースが落としたという噂の、小さな鈴。"
+  },
+  {
+    "id": "gift_medium_101",
+    "image": "../Christmas/images/gifts/gift_medium_101.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "木製のミニチュアプレゼント箱",
+    "description": "木目が温かい、開けられそうなミニチュアの贈り物箱。"
+  },
+  {
+    "id": "gift_medium_102",
+    "image": "../Christmas/images/gifts/gift_medium_102.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "クリスマスツリーの種袋",
+    "description": "クリスマスツリーの種だという、小さな紙袋。"
+  },
+  {
+    "id": "gift_medium_103",
+    "image": "../Christmas/images/gifts/gift_medium_103.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "赤い実のついた小枝のブローチ",
+    "description": "赤い実をつけた小枝をかたどったブローチ。"
+  },
+  {
+    "id": "gift_medium_104",
+    "image": "../Christmas/images/gifts/gift_medium_104.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "小さなベルベットの巾着袋",
+    "description": "手のひらに収まる、柔らかなベルベットの巾着。"
+  },
+  {
+    "id": "gift_medium_105",
+    "image": "../Christmas/images/gifts/gift_medium_105.png",
+    "gift_type": 50,
+    "cost": 600,
+    "category": "小さな不思議",
+    "name": "中身の分からない小さな包み",
+    "description": "包みを開けるまで、中身が何か分からない小さな贈り物。"
   },
   {
     "id": "gift_large_001",
@@ -2268,5 +2987,212 @@ window.CHRISTMAS_GIFTS = [
     "category": "食卓のごちそう",
     "name": "神狩荘の聖夜のごちそう缶",
     "description": "高級コンビーフ、燻製牡蠣、オイルサーディンなど、保存の利く贅沢な食材を集めた特製缶詰セット。缶の底には、見覚えのない日付が刻まれている。"
+  },
+  {
+    "id": "gift_named_068",
+    "image": "../Christmas/images/gifts/gift_named_068.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "神狩荘の記念品",
+    "name": "仮屋くんのこけし",
+    "description": "仮屋くんをモデルに作った手作りこけし。似ているかどうかは作った人次第。"
+  },
+  {
+    "id": "gift_named_069",
+    "image": "../Christmas/images/gifts/gift_named_069.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "神狩荘の記念品",
+    "name": "13先輩の手形色紙",
+    "description": "色紙に13先輩の手形を押した、世界に一枚だけの記念品。クリスマス仕様に赤と緑の飾りを添え、隅には小さく「メリークリスマス」と書かれている。手形以外に特に説明はない。"
+  },
+  {
+    "id": "gift_named_070",
+    "image": "../Christmas/images/gifts/gift_named_070.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "神狩荘の記念品",
+    "name": "仮屋くんのクリスマス靴下人形",
+    "description": "靴下に綿を詰めて作った人形。目つきが妙に本人らしい。"
+  },
+  {
+    "id": "gift_small_081",
+    "image": "../Christmas/images/gifts/gift_small_081.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "仮屋くんの名言（仮）湯のみ",
+    "description": "紙コップに「管理人のありがたいお言葉」と手書きしたもの。中身は普通の紙コップ。"
+  },
+  {
+    "id": "gift_small_082",
+    "image": "../Christmas/images/gifts/gift_small_082.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "手作り糸電話",
+    "description": "紙コップで作った赤と緑の手作り糸電話。壁にあてると隣の部屋の音が聞こえるかも……？"
+  },
+  {
+    "id": "gift_small_083",
+    "image": "../Christmas/images/gifts/gift_small_083.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "手作りのポチ袋",
+    "description": "中身は当然ない。お正月にお年玉が欲しいと仮屋からのアピールかも……？"
+  },
+  {
+    "id": "gift_small_084",
+    "image": "../Christmas/images/gifts/gift_small_084.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "裏庭の土を少しだけ入れた小瓶",
+    "description": "「神狩荘産」と手書きのラベルが貼られている。"
+  },
+  {
+    "id": "gift_small_085",
+    "image": "../Christmas/images/gifts/gift_small_085.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "中身のないクリスマス靴下",
+    "description": "何度確認しても何も入っていない。"
+  },
+  {
+    "id": "gift_small_086",
+    "image": "../Christmas/images/gifts/gift_small_086.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "誰かの足跡を写した紙",
+    "description": "裏庭の泥に残った足跡を鉛筆で写し取ったもの。"
+  },
+  {
+    "id": "gift_small_087",
+    "image": "../Christmas/images/gifts/gift_small_087.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "一枚だけの古い切符",
+    "description": "行き先の欄が空白になっている。"
+  },
+  {
+    "id": "gift_small_088",
+    "image": "../Christmas/images/gifts/gift_small_088.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "13先輩のクリスマス限定指差し棒",
+    "description": "ただの木の棒に赤いリボンを巻き、「13先輩公認」と書いた紙を貼ったもの。公認かどうかは不明。"
+  },
+  {
+    "id": "gift_small_089",
+    "image": "../Christmas/images/gifts/gift_small_089.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "神狩荘の珍品",
+    "name": "神狩荘・空気おすそ分け袋",
+    "description": "小さな紙袋に「神狩荘のクリスマスの空気入り」と書いてある。中身はもちろん空気。"
+  },
+  {
+    "id": "gift_small_090",
+    "image": "../Christmas/images/gifts/gift_small_090.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "仮屋くん手作りの松ぼっくりツリー",
+    "description": "裏庭で拾った松ぼっくりに色を塗り、赤いリボンを結んだ小さなツリー。"
+  },
+  {
+    "id": "gift_small_091",
+    "image": "../Christmas/images/gifts/gift_small_091.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "仮屋くん作・木片のクリスマスオーナメント",
+    "description": "余った木片を星型に削って紐を通したもの。少し歪んでいる。"
+  },
+  {
+    "id": "gift_small_092",
+    "image": "../Christmas/images/gifts/gift_small_092.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "仮屋くんの手縫いクリスマス靴下",
+    "description": "余り布で作った小さな靴下。飴玉が二、三個入る程度の大きさ。"
+  },
+  {
+    "id": "gift_small_093",
+    "image": "../Christmas/images/gifts/gift_small_093.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手作りの飾り",
+    "name": "仮屋くん作・神狩荘のミニ看板",
+    "description": "段ボールに「MERRY CHRISTMAS」と書き、裏に小さな支えを付けた卓上看板。"
+  },
+  {
+    "id": "gift_small_094",
+    "image": "../Christmas/images/gifts/gift_small_094.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "仮屋くんの手作りペン立て",
+    "description": "空き缶に麻紐と赤いリボンを巻いたもの。ペンを立てると少し傾く。"
+  },
+  {
+    "id": "gift_small_095",
+    "image": "../Christmas/images/gifts/gift_small_095.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "仮屋くん作・鍵置きトレイ",
+    "description": "端材を浅い皿状に組み合わせたもの。鍵を置くと木の音がする。"
+  },
+  {
+    "id": "gift_small_096",
+    "image": "../Christmas/images/gifts/gift_small_096.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "仮屋くんの手作り貯金箱",
+    "description": "空き缶にクリスマス柄の紙を巻き、投入口を開けたもの。正面には「神狩荘修繕費」と書かれている。"
+  },
+  {
+    "id": "gift_small_097",
+    "image": "../Christmas/images/gifts/gift_small_097.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "日用品・裁縫小物",
+    "name": "仮屋くん作・卓上ごみ箱",
+    "description": "クリスマスのチラシで折った小さなごみ箱。みかんの皮や机の上で出た紙くずを捨てるのにちょうどいい。"
+  },
+  {
+    "id": "gift_small_098",
+    "image": "../Christmas/images/gifts/gift_small_098.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手編みの冬小物",
+    "name": "手編み手袋",
+    "description": "赤と緑の毛糸で編んだ手袋。左右で微妙に大きさが違うけれど、手首には小さな雪の結晶が刺繍されている。"
+  },
+  {
+    "id": "gift_small_099",
+    "image": "../Christmas/images/gifts/gift_small_099.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手編みの冬小物",
+    "name": "手編み靴下",
+    "description": "余った毛糸を組み合わせて編んだ厚手の靴下。クリスマスカラーの縞模様で、履き口には小さなポンポン付き。"
+  },
+  {
+    "id": "gift_small_100",
+    "image": "../Christmas/images/gifts/gift_small_100.png",
+    "gift_type": 10,
+    "cost": 300,
+    "category": "手編みの冬小物",
+    "name": "特製・手編みマフラー",
+    "description": "深緑と赤の毛糸で長めに編んだマフラー。端には「Merry Christmas」の小さな布タグが縫い付けられている。"
   }
 ];
