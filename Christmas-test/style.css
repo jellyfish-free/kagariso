@@ -46,3 +46,23 @@
 
 /* 景品候補一覧：カテゴリー行だけを非表示（景品名・説明文は表示） */
 .catalog-list .catalog-item > small { display: none !important; }
+
+/* 景品候補一覧の末尾に表示する閉じるボタン */
+.catalog-close-button {
+  display:block;
+  width:min(340px,calc(100% - 32px));
+  margin:2px auto 20px;
+  padding:12px 18px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:rgba(36,65,54,.95);
+  color:var(--gold2);
+  font:inherit;
+  font-weight:700;
+  cursor:pointer;
+  transition:background .2s,border-color .2s;
+}
+.catalog-close-button:hover,.catalog-close-button:focus-visible {
+  background:rgba(52,85,70,.95);
+  border-color:var(--gold);
+}

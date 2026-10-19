@@ -241,6 +241,27 @@ function renderGiftCatalog(){
       const description=document.createElement('p');description.textContent=gift.description;
       item.append(title,category,description);box.append(item);
     }
+    // 候補一覧の最下部に「閉じる」ボタンを追加する。
+    // 上部の見出し(summary)を押して開閉する既存の動作はそのまま残す。
+    const details=box.closest('details.catalog-details');
+    if(details){
+      // 再描画されてもボタンが重複しないようにする。
+      let closeButton=details.querySelector('.catalog-close-button');
+      if(!closeButton){
+        closeButton=document.createElement('button');
+        closeButton.type='button';
+        closeButton.className='catalog-close-button';
+        closeButton.textContent='▲ 候補一覧を閉じる';
+        closeButton.addEventListener('click',()=>{
+          details.open=false;
+          // 長い一覧を閉じても現在位置がページ下部に残らないように、
+          // 閉じた見出しの位置へスムーズに戻す。
+          const summary=details.querySelector('summary');
+          if(summary)summary.scrollIntoView({behavior:'smooth',block:'start'});
+        });
+        details.append(closeButton);
+      }
+    }
   }
 }
 renderGiftCatalog();bind();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);
