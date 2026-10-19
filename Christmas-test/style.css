@@ -43,3 +43,6 @@
 .catalog-list .catalog-item img {display:none!important;}
 @media(max-width:900px){.catalog-list {grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:650px){.catalog-list {grid-template-columns:1fr;padding:12px;gap:10px;}.catalog-list .catalog-item {padding:14px 15px;}}
+
+/* 景品候補一覧：カテゴリー行だけを非表示（景品名・説明文は表示） */
+.catalog-list .catalog-item > small { display: none !important; }
