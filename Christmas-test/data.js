@@ -222,8 +222,8 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "紙・手描きの贈り物",
-    "name": "神狩荘の間取りを描いたメモ",
-    "description": "なぜか部屋の配置が少しだけ間違っている。"
+    "name": "手作りのポストカード",
+    "description": "心温まるメッセージ入りポストカード"
   },
   {
     "id": "gift_small_026",
