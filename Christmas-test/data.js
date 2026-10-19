@@ -276,8 +276,8 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 10,
     "cost": 300,
     "category": "紙・手描きの贈り物",
-    "name": "紙製の小さなプレゼント箱",
-    "description": "中身は入っていない。"
+    "name": "手編みのぬいぐるみ",
+    "description": "小さな雪だるまとくまの編みぐるみ。手のひらサイズ"
   },
   {
     "id": "gift_small_032",
