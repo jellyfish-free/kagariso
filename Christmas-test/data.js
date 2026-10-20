@@ -1420,7 +1420,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 50,
     "cost": 600,
     "category": "お菓子",
-    "name": "ミニチュアのチョコレートボックス",
+    "name": "チョコレートボックス",
     "description": "ひと口サイズのチョコレートを詰めた、小さな箱。"
   },
   {
@@ -1510,7 +1510,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 50,
     "cost": 600,
     "category": "クリスマス飾り",
-    "name": "ミニチュアの雪だるま",
+    "name": "雪だるまの置物",
     "description": "丸い体と小さな鼻が可愛らしい、雪だるまの置物。"
   },
   {
