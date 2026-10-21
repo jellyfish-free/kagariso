@@ -282,7 +282,65 @@ function renderSpecificGiftChoice(){
   if(items.some(x=>x.id===previous))select.value=previous;
   const chosen=items.find(x=>x.id===select.value);
   const preview=$('specificGiftPreview');preview.replaceChildren();
-  if(chosen){const strong=document.createElement('strong');strong.textContent=chosen.name;const p=document.createElement('p');p.textContent=chosen.description||'';preview.append(strong,p);}
+  if(chosen){
+    const card=document.createElement('div');
+    card.className='specific-preview-card';
+
+    const frame=document.createElement('div');
+    frame.className='specific-preview-frame';
+    // SAMPLE付きの選択画面だけ右クリックメニュー・画像ドラッグを抑止。
+    // 当選結果・購入後の画像には適用しない。
+    frame.addEventListener('contextmenu', event => event.preventDefault());
+    frame.addEventListener('dragstart', event => event.preventDefault());
+
+    if(chosen.image){
+      const img=document.createElement('img');
+      img.className='specific-preview-image';
+      img.src=chosen.image;
+      img.alt=`${chosen.name} のサンプル画像`;
+      img.loading='eager';
+      img.draggable=false;
+      img.setAttribute('aria-description','選択用サンプル画像です');
+      img.onerror=()=>{
+        frame.replaceChildren();
+        const placeholder=document.createElement('span');
+        placeholder.className='specific-preview-placeholder';
+        placeholder.textContent='🎁';
+        frame.append(placeholder);
+        const badge=document.createElement('span');
+        badge.className='sample-watermark';
+        badge.textContent='SAMPLE';
+        frame.append(badge);
+      };
+      frame.append(img);
+    }else{
+      const placeholder=document.createElement('span');
+      placeholder.className='specific-preview-placeholder';
+      placeholder.textContent='🎁';
+      frame.append(placeholder);
+    }
+
+    const badge=document.createElement('span');
+    badge.className='sample-watermark';
+    badge.textContent='SAMPLE';
+    frame.append(badge);
+
+    const details=document.createElement('div');
+    details.className='specific-preview-details';
+    const small=document.createElement('small');
+    small.textContent='選択中の景品イメージ';
+    const strong=document.createElement('strong');
+    strong.textContent=chosen.name;
+    const p=document.createElement('p');
+    p.textContent=chosen.description||'';
+    const note=document.createElement('div');
+    note.className='specific-preview-note';
+    note.textContent='※ この画像は選択用サンプルです';
+    details.append(small,strong,p,note);
+
+    card.append(frame,details);
+    preview.append(card);
+  }
   const dest=$('specificGiftDestination').value;
   $('specificGiftMessageWrap').hidden=!(dest==='pool'&&type===150);
   $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`${format(SPECIFIC_COSTS[type])}pt・共通くじへ1個追加`;
