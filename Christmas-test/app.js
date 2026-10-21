@@ -184,7 +184,55 @@ const GIFT_LABELS = {10:'ささやかなプレゼント',50:'まあまあなプ�
 function fillHistory(target,items,kind){const root=$(target);root.replaceChildren();if(!items?.length){const p=document.createElement('p');p.className='empty';p.textContent=kind==='draw'?'まだプレゼントを受け取っていません。':'まだプレゼントを用意していません。';root.append(p);return;}
   for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${GIFT_LABELS[item.gift_type] || "プレゼント"}${item.creator_name?' · '+item.creator_name+'作':''}`:`${GIFT_LABELS[item.gift_type] || "プレゼント"} · ${item.status==='claimed'?'当選済':'抽選待ち'}`;/* 景品画像は当選結果の画面だけに表示する */row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
 }
-async function refreshHistory(){if(!state.me)return;try{const data=await api('/api/history');fillHistory('drawHistory',data.draws,'draw');fillHistory('generatedHistory',data.generated,'generated');renderSpecificPurchaseHistory(data.self_purchases||[]);const root=$('selfGiftHistory');root.replaceChildren();if(!data.self_gifts?.length){const e=document.createElement('p');e.className='empty';e.textContent='まだ交換していません。';root.append(e);}else for(const gift of data.self_gifts){const e=document.createElement('article');e.className='history-item';e.textContent=`${gift.claim_date} · ${GIFT_LABELS[gift.gift_type]}`;root.append(e);}}catch(err){safeError(err);}}
+// くじ当選・自分用ランダム交換・指定購入を1つの受取履歴にまとめる。
+// 同日の複数件も正確に並べられるよう、D1から返された日時を使う。
+function renderReceivedHistory(data){
+  const root=$('drawHistory');
+  root.replaceChildren();
+  const received=[
+    ...(data.draws||[]).map(x=>({...x,source:'draw',sort_at:x.drawn_at||x.draw_date||''})),
+    ...(data.self_gifts||[]).map(x=>({...x,source:'random',sort_at:x.created_at||x.claim_date||''})),
+    ...(data.self_purchases||[]).map(x=>({...x,source:'specific',sort_at:x.created_at||x.purchase_date||''})),
+  ];
+  received.sort((a,b)=>String(b.sort_at).localeCompare(String(a.sort_at)));
+  if(!received.length){
+    const p=document.createElement('p');
+    p.className='empty';
+    p.textContent='まだプレゼントを受け取っていません。';
+    root.append(p);
+    return;
+  }
+  for(const item of received){
+    const row=document.createElement('article');
+    row.className='history-item';
+    const name=document.createElement('strong');
+    const date=item.draw_date||item.claim_date||item.purchase_date||'';
+    const type=GIFT_LABELS[item.gift_type]||'プレゼント';
+    const sub=document.createElement('small');
+    if(item.source==='draw'){
+      name.textContent=item.item_title&&item.title!==item.item_title?`${item.title}（${item.item_title}）`:item.title;
+      sub.textContent=`${date} · 🎟️ くじ当選 · ${type}${item.creator_name?' · '+item.creator_name+'作':''}`;
+    }else if(item.source==='random'){
+      name.textContent=item.title||type;
+      sub.textContent=`${date} · 🎁 自分用ランダム交換（800pt） · ${type}`;
+    }else{
+      name.textContent=item.title||type;
+      sub.textContent=`${date} · 🛍️ 自分用指定購入（5,000pt） · ${type}`;
+    }
+    row.append(name,sub);
+    if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}
+    root.append(row);
+  }
+}
+async function refreshHistory(){
+  if(!state.me)return;
+  try{
+    const data=await api('/api/history');
+    renderReceivedHistory(data);
+    fillHistory('generatedHistory',data.generated,'generated');
+  }catch(err){safeError(err);}
+}
+
 function bind(){document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));document.querySelectorAll('.refresh').forEach(b=>b.addEventListener('click',refreshAll));
   $('registerOpen').addEventListener('click',openRegister);$('registerClose').addEventListener('click',()=>$('registerDialog').close());$('registerForm').addEventListener('submit',register);$('spinButton').addEventListener('click',spin);
   document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);$('specificGiftType').addEventListener('change',renderSpecificGiftChoice);$('specificGiftItem').addEventListener('change',renderSpecificGiftChoice);$('specificGiftDestination').addEventListener('change',renderSpecificGiftChoice);$('specificGiftButton').addEventListener('click',exchangeSpecificGift);
@@ -387,9 +435,5 @@ async function exchangeSpecificGift(){
     renderMe();await refreshPublic();await refreshHistory();
   }catch(e){safeError(e);}finally{state.busy=false;updateButtons();}
 }
-function renderSpecificPurchaseHistory(items){
-  const root=$('specificGiftHistory');root.replaceChildren();
-  if(!items.length){const e=document.createElement('p');e.className='empty';e.textContent='指定購入の履歴はまだありません。';root.append(e);return;}
-  items.forEach(g=>{const el=document.createElement('article');el.className='history-item';el.textContent=`${g.purchase_date} · ${g.title}（5,000pt）`;root.append(el);});
-}
+
 renderGiftCatalog();bind();renderSpecificGiftChoice();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);
