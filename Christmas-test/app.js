@@ -409,8 +409,8 @@ function renderSpecificGiftChoice(){
   }
   const dest=$('specificGiftDestination').value;
   $('specificGiftMessageWrap').hidden=dest!=='pool';
-  $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`どのランクでも2,500pt・メッセージ必須・共通くじへ1個追加`;
-  $('specificGiftButton').textContent=dest==='self'?'5,000ptで自分用に購入':'2,500ptで共通くじに追加';
+  $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`どのプレゼントも2,500pt・メッセージ必須・共通箱へ1個追加`;
+  $('specificGiftButton').textContent=dest==='self'?'5,000ptで自分用に購入':'2,500ptで共通箱に追加';
   updateButtons();
 }
 async function exchangeSpecificGift(){
@@ -422,7 +422,7 @@ async function exchangeSpecificGift(){
   const message=$('specificGiftMessage').value.trim();
   if(dest==='pool'&&!message){msg('共通くじへの指定交換にはメッセージが必要です。',true);$('specificGiftMessage').focus();return;}
   const cost=dest==='self'?5000:SPECIFIC_POOL_COST;
-  if(!window.confirm(`「${chosen.name}」を${cost.toLocaleString('ja-JP')}ptで${dest==='self'?'自分用に購入':'共通くじに投入'}しますか？`))return;
+  if(!window.confirm(`「${chosen.name}」を${cost.toLocaleString('ja-JP')}ptで${dest==='self'?'自分用に購入':'共通箱に投入'}しますか？`))return;
   state.busy=true;updateButtons();
   try{
     const d=dest==='self'?await api('/api/self-purchase',{method:'POST',body:{gift_id:giftId}}):await api('/api/exchange',{method:'POST',body:{cost,gift_id:giftId,...(message?{message}:{})}});
@@ -432,7 +432,7 @@ async function exchangeSpecificGift(){
       renderPrizeCard($('specificGiftResult'),chosen.name,type,null,{self:true});$('specificGiftResult').hidden=false;
       msg(`「${chosen.name}」を自分用に購入しました！`);
     }else{
-      msg(`「${chosen.name}」を共通くじへ追加しました！`);$('specificGiftMessage').value='';
+      msg(`「${chosen.name}」を共通箱へ追加しました！`);$('specificGiftMessage').value='';
     }
     renderMe();await refreshPublic();await refreshHistory();
   }catch(e){safeError(e);}finally{state.busy=false;updateButtons();}
