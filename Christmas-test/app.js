@@ -132,7 +132,7 @@ async function spin(){
   }
 }
 // 上段の3つは従来どおりランダム交換専用（300/600/1200pt）。
-// 2500pt名前入りプレゼントは下段の「好きなプレゼントを選ぶ」から指定交換する。
+// 2500pt超豪華なプレゼントは下段の「好きなプレゼントを選ぶ」から指定交換する。
 let chosenCost=null;
 function askExchange(cost){
   if(!state.me)return openRegister();
@@ -180,9 +180,9 @@ async function draw(){if(state.busy)return;if(!state.me)return openRegister();if
     state.me.draw_count_today=d.draw_count_today;renderMe();msg('プレゼントが当たりました！');await refreshPublic();await refreshHistory();$('prizeReveal').scrollIntoView({behavior:'smooth',block:'center'});}
   catch(err){safeError(err);}finally{state.busy=false;updateButtons();}
 }
-const GIFT_LABELS = {10:'ささやかなプレゼント',50:'まあまあなプレゼント',100:'豪華なプレゼント',150:'名前とメッセージ入り'};
+const GIFT_LABELS = {10:'ささやかなプレゼント',50:'まあまあなプレゼント',100:'豪華なプレゼント',150:'超豪華なプレゼント'};
 function fillHistory(target,items,kind){const root=$(target);root.replaceChildren();if(!items?.length){const p=document.createElement('p');p.className='empty';p.textContent=kind==='draw'?'まだプレゼントを受け取っていません。':'まだプレゼントを用意していません。';root.append(p);return;}
-  for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${GIFT_LABELS[item.gift_type] || "プレゼント"}${item.creator_name?' · '+item.creator_name+'作':''}`:`${GIFT_LABELS[item.gift_type] || "プレゼント"} · ${item.status==='claimed'?'当選済':'抽選待ち'}`;/* 景品画像は当選結果の画面だけに表示する */row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
+  for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${GIFT_LABELS[item.gift_type] || "プレゼント"}${item.creator_name?' · '+item.creator_name+'作':''}`:`${GIFT_LABELS[item.gift_type] || "プレゼント"} · ${item.status==='claimed'?'当選済':'抽選待ち'}`;/* プレゼント画像は当選結果の画面だけに表示する */row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
 }
 // くじ当選・自分用ランダム交換・指定購入を1つの受取履歴にまとめる。
 // 同日の複数件も正確に並べられるよう、D1から返された日時を使う。
@@ -276,7 +276,7 @@ function renderPrizeCard(root, title, giftType, itemTitle=null, options={}){
   const details=document.createElement('div');
   details.className='prize-item-details';
   const rank=document.createElement('small');
-  const labels={10:'ささやかなプレゼント',50:'まあまあなプレゼント',100:'豪華なプレゼント',150:'名前入りプレゼント'};
+  const labels={10:'ささやかなプレゼント',50:'まあまあなプレゼント',100:'豪華なプレゼント',150:'超豪華なプレゼント'};
   rank.textContent=labels[giftType]||'クリスマスプレゼント';
   const name=document.createElement('strong');
   name.textContent=gift?.name||itemTitle||title||'プレゼント';
@@ -331,15 +331,15 @@ function renderGiftCatalog(){
   }
 }
 
-// 指定購入・指定投入は最新のdata.jsの景品IDを使用する。
-// 共通くじへの指定交換は、景品ランクに関係なく一律2,500pt。
+// 指定購入・指定投入は最新のdata.jsのプレゼントIDを使用する。
+// 共通くじへの指定交換は、プレゼントランクに関係なく一律2,500pt。
 const SPECIFIC_POOL_COST=2500;
 function renderSpecificGiftChoice(){
   const type=Number($('specificGiftType').value);
   const select=$('specificGiftItem');
   const previous=select.value;
   const items=(window.CHRISTMAS_GIFTS||[]).filter(x=>Number(x.gift_type)===type);
-  // ランク変更時は候補を更新。同じランクなら選択中の景品を維持。
+  // ランク変更時は候補を更新。同じランクなら選択中のプレゼントを維持。
   if(select.dataset.type!==String(type)){
     select.replaceChildren();
     items.forEach(x=>{const opt=document.createElement('option');opt.value=x.id;opt.textContent=x.name;select.append(opt);});
@@ -394,7 +394,7 @@ function renderSpecificGiftChoice(){
     const details=document.createElement('div');
     details.className='specific-preview-details';
     const small=document.createElement('small');
-    small.textContent='選択中の景品イメージ';
+    small.textContent='選択中のプレゼントイメージ';
     const strong=document.createElement('strong');
     strong.textContent=chosen.name;
     const p=document.createElement('p');
@@ -418,7 +418,7 @@ async function exchangeSpecificGift(){
   if(!state.me)return openRegister();
   const type=Number($('specificGiftType').value),giftId=$('specificGiftItem').value,dest=$('specificGiftDestination').value;
   const chosen=(window.CHRISTMAS_GIFTS||[]).find(x=>x.id===giftId&&Number(x.gift_type)===type);
-  if(!chosen)return msg('景品を選んでください。',true);
+  if(!chosen)return msg('プレゼントを選んでください。',true);
   const message=$('specificGiftMessage').value.trim();
   if(dest==='pool'&&!message){msg('共通くじへの指定交換にはメッセージが必要です。',true);$('specificGiftMessage').focus();return;}
   const cost=dest==='self'?5000:SPECIFIC_POOL_COST;
