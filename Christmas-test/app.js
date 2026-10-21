@@ -75,7 +75,7 @@ function updateButtons(){
   const hasPlayer=Boolean(state.me), play=eligible('2026-12-01'),draw=eligible('2026-12-01');
   $('spinButton').disabled=state.busy||!hasPlayer||!play;
   document.querySelectorAll('.exchange-button').forEach(button=>{button.disabled=state.busy||!hasPlayer||!play||Number(state.me?.points||0)<Number(button.dataset.cost);});
-  $('specificGiftButton').disabled=state.busy||!hasPlayer||!play||!$('specificGiftItem').value||( $('specificGiftDestination').value==='self' ? (Number(state.me?.points||0)<5000||Boolean(state.me?.self_purchase_used_today)) : (Number(state.me?.points||0)<({10:300,50:600,100:1200,150:2500}[Number($('specificGiftType').value)])) );
+  $('specificGiftButton').disabled=state.busy||!hasPlayer||!play||!$('specificGiftItem').value||( $('specificGiftDestination').value==='self' ? (Number(state.me?.points||0)<5000||Boolean(state.me?.self_purchase_used_today)) : (Number(state.me?.points||0)<2500||!$('specificGiftMessage').value.trim()) );
   $('selfGiftButton').disabled=state.busy||!hasPlayer||!play||Number(state.me?.points||0)<800||Boolean(state.me?.self_gift_used_today);
   const remaining=hasPlayer?Math.max(0,3-Number(state.me.draw_count_today||0)):0;
   $('drawButton').disabled=state.busy||!hasPlayer||!draw||remaining===0||Number(state.public?.total_stock||0)===0;
@@ -235,7 +235,7 @@ async function refreshHistory(){
 
 function bind(){document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));document.querySelectorAll('.refresh').forEach(b=>b.addEventListener('click',refreshAll));
   $('registerOpen').addEventListener('click',openRegister);$('registerClose').addEventListener('click',()=>$('registerDialog').close());$('registerForm').addEventListener('submit',register);$('spinButton').addEventListener('click',spin);
-  document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);$('specificGiftType').addEventListener('change',renderSpecificGiftChoice);$('specificGiftItem').addEventListener('change',renderSpecificGiftChoice);$('specificGiftDestination').addEventListener('change',renderSpecificGiftChoice);$('specificGiftButton').addEventListener('click',exchangeSpecificGift);
+  document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);$('specificGiftType').addEventListener('change',renderSpecificGiftChoice);$('specificGiftItem').addEventListener('change',renderSpecificGiftChoice);$('specificGiftDestination').addEventListener('change',renderSpecificGiftChoice);$('specificGiftButton').addEventListener('click',exchangeSpecificGift);$('specificGiftMessage').addEventListener('input',updateButtons);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAll();});
 }
 function findGiftItem(title, giftType, itemTitle=null){
@@ -332,7 +332,8 @@ function renderGiftCatalog(){
 }
 
 // 指定購入・指定投入は最新のdata.jsの景品IDを使用する。
-const SPECIFIC_COSTS={10:300,50:600,100:1200,150:2500};
+// 共通くじへの指定交換は、景品ランクに関係なく一律2,500pt。
+const SPECIFIC_POOL_COST=2500;
 function renderSpecificGiftChoice(){
   const type=Number($('specificGiftType').value);
   const select=$('specificGiftItem');
@@ -408,7 +409,8 @@ function renderSpecificGiftChoice(){
   }
   const dest=$('specificGiftDestination').value;
   $('specificGiftMessageWrap').hidden=dest!=='pool';
-  $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`${format(SPECIFIC_COSTS[type])}pt・共通くじへ1個追加`;
+  $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`どのランクでも2,500pt・メッセージ必須・共通くじへ1個追加`;
+  $('specificGiftButton').textContent=dest==='self'?'5,000ptで自分用に購入':'2,500ptで共通くじに追加';
   updateButtons();
 }
 async function exchangeSpecificGift(){
@@ -418,8 +420,8 @@ async function exchangeSpecificGift(){
   const chosen=(window.CHRISTMAS_GIFTS||[]).find(x=>x.id===giftId&&Number(x.gift_type)===type);
   if(!chosen)return msg('景品を選んでください。',true);
   const message=$('specificGiftMessage').value.trim();
-  if(dest==='pool'&&type===150&&!message)return msg('名前入りプレゼントにはメッセージが必要です。',true);
-  const cost=dest==='self'?5000:SPECIFIC_COSTS[type];
+  if(dest==='pool'&&!message){msg('共通くじへの指定交換にはメッセージが必要です。',true);$('specificGiftMessage').focus();return;}
+  const cost=dest==='self'?5000:SPECIFIC_POOL_COST;
   if(!window.confirm(`「${chosen.name}」を${cost.toLocaleString('ja-JP')}ptで${dest==='self'?'自分用に購入':'共通くじに投入'}しますか？`))return;
   state.busy=true;updateButtons();
   try{
