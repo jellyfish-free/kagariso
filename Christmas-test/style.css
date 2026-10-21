@@ -66,3 +66,7 @@
   background:rgba(52,85,70,.95);
   border-color:var(--gold);
 }
+
+/* 指定景品交換・指定購入 */
+.specific-gift-panel{margin-top:28px;padding:26px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}
+.specific-gift-panel h3{margin:7px 0 12px}.specific-form{display:grid;gap:14px;margin-top:16px}.specific-form label{display:grid;gap:6px;color:var(--gold2);font-size:13px}.specific-form select{width:100%;padding:11px;border:1px solid #67806c;border-radius:8px;background:#0b211c;color:var(--ink);font:inherit}.specific-preview{padding:14px;border:1px solid var(--border);border-radius:10px;background:#0b211c}.specific-preview p{margin:5px 0 0;font-size:13px;color:var(--muted)}.specific-form [hidden]{display:none!important}

@@ -29,7 +29,7 @@ async function api(path,options={}){
   return data;
 }
 function eligible(start,end='2026-12-24'){const d=state.public?.date_jst || dateJST();return d>=start && d<=end;}
-function phase(){const d=state.public?.date_jst || dateJST();return d<'2026-12-01'?'開催まであと少し':d<='2026-12-15'?'ツリー育成・プレゼント交換期間':d<='2026-12-24'?'プレゼントくじ開催中':'イベントは終了しました';}
+function phase(){const d=state.public?.date_jst || dateJST();return d<'2026-12-01'?'開催まであと少し':d<='2026-12-24'?'クリスマス開催中':'イベントは終了しました';}
 function switchTab(name){
   document.querySelectorAll('.tab').forEach(b=>{const active=b.dataset.tab===name;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));});
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id===`pane-${name}`));
@@ -72,16 +72,17 @@ function renderMe(){
   renderRanking();updateButtons();
 }
 function updateButtons(){
-  const hasPlayer=Boolean(state.me), play=eligible('2026-12-01'),draw=eligible('2026-12-16');
+  const hasPlayer=Boolean(state.me), play=eligible('2026-12-01'),draw=eligible('2026-12-01');
   $('spinButton').disabled=state.busy||!hasPlayer||!play;
   document.querySelectorAll('.exchange-button').forEach(button=>{button.disabled=state.busy||!hasPlayer||!play||Number(state.me?.points||0)<Number(button.dataset.cost);});
+  $('specificGiftButton').disabled=state.busy||!hasPlayer||!play||!$('specificGiftItem').value||( $('specificGiftDestination').value==='self' ? (Number(state.me?.points||0)<5000||Boolean(state.me?.self_purchase_used_today)) : (Number(state.me?.points||0)<({10:300,50:600,100:1200,150:2500}[Number($('specificGiftType').value)])) );
   $('selfGiftButton').disabled=state.busy||!hasPlayer||!play||Number(state.me?.points||0)<800||Boolean(state.me?.self_gift_used_today);
   const remaining=hasPlayer?Math.max(0,3-Number(state.me.draw_count_today||0)):0;
   $('drawButton').disabled=state.busy||!hasPlayer||!draw||remaining===0||Number(state.public?.total_stock||0)===0;
-  $('lotteryHint').textContent=!draw?'くじは2026年12月16日〜24日に開催します。':Number(state.public?.total_stock||0)===0?'プレゼントがなくなり次第終了です。在庫は現在0個です。':remaining===0?'今日の抽選は3回終了しました。翌日0時（日本時間）に再び引けます。':'1日3回まで。引いたプレゼントは共通在庫からなくなります。';
+  $('lotteryHint').textContent=!draw?'くじは2026年12月1日〜24日に開催します。':Number(state.public?.total_stock||0)===0?'プレゼントがなくなり次第終了です。在庫は現在0個です。':remaining===0?'今日の抽選は3回終了しました。翌日0時（日本時間）に再び引けます。':'1日3回まで。引いたプレゼントは共通在庫からなくなります。';
 }
 async function refreshPublic(){try{const d=await api('/api/state');state.public=d;$('connectionDot').classList.add('online');$('connectionText').textContent='接続中';renderPublic();}catch(e){$('connectionDot').classList.remove('online');$('connectionText').textContent='接続エラー';safeError(e);}}
-async function refreshMe(){if(!state.token){state.me=null;renderMe();return;}try{const d=await api('/api/me');state.me={...d.player,draw_count_today:d.draw_count_today,self_gift_used_today:d.self_gift_used_today};renderMe();}catch(e){state.me=null;renderMe();msg('参加者情報を確認できません。保存済みトークンをご確認ください。',true);}}
+async function refreshMe(){if(!state.token){state.me=null;renderMe();return;}try{const d=await api('/api/me');state.me={...d.player,draw_count_today:d.draw_count_today,self_gift_used_today:d.self_gift_used_today,self_purchase_used_today:d.self_purchase_used_today};renderMe();}catch(e){state.me=null;renderMe();msg('参加者情報を確認できません。保存済みトークンをご確認ください。',true);}}
 async function refreshAll(){await Promise.all([refreshPublic(),refreshMe()]);}
 function openRegister(){if(state.me){msg('このブラウザではすでに「'+state.me.character_name+'」として参加しています。');return;}if(state.token){msg('保存済みの参加情報を確認できません。ページ更新後も続く場合は運営へ連絡してください。',true);return;}$('registerDialog').showModal();}
 async function register(e){e.preventDefault();if(state.busy)return;const name=$('characterName').value.trim();if(!name)return;state.busy=true;$('registerSubmit').disabled=true;
@@ -166,10 +167,10 @@ const GIFT_LABELS = {10:'ささやかなプレゼント',50:'まあまあなプ�
 function fillHistory(target,items,kind){const root=$(target);root.replaceChildren();if(!items?.length){const p=document.createElement('p');p.className='empty';p.textContent=kind==='draw'?'まだプレゼントを受け取っていません。':'まだプレゼントを用意していません。';root.append(p);return;}
   for(const item of items){const row=document.createElement('article');row.className='history-item';const name=document.createElement('strong');name.textContent=item.title;const desc=document.createElement('small');desc.textContent=kind==='draw'?`${item.draw_date} · ${GIFT_LABELS[item.gift_type] || "プレゼント"}${item.creator_name?' · '+item.creator_name+'作':''}`:`${GIFT_LABELS[item.gift_type] || "プレゼント"} · ${item.status==='claimed'?'当選済':'抽選待ち'}`;/* 景品画像は当選結果の画面だけに表示する */row.append(name,desc);if(item.message){const p=document.createElement('p');p.textContent=item.message;row.append(p);}root.append(row);}
 }
-async function refreshHistory(){if(!state.me)return;try{const data=await api('/api/history');fillHistory('drawHistory',data.draws,'draw');fillHistory('generatedHistory',data.generated,'generated');const root=$('selfGiftHistory');root.replaceChildren();if(!data.self_gifts?.length){const e=document.createElement('p');e.className='empty';e.textContent='まだ交換していません。';root.append(e);}else for(const gift of data.self_gifts){const e=document.createElement('article');e.className='history-item';e.textContent=`${gift.claim_date} · ${GIFT_LABELS[gift.gift_type]}`;root.append(e);}}catch(err){safeError(err);}}
+async function refreshHistory(){if(!state.me)return;try{const data=await api('/api/history');fillHistory('drawHistory',data.draws,'draw');fillHistory('generatedHistory',data.generated,'generated');renderSpecificPurchaseHistory(data.self_purchases||[]);const root=$('selfGiftHistory');root.replaceChildren();if(!data.self_gifts?.length){const e=document.createElement('p');e.className='empty';e.textContent='まだ交換していません。';root.append(e);}else for(const gift of data.self_gifts){const e=document.createElement('article');e.className='history-item';e.textContent=`${gift.claim_date} · ${GIFT_LABELS[gift.gift_type]}`;root.append(e);}}catch(err){safeError(err);}}
 function bind(){document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));document.querySelectorAll('.refresh').forEach(b=>b.addEventListener('click',refreshAll));
   $('registerOpen').addEventListener('click',openRegister);$('registerClose').addEventListener('click',()=>$('registerDialog').close());$('registerForm').addEventListener('submit',register);$('spinButton').addEventListener('click',spin);
-  document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);
+  document.querySelectorAll('.exchange-button').forEach(b=>b.addEventListener('click',()=>askExchange(Number(b.dataset.cost))));$('confirmCancel').addEventListener('click',()=>$('confirmDialog').close());$('confirmAccept').addEventListener('click',exchange);$('drawButton').addEventListener('click',draw);$('selfGiftButton').addEventListener('click',claimSelfGift);$('specificGiftType').addEventListener('change',renderSpecificGiftChoice);$('specificGiftItem').addEventListener('change',renderSpecificGiftChoice);$('specificGiftDestination').addEventListener('change',renderSpecificGiftChoice);$('specificGiftButton').addEventListener('click',exchangeSpecificGift);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAll();});
 }
 function findGiftItem(title, giftType, itemTitle=null){
@@ -264,4 +265,56 @@ function renderGiftCatalog(){
     }
   }
 }
-renderGiftCatalog();bind();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);
+
+// 指定購入・指定投入は最新のdata.jsの景品IDを使用する。
+const SPECIFIC_COSTS={10:300,50:600,100:1200,150:2500};
+function renderSpecificGiftChoice(){
+  const type=Number($('specificGiftType').value);
+  const select=$('specificGiftItem');
+  const previous=select.value;
+  const items=(window.CHRISTMAS_GIFTS||[]).filter(x=>Number(x.gift_type)===type);
+  // ランク変更時は候補を更新。同じランクなら選択中の景品を維持。
+  if(select.dataset.type!==String(type)){
+    select.replaceChildren();
+    items.forEach(x=>{const opt=document.createElement('option');opt.value=x.id;opt.textContent=x.name;select.append(opt);});
+    select.dataset.type=String(type);
+  }
+  if(items.some(x=>x.id===previous))select.value=previous;
+  const chosen=items.find(x=>x.id===select.value);
+  const preview=$('specificGiftPreview');preview.replaceChildren();
+  if(chosen){const strong=document.createElement('strong');strong.textContent=chosen.name;const p=document.createElement('p');p.textContent=chosen.description||'';preview.append(strong,p);}
+  const dest=$('specificGiftDestination').value;
+  $('specificGiftMessageWrap').hidden=!(dest==='pool'&&type===150);
+  $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`${format(SPECIFIC_COSTS[type])}pt・共通くじへ1個追加`;
+  updateButtons();
+}
+async function exchangeSpecificGift(){
+  if(state.busy)return;
+  if(!state.me)return openRegister();
+  const type=Number($('specificGiftType').value),giftId=$('specificGiftItem').value,dest=$('specificGiftDestination').value;
+  const chosen=(window.CHRISTMAS_GIFTS||[]).find(x=>x.id===giftId&&Number(x.gift_type)===type);
+  if(!chosen)return msg('景品を選んでください。',true);
+  const message=$('specificGiftMessage').value.trim();
+  if(dest==='pool'&&type===150&&!message)return msg('名前入りプレゼントにはメッセージが必要です。',true);
+  const cost=dest==='self'?5000:SPECIFIC_COSTS[type];
+  if(!window.confirm(`「${chosen.name}」を${cost.toLocaleString('ja-JP')}ptで${dest==='self'?'自分用に購入':'共通くじに投入'}しますか？`))return;
+  state.busy=true;updateButtons();
+  try{
+    const d=dest==='self'?await api('/api/self-purchase',{method:'POST',body:{gift_id:giftId}}):await api('/api/exchange',{method:'POST',body:{cost,gift_id:giftId,...(type===150?{message}:{})}});
+    state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;
+    if(dest==='self'){
+      state.me.self_purchase_used_today=true;
+      renderPrizeCard($('specificGiftResult'),chosen.name,type,null,{self:true});$('specificGiftResult').hidden=false;
+      msg(`「${chosen.name}」を自分用に購入しました！`);
+    }else{
+      msg(`「${chosen.name}」を共通くじへ追加しました！`);if(type===150)$('specificGiftMessage').value='';
+    }
+    renderMe();await refreshPublic();await refreshHistory();
+  }catch(e){safeError(e);}finally{state.busy=false;updateButtons();}
+}
+function renderSpecificPurchaseHistory(items){
+  const root=$('specificGiftHistory');root.replaceChildren();
+  if(!items.length){const e=document.createElement('p');e.className='empty';e.textContent='指定購入の履歴はまだありません。';root.append(e);return;}
+  items.forEach(g=>{const el=document.createElement('article');el.className='history-item';el.textContent=`${g.purchase_date} · ${g.title}（5,000pt）`;root.append(el);});
+}
+renderGiftCatalog();bind();renderSpecificGiftChoice();refreshAll();setInterval(()=>{if(!document.hidden)refreshAll();},60000);
