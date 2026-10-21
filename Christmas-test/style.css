@@ -78,13 +78,16 @@
 .specific-preview-frame{position:relative;flex:0 0 180px;width:180px;min-height:180px;aspect-ratio:1/1;display:flex;justify-content:center;align-items:center;border-radius:13px;background:rgba(255,255,255,.08);overflow:hidden;}
 .specific-preview-image{display:block;width:100%;height:100%;object-fit:contain;}
 .specific-preview-placeholder{font-size:64px;}
-.sample-watermark{position:absolute;left:10px;bottom:10px;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,.58);border:1px solid rgba(255,255,255,.28);color:#fff;letter-spacing:.12em;font-size:11px;font-weight:700;backdrop-filter:blur(2px);}
+.sample-watermark{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-28deg);width:145%;text-align:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:800;letter-spacing:.28em;line-height:1;padding:0;text-shadow:0 1px 10px rgba(0,0,0,.18);white-space:nowrap;mix-blend-mode:screen;z-index:2;}
 .specific-preview-details{min-width:0;flex:1;display:flex;flex-direction:column;gap:7px;}
 .specific-preview-details small{display:block;color:var(--gold);font-size:11px;letter-spacing:.08em;}
 .specific-preview-details strong{display:block;color:var(--gold2);font-size:1.08rem;line-height:1.6;}
 .specific-preview-details p{margin:0;color:var(--muted);font-size:12px;line-height:1.8;white-space:pre-wrap;}
 .specific-preview-note{font-size:11px;color:var(--gold2);opacity:.92;}
 @media(max-width:540px){.specific-preview-card{flex-direction:column;align-items:stretch;text-align:center;}.specific-preview-frame{width:min(100%,260px);margin:0 auto;flex-basis:auto;min-height:200px;}.specific-preview-details{text-align:center;}}
+
+
+@media(max-width:540px){.sample-watermark{font-size:28px;letter-spacing:.22em;width:155%;}}
 
 /* SAMPLE付き画像の通常操作による保存・ドラッグを抑止（選択プレビュー限定） */
 .specific-preview-frame,
