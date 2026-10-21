@@ -130,3 +130,9 @@
     height: auto;
   }
 }
+
+/* 交換所4枠目の800ptカード：結果・履歴をカード内に表示 */
+.self-gift-card h4{font-size:14px;margin:14px 0 6px;}
+.self-gift-card .self-gift-result{font-weight:normal;}
+.self-gift-card .history-list{max-height:240px;overflow:auto;}
+.self-gift-card .gift-bottom{margin-top:auto;}

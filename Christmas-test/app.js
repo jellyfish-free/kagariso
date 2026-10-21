@@ -131,14 +131,31 @@ async function spin(){
     state.busy=false;updateButtons();
   }
 }
+// 上段の3つは従来どおりランダム交換専用（300/600/1200pt）。
+// 2500pt名前入りプレゼントは下段の「好きなプレゼントを選ぶ」から指定交換する。
 let chosenCost=null;
-function askExchange(cost){if(!state.me)return openRegister();if(state.busy)return;const message=$('giftMessage').value.trim();if(cost===2500&&!message){msg('2,500ptのプレゼントにはメッセージを入力してください。',true);$('giftMessage').focus();return;}chosenCost=cost;
-  $('confirmText').textContent=`${cost}ptを使って${cost===2500?'「'+state.me.character_name+'からのプレゼント」':'プレゼント'}を1個生成します。共通のくじへ自動登録されます。${cost===2500?' メッセージ：「'+message+'」':''}`;
+function askExchange(cost){
+  if(!state.me)return openRegister();
+  if(state.busy)return;
+  if(![300,600,1200].includes(cost))return msg('この種類は下の指定交換欄から選んでください。',true);
+  chosenCost=cost;
+  $('confirmText').textContent=`${format(cost)}ptを使ってランダムなプレゼントを1個生成します。共通くじへ自動登録されます。`;
   $('confirmDialog').showModal();
 }
-async function exchange(){if(state.busy||chosenCost===null)return;const cost=chosenCost;state.busy=true;updateButtons();$('confirmAccept').disabled=true;
-  try{const d=await api('/api/exchange',{method:'POST',body:{cost,...(cost===2500?{message:$('giftMessage').value.trim()}:{})}});$('confirmDialog').close();if(cost===2500)$('giftMessage').value='';state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;renderMe();msg(`「${d.present.title}」${d.present.item_title?'（'+d.present.item_title+'）':''}を共通の抽選箱へ追加しました！`);await refreshPublic();await refreshHistory();}
-  catch(err){safeError(err);}finally{chosenCost=null;state.busy=false;$('confirmAccept').disabled=false;updateButtons();}
+async function exchange(){
+  if(state.busy||chosenCost===null)return;
+  const cost=chosenCost;
+  state.busy=true;updateButtons();$('confirmAccept').disabled=true;
+  try{
+    const d=await api('/api/exchange',{method:'POST',body:{cost}});
+    $('confirmDialog').close();
+    state.me.points=d.player.points;
+    state.me.total_earned=d.player.total_earned;
+    renderMe();
+    msg(`「${d.present.title}」を共通の抽選箱へ追加しました！`);
+    await refreshPublic();await refreshHistory();
+  }catch(err){safeError(err);}
+  finally{chosenCost=null;state.busy=false;$('confirmAccept').disabled=false;updateButtons();}
 }
 async function claimSelfGift(){
   if(state.busy)return;
@@ -342,7 +359,7 @@ function renderSpecificGiftChoice(){
     preview.append(card);
   }
   const dest=$('specificGiftDestination').value;
-  $('specificGiftMessageWrap').hidden=!(dest==='pool'&&type===150);
+  $('specificGiftMessageWrap').hidden=dest!=='pool';
   $('specificGiftLimit').textContent=dest==='self'?'5,000pt・1日1回（ランダム800pt交換とは別枠）':`${format(SPECIFIC_COSTS[type])}pt・共通くじへ1個追加`;
   updateButtons();
 }
@@ -358,14 +375,14 @@ async function exchangeSpecificGift(){
   if(!window.confirm(`「${chosen.name}」を${cost.toLocaleString('ja-JP')}ptで${dest==='self'?'自分用に購入':'共通くじに投入'}しますか？`))return;
   state.busy=true;updateButtons();
   try{
-    const d=dest==='self'?await api('/api/self-purchase',{method:'POST',body:{gift_id:giftId}}):await api('/api/exchange',{method:'POST',body:{cost,gift_id:giftId,...(type===150?{message}:{})}});
+    const d=dest==='self'?await api('/api/self-purchase',{method:'POST',body:{gift_id:giftId}}):await api('/api/exchange',{method:'POST',body:{cost,gift_id:giftId,...(message?{message}:{})}});
     state.me.points=d.player.points;state.me.total_earned=d.player.total_earned;
     if(dest==='self'){
       state.me.self_purchase_used_today=true;
       renderPrizeCard($('specificGiftResult'),chosen.name,type,null,{self:true});$('specificGiftResult').hidden=false;
       msg(`「${chosen.name}」を自分用に購入しました！`);
     }else{
-      msg(`「${chosen.name}」を共通くじへ追加しました！`);if(type===150)$('specificGiftMessage').value='';
+      msg(`「${chosen.name}」を共通くじへ追加しました！`);$('specificGiftMessage').value='';
     }
     renderMe();await refreshPublic();await refreshHistory();
   }catch(e){safeError(e);}finally{state.busy=false;updateButtons();}
