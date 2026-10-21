@@ -70,3 +70,30 @@
 /* 指定景品交換・指定購入 */
 .specific-gift-panel{margin-top:28px;padding:26px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}
 .specific-gift-panel h3{margin:7px 0 12px}.specific-form{display:grid;gap:14px;margin-top:16px}.specific-form label{display:grid;gap:6px;color:var(--gold2);font-size:13px}.specific-form select{width:100%;padding:11px;border:1px solid #67806c;border-radius:8px;background:#0b211c;color:var(--ink);font:inherit}.specific-preview{padding:14px;border:1px solid var(--border);border-radius:10px;background:#0b211c}.specific-preview p{margin:5px 0 0;font-size:13px;color:var(--muted)}.specific-form [hidden]{display:none!important}
+
+/* ==========================================================
+   スマートフォン：ツリーの画像が左右で切れないようにする
+   imgタグに付いている width="600" height="600" に依存せず、
+   表示領域の幅に合わせて画像全体を縮小する。
+   PCでも表示領域を超えないようにする。
+   ========================================================== */
+.tree-art {
+  min-width: 0;
+}
+.tree-art .tree-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 700px) {
+  .tree-art {
+    min-height: 0;
+    padding: 0;
+  }
+  .tree-art .tree-image {
+    width: 100%;
+    height: auto;
+  }
+}
