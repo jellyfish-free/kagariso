@@ -1,4 +1,4 @@
-// 神狩荘クリスマス景品カタログ：ささやか100 / まあまあ99 / 豪華80 / 名前入り70
+// 神狩荘クリスマス プレゼント一覧：ささやか100 / まあまあ100 / 豪華80 / 超豪華80
 window.CHRISTMAS_GIFTS = [
   {
     "id": "gift_small_001",
@@ -2095,8 +2095,8 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 100,
     "cost": 1200,
     "category": "不思議な贈り物",
-    "name": "お菓子が増えるクリスマス靴下",
-    "description": "枕元に置いておくと、目が覚めた時に靴下の中はお菓子で溢れている。"
+    "name": "誰かの名前が増えるクリスマス靴下",
+    "description": "名前入りの上質な靴下。翌朝、刺繍した覚えのない名前がひとつ増えている。"
   },
   {
     "id": "gift_large_034",
@@ -2221,7 +2221,7 @@ window.CHRISTMAS_GIFTS = [
     "gift_type": 100,
     "cost": 1200,
     "category": "特別な雑貨",
-    "name": "冬の香水コレクション",
+    "name": "冬の香りのミニチュア香水コレクション",
     "description": "雪、森、暖炉、スパイスをイメージした小瓶のセット。香りごとに違う冬の情景を楽しめる。"
   },
   {
@@ -3151,5 +3151,95 @@ window.CHRISTMAS_GIFTS = [
     "name": "仮屋くんのクリスマス靴下人形",
     "description": "靴下に綿を詰めて作った人形。目つきが妙に本人らしい。"
   },
+  {
+    "id": "gift_named_071",
+    "image": "../Christmas/images/gifts/gift_named_071.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "正統派サンタクロース衣装",
+    "description": "深紅のベルベットに白いファーをあしらった上下セット。幅広のベルトや帽子まで揃った本格仕様。"
+  },
+  {
+    "id": "gift_named_072",
+    "image": "../Christmas/images/gifts/gift_named_072.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "黒金のダークサンタ衣装",
+    "description": "黒を基調に金の刺繍を施したロングコート型。大人っぽく、少しミステリアスなサンタになれる。"
+  },
+  {
+    "id": "gift_named_073",
+    "image": "../Christmas/images/gifts/gift_named_073.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "クリスマスエルフの衣装",
+    "description": "深緑と赤のチュニックに金の縁取り、先の尖った帽子を合わせた小人風の衣装。"
+  },
+  {
+    "id": "gift_named_074",
+    "image": "../Christmas/images/gifts/gift_named_074.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "トナカイのなりきりセット",
+    "description": "茶色のふわふわ衣装に角のカチューシャと小さな鈴。かわいらしくも、少し遊び心のある贈り物。"
+  },
+  {
+    "id": "gift_named_075",
+    "image": "../Christmas/images/gifts/gift_named_075.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "雪の王子の衣装",
+    "description": "白と銀を基調に、結晶模様の刺繍を施したロングコートとケープ。幻想的で気品のある装い。"
+  },
+  {
+    "id": "gift_named_076",
+    "image": "../Christmas/images/gifts/gift_named_076.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "くるみ割り人形の軍服",
+    "description": "赤と紺のジャケットに金の飾緒、肩章、ブーツを組み合わせた華やかな舞台衣装。"
+  },
+  {
+    "id": "gift_named_077",
+    "image": "../Christmas/images/gifts/gift_named_077.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "聖夜の天使の衣装",
+    "description": "アイボリーのローブに金の装飾、羽根と光輪を添えた衣装。柔らかな雰囲気に仕上がる。"
+  },
+  {
+    "id": "gift_named_078",
+    "image": "../Christmas/images/gifts/gift_named_078.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "クリスマス紳士の正装",
+    "description": "ボルドーの燕尾服に金のベスト、シルクハットを合わせたクラシカルな装い。仮装感は控えめでおしゃれ。"
+  },
+  {
+    "id": "gift_named_079",
+    "image": "../Christmas/images/gifts/gift_named_079.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "雪だるまのなりきり衣装",
+    "description": "白いふわふわの衣装に赤いマフラー、黒い帽子と人参色の鼻。イベントを楽しくしてくれる一着。"
+  },
+  {
+    "id": "gift_named_080",
+    "image": "../Christmas/images/gifts/gift_named_080.png",
+    "gift_type": 150,
+    "cost": 2500,
+    "category": "クリスマス衣装",
+    "name": "星降る夜の魔法使い衣装",
+    "description": "夜空のような紺色のローブに星や月の刺繍を散りばめた衣装。神秘的なクリスマスの演出にぴったり。"
+  }
 
 ];
